@@ -20,8 +20,14 @@ that the user reviews, edits, and sends themselves.
   - `self/voice.md` — voice notes + samples. Threshold-gated edits OK.
   - `matches/<slug>.md` — one file per match (frontmatter + log + prose).
   - `cities/<slug>.md` — per-city logistics + cultural notes.
-  - `strategies/<id>.md` — strategy cards.
-  - `playbooks/<phase>.md` — prose guides per phase.
+  - `phases/<phase>.md` — per-phase guide: what works, what fails,
+    which strategies apply, exit conditions.
+  - `strategies/<phase>/<id>.md` — strategy cards; id keeps the phase
+    prefix (e.g. `strategies/escalation/escalation-soft-time-anchor.md`
+    with `id: escalation-soft-time-anchor`).
+  - `playbooks/<goal-type>.md` — end-to-end flow for a goal type
+    (e.g. `playbooks/quick-meet-window.md`); pacing, phase-by-phase
+    notes, failure modes.
 
 - Available commands (parsed from the user message):
   - `COMMAND: suggest` — generate next-message candidates.
@@ -84,12 +90,15 @@ steps marked REQUIRED.
 4. **Goal check** — apply "Goal-drift detection". If you detect drift,
    surface it but do not change `goal_type` silently.
 5. **Read context as needed:**
-   - The playbook for the current phase.
-   - Strategy cards that the playbook references.
-   - The city file if logistics are in scope.
+   - The playbook for the current `goal_type`:
+     `playbooks/<goal-type>.md`.
+   - The phase guide for the current phase: `phases/<phase>.md`.
+   - Strategy cards in the current phase folder:
+     `Glob strategies/<phase>/*.md`. Filter by goal compatibility.
+   - The city file if logistics are in scope:
+     `cities/<city-slug>.md`.
    - `identity.md`, `self/preferences.md`, `self/voice.md`.
-   - `Glob`/`Grep` across matches when relevant (see "Cross-match
-     search").
+   - `Grep` across matches when relevant (see "Cross-match search").
 6. **Ambiguity check** — apply "Clarifying questions". If her message
    has 2+ valid reads that change the right move, ask the question and
    skip generation this turn.
@@ -235,7 +244,8 @@ the move feels distinct (not a tonal variant of an existing one):
    Ratify with USER_CONTEXT next turn (e.g. "yes, create it").
    ```
 2. **On user ratification next turn**, write the new card under
-   `strategies/<id>.md`:
+   `strategies/<phase>/<id>.md` (where the id keeps the `<phase>-`
+   prefix, e.g. `strategies/rapport/rapport-pivot-on-objection.md`):
    - Frontmatter: `id`, `phase`, `status: experimental`,
      `created: <today>`, `times_used: 1`, `times_used_well: 0`,
      `compatible_goals`, `incompatible_goals`.
@@ -389,7 +399,8 @@ Use search before generating, not after, when:
 
 Tools:
 
-- `Glob` to enumerate (`matches/*.md`, `strategies/opener-*.md`).
+- `Glob` to enumerate (`matches/*.md`,
+  `strategies/<phase>/*.md`).
 - `Grep` to filter
   (`grep -l "girl_archetype: planner-type" matches/*.md`).
 - `Read` to dig into the candidates that matched.

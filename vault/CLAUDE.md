@@ -8,8 +8,15 @@ correct. The orchestrator prompt assumes these conventions hold.
 - Match slugs: `YYYY-MM-<firstname>-<city-code>.md` — e.g.
   `2026-04-sofia-cr.md`. Lowercase, ASCII, hyphens.
 - City slugs: `<city>-<country-code>.md` — e.g. `san-jose-cr.md`.
-- Strategy slugs: `<phase>-<short-name>.md` — e.g.
-  `escalation-soft-time-anchor.md`.
+- Strategy paths: `strategies/<phase>/<id>.md`. Id keeps the phase
+  prefix for clarity in match log entries — e.g.
+  `strategies/escalation/escalation-soft-time-anchor.md` with
+  `id: escalation-soft-time-anchor`.
+- Phase guides: `phases/<phase>.md` — one per phase
+  (`opener`, `rapport`, `qualifying`, `escalation`, `logistics`,
+  `confirm`, `recovery`).
+- Playbooks (goal-type end-to-end flows):
+  `playbooks/<goal-type>.md` — e.g. `playbooks/quick-meet-window.md`.
 
 ## Frontmatter — match files
 
