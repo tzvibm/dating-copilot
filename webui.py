@@ -1,6 +1,6 @@
 """webui — lightweight FastAPI UI on top of the dcp agent runtime.
 
-Runs locally (or in a Codespace with a forwarded port). Lets the user:
+Runs locally on http://127.0.0.1:7878 by default. Lets the user:
   - see all matches and their current phase
   - create a new match
   - paste her latest message and/or upload a screenshot

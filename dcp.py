@@ -50,8 +50,8 @@ err = Console(stderr=True)
 
 
 def load_env() -> None:
-    """Load .env if present. Codespaces injects secrets directly so the
-    file is optional. Never overrides values already in the environment.
+    """Load .env if present. Never overrides values already in the
+    environment (so platform-injected env vars always win).
     """
     env_path = REPO_ROOT / ".env"
     if env_path.exists():
@@ -71,10 +71,8 @@ def require_api_key() -> str:
     if not key:
         err.print(
             "[red]ANTHROPIC_API_KEY is not set.[/red]\n"
-            "  - Local: copy .env.example to .env and paste your key, "
-            "then `chmod 600 .env`.\n"
-            "  - Codespaces: add ANTHROPIC_API_KEY as a Codespace secret "
-            "in the repo settings.\n"
+            "  Copy .env.example to .env and paste your key, then\n"
+            "  `chmod 600 .env`. Or run `./dev.sh` to do this for you.\n"
             "  Get a key at https://console.anthropic.com/settings/keys"
         )
         raise typer.Exit(code=2)

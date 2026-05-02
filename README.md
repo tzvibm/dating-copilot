@@ -38,20 +38,58 @@ dcp setup                            # interview to fill identity/voice/prefs
 dcp ui                               # http://127.0.0.1:7878
 ```
 
-## What's here
+## Architecture
 
 ```
-dcp.py                # CLI: setup, suggest, record-sent, label, review,
-                      #      new-match, ui, doctor
+┌────────────────┐         ┌────────────────────┐
+│  browser       │  HTTP   │  FastAPI (webui.py)│
+│  127.0.0.1:7878│◄───────►│                    │
+└────────────────┘         └─────────┬──────────┘
+                                     │ imports
+                                     ▼
+                           ┌────────────────────┐
+                           │  dcp.py            │
+                           │  CLI + run_agent() │
+                           └─────────┬──────────┘
+                                     │ async iter
+                                     ▼
+                           ┌────────────────────┐  HTTPS  ┌─────────────┐
+                           │ Claude Agent SDK   │◄───────►│  Anthropic  │
+                           │ tools: Read/Write/ │         │  API        │
+                           │ Edit/Glob/Grep/Bash│         └─────────────┘
+                           └─────────┬──────────┘
+                                     │
+                                     ▼
+                           ┌────────────────────┐
+                           │  vault/*.md        │ ◄── git auto-commits
+                           │  (your memory)     │
+                           └────────────────────┘
+```
+
+One process, one agent per turn, files for state, git for history.
+
+## File map
+
+```
+dcp.py                # CLI: setup, suggest, record-sent, label,
+                      #      review, new-match, ui, doctor
 webui.py              # FastAPI app behind `dcp ui`
+dev.sh                # one-shot bootstrap (venv + deps + .env + ui)
 prompts/
-  orchestrator.md     # system prompt for normal turns
-  setup.md            # system prompt for the onboarding interview
+  orchestrator.md     # system prompt for normal turns (the program)
+  setup.md            # system prompt for onboarding interview
 templates/, static/   # the web UI
 vault/                # the agent's memory: markdown + frontmatter
-.env.example          # template; copy to .env and edit
+  CLAUDE.md           # conventions; agent re-reads each turn
+  identity.md         # who you are; agent reads, never writes
+  goals/              # enumerated goal types
+  self/               # preferences.md, voice.md, observations.md
+  matches/<slug>.md   # one per match, w/ frontmatter + log
+  strategies/<id>.md  # strategy cards w/ use stats
+  playbooks/          # per-phase prose guides
+  cities/<slug>.md    # per-city venues + culture
+.env.example          # copy to .env and edit
 SECURITY.md           # threat model + key handling
-.devcontainer/        # Codespaces config (optional, for later mobile use)
 ```
 
 ## Usage
@@ -147,18 +185,18 @@ dcp review 2026-05-sofia-cr
 - **City files.** `vault/cities/_template.md` is the schema. Drop
   one in for each city you spend real time in.
 
-## Deploying later
+## Mobile / remote access
 
-Today this runs on your laptop only. Options for later:
+Two paths:
 
-- **Mobile from anywhere via GitHub Codespaces.** A `.devcontainer/`
-  is included. Push the repo (private), set `ANTHROPIC_API_KEY` as a
-  Codespace secret, open in Codespaces from your phone browser, run
-  `dcp ui --host 0.0.0.0`. Cold-start adds ~30s.
-- **Tiny VPS / Render / Fly / Railway.** It's just a FastAPI app
-  with a writable filesystem. The vault would need to live on a
-  persistent volume, and you'd want to put the UI behind auth (it
-  has none right now — fine for localhost, NOT for the internet).
+- **Same wifi.** `dcp ui --host 0.0.0.0`, then open
+  `http://<your-laptop-ip>:7878` from your phone. Works for trusted
+  networks only.
+- **Anywhere.** Deploy to a tiny VPS, Render, Fly, or Railway. It's
+  a vanilla FastAPI app with a writable filesystem; the vault has to
+  live on a persistent volume and you must add auth before exposing
+  it (none today). Not in scope for MVP — bring it up when you're
+  ready.
 
 Don't expose this to the public internet without adding auth.
 

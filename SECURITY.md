@@ -12,16 +12,12 @@ This is a personal tool that handles two kinds of sensitive data:
 - The key is loaded from the `ANTHROPIC_API_KEY` environment variable.
   It is never read from a CLI flag, never logged, and never written to
   any file in this repo.
-- For local development (the main path), put it in `.env` (gitignored).
-  The CLI loads that file via `python-dotenv` if present and refuses
-  to read it if its POSIX mode is looser than `0600`.
+- Put it in `.env` (gitignored). The CLI loads that file via
+  `python-dotenv` if present and refuses to read it if its POSIX mode
+  is looser than `0600`.
 - The CLI never passes the key as an argument to subprocesses.
 - If `ANTHROPIC_API_KEY` is missing, the CLI exits with a clear error
   before any network call.
-- (Codespaces, optional / future) Set `ANTHROPIC_API_KEY` as a
-  Codespace secret in repo settings; the devcontainer declares it as
-  required and GitHub injects it as an env var. Do not create a
-  `.env` file inside a Codespace.
 
 ## Repo hygiene
 
@@ -36,7 +32,7 @@ This is a personal tool that handles two kinds of sensitive data:
 ## If a key leaks
 
 1. Rotate it immediately at https://console.anthropic.com/settings/keys
-2. Update the Codespace secret and your local `.env`.
+2. Update your local `.env` (and any deployment env vars if you've deployed).
 3. If it was committed: rotate first, then rewrite history with
    `git filter-repo` (or `git filter-branch`) and force-push. Rotation
    matters more than scrubbing history — assume any committed secret
@@ -59,7 +55,7 @@ This is a personal tool that handles two kinds of sensitive data:
 - Anyone with read access to the repo (you, collaborators, GitHub
   staff under legal process). Use a private repo and don't add
   collaborators.
-- Anyone with access to your machine or your Codespace.
+- Anyone with access to your machine.
 - Prompt injection from pasted message content. The agent has file
   write access to the vault; a malicious paste could in theory direct
   it to rewrite files. Mitigation: review the diff before each commit
