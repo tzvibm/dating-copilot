@@ -516,10 +516,11 @@ def setup() -> None:
 
 @app.command()
 def ui(
-    host: str = typer.Option("127.0.0.1", "--host", help="Bind host. Use 0.0.0.0 in Codespaces."),
+    host: str = typer.Option("127.0.0.1", "--host", help="Bind host. Default localhost-only."),
     port: int = typer.Option(7878, "--port", help="Port."),
+    reload: bool = typer.Option(False, "--reload", help="Auto-reload on code changes (dev)."),
 ) -> None:
-    """Launch the lightweight web UI."""
+    """Launch the lightweight web UI on localhost."""
     load_env()
     require_api_key()  # fail fast before starting uvicorn
 
@@ -527,22 +528,26 @@ def ui(
         import uvicorn  # noqa: F401
     except ImportError:
         err.print(
-            "[red]uvicorn is not installed.[/red] Install UI deps: "
-            "`pip install -e '.[ui]'`"
+            "[red]uvicorn is not installed.[/red] Install: `pip install -e .`"
         )
         raise typer.Exit(code=2) from None
-
-    # In Codespaces, default to all-interfaces so the port-forwarding works.
-    if os.environ.get("CODESPACES") == "true" and host == "127.0.0.1":
-        host = "0.0.0.0"
 
     console.print(
         f"[green]dcp ui[/green] starting at http://{host}:{port} "
         f"(vault: {vault_dir()})"
     )
+    if reload:
+        console.print("[dim]reload mode: code changes will restart the server[/dim]")
     import uvicorn
 
-    uvicorn.run("webui:app", host=host, port=port, log_level="info", reload=False)
+    uvicorn.run(
+        "webui:app",
+        host=host,
+        port=port,
+        log_level="info",
+        reload=reload,
+        reload_dirs=[str(REPO_ROOT)] if reload else None,
+    )
 
 
 @app.command()

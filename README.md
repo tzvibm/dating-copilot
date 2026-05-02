@@ -1,73 +1,85 @@
 # dating-copilot
 
 Personal copilot for moving dating-app conversations from first message
-to an in-person meet. Single-agent system with a markdown vault for state,
-git for history, optional web UI for phone use.
+to an in-person meet. FastAPI web UI on top of a single-agent runtime
+over a markdown vault. Git is the audit trail.
 
 > Personal tool. Single user. Make the repo private.
 
-## What's here
+## Quick start (laptop)
 
-```
-dcp.py                # CLI (suggest, record-sent, label, review, new-match, ui, doctor)
-webui.py              # FastAPI app behind `dcp ui`
-prompts/
-  orchestrator.md     # the system prompt that drives the agent
-templates/, static/   # the web UI
-vault/                # the agent's memory: markdown + frontmatter
-.devcontainer/        # Codespaces setup with required secret declared
-.env.example          # template; copy to .env locally
-SECURITY.md           # threat model + key handling
+You'll need Python 3.12+ and an Anthropic API key.
+
+```bash
+git clone <your-fork-url> dating-copilot
+cd dating-copilot
+./dev.sh
 ```
 
-## Setup
+`dev.sh` creates a virtualenv, installs deps, drops a `.env` from the
+template, then prints what to do next. Edit `.env`, paste your key
+from https://console.anthropic.com/settings/keys, re-run `./dev.sh`,
+and the web UI opens at **http://127.0.0.1:7878**.
 
-### Local
+First time using it: tap the orange **run setup** banner. The agent
+interviews you for ~5 minutes and writes your `identity.md`,
+`self/voice.md`, and `self/preferences.md`.
+
+### Manual setup (if you want to do it without the script)
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e .
 cp .env.example .env
-chmod 600 .env                    # required; the CLI refuses loose perms
-$EDITOR .env                      # paste your ANTHROPIC_API_KEY
-dcp doctor                        # verify config
-dcp setup                         # interactive interview — see "Profile setup" below
+chmod 600 .env                       # required; CLI refuses loose perms
+$EDITOR .env                         # paste ANTHROPIC_API_KEY=sk-...
+dcp doctor                           # confirms the key is loaded
+dcp setup                            # interview to fill identity/voice/prefs
+dcp ui                               # http://127.0.0.1:7878
 ```
 
-Get an Anthropic key at https://console.anthropic.com/settings/keys.
+## What's here
 
-### GitHub Codespaces
-
-1. Push this repo to GitHub. **Make it private.**
-2. Repo → Settings → Secrets and variables → Codespaces → New repository
-   secret. Name: `ANTHROPIC_API_KEY`. Paste the key.
-3. Open the repo in a Codespace. The devcontainer declares the secret
-   as required, so GitHub injects it as an env var. No `.env` file
-   needed; do not create one in the Codespace.
-4. In the Codespace terminal: `dcp doctor`.
-
-## Profile setup
-
-Don't edit the markdown files in `vault/identity.md`, `vault/self/voice.md`,
-or `vault/self/preferences.md` by hand. Run an interview instead:
-
-```bash
-dcp setup
 ```
-
-The agent walks through 11 short questions: who you are, the current
-season, what you're optimising for (and what you're explicitly not),
-your default match goal, voice notes, 8–15 real message samples, types
-that work, types that don't, date activities, and energy patterns. It
-writes the three files when you're done. The interview is also
-available in the web UI at `/setup` if you'd rather do it from your
-phone.
-
-You can re-run setup any time to refresh.
+dcp.py                # CLI: setup, suggest, record-sent, label, review,
+                      #      new-match, ui, doctor
+webui.py              # FastAPI app behind `dcp ui`
+prompts/
+  orchestrator.md     # system prompt for normal turns
+  setup.md            # system prompt for the onboarding interview
+templates/, static/   # the web UI
+vault/                # the agent's memory: markdown + frontmatter
+.env.example          # template; copy to .env and edit
+SECURITY.md           # threat model + key handling
+.devcontainer/        # Codespaces config (optional, for later mobile use)
+```
 
 ## Usage
 
+### Web UI (the main path)
+
+```bash
+dcp ui                # http://127.0.0.1:7878
+dcp ui --reload       # auto-restart on code changes (dev)
+```
+
+The UI lets you:
+
+- **Setup**: interview-driven onboarding (writes identity/voice/preferences).
+- **Matches**: list, create, click into a match.
+- **Suggest**: paste her message or upload a screenshot, optionally
+  add per-turn context (e.g. "I'm flying out Saturday"), pick a mode
+  (draft / options / coach), get suggestions.
+- **Record sent**: tap the option you actually sent (1, 2, 3) or paste
+  the verbatim text if you edited it. The agent records it.
+- **Label outcome**: replied warm / cold / no_reply / meet_set / etc.
+  Updates strategy stats.
+
+Every action auto-commits the vault diff to git.
+
 ### CLI
+
+Useful when you'd rather stay in the terminal:
 
 ```bash
 # bootstrap a match
@@ -75,97 +87,89 @@ dcp new-match 2026-05-sofia-cr --name Sofia --platform tinder \
   --city "San José, CR" --days-remaining 9 \
   --profile-notes "bookstore pic, mentions she's here 6 weeks"
 
-# get suggestions for the next message (paste her message at the prompt,
-# Ctrl-D when done)
+# get suggestions
 dcp suggest 2026-05-sofia-cr --mode options
-
-# pass per-turn context to the agent
-dcp suggest 2026-05-sofia-cr -c "I'm flying out Saturday so timing is tight"
-
-# screenshot instead of pasted text
+dcp suggest 2026-05-sofia-cr -c "she just said her trip got extended"
 dcp suggest 2026-05-sofia-cr -s ~/Downloads/screen.png
 
-# record what you actually sent (1, 2, or 3 from the suggestions, or
-# the verbatim text if you edited)
+# record what you sent (1, 2, or 3 from the suggestions)
 dcp record-sent 2026-05-sofia-cr 2
 
-# label the outcome after she replies (or doesn't)
+# label outcome
 dcp label 2026-05-sofia-cr replied_warm
 
-# read the state and recommend a next move (no draft)
+# state-of-the-conversation summary, no draft
 dcp review 2026-05-sofia-cr
 ```
 
-Every command auto-commits the vault diff to git and pushes (assuming
-the branch tracks an upstream). Disable with `DCP_AUTOCOMMIT=0` /
-`DCP_AUTOPUSH=0`.
-
-### Web UI
-
-```bash
-dcp ui                # http://127.0.0.1:7878
-```
-
-In a Codespace, `dcp ui` binds to `0.0.0.0` automatically and the port
-is forwarded; open the forwarded URL from your phone. The UI lets you:
-
-- create matches with a small form
-- paste messages or upload screenshots
-- add per-turn context that gets injected into the agent prompt
-- pick a suggestion (1/2/3) or paste an edited version, mark it sent
-- record outcome labels
-
-The UI calls the same agent runtime as the CLI, so commits and history
-stay consistent.
+`dcp doctor` reports config without making API calls.
 
 ## How the agent works
 
 - **One agent, one system prompt, one loop.** `prompts/orchestrator.md`
-  is the entire program logic.
-- **The vault is the state.** Markdown with YAML frontmatter. Read with
-  your eyes in any markdown viewer.
-- **Tools the agent has:** Read, Write, Edit, Glob, Grep, Bash. No MCP
-  servers, no databases.
-- **Git is the audit trail.** Every command auto-commits. Use `git log`
-  / `git diff` / `git revert` like normal.
-- **Hard rules:** the agent never edits `vault/identity.md`, never
-  sends messages, never runs git commands, and never touches files
-  outside the vault.
-
-See [the design doc](./docs/) (or the conversation that produced this
-repo) for the full rationale.
+  is the entire program logic for normal turns; `prompts/setup.md` is
+  used only for the onboarding interview.
+- **The vault is the state.** Markdown with YAML frontmatter. Read
+  with your eyes in any markdown viewer.
+- **Tools the agent has:** Read, Write, Edit, Glob, Grep, Bash. No
+  MCP servers, no databases.
+- **Git is the audit trail.** Every command auto-commits. Use
+  `git log` / `git diff` / `git revert` like normal.
+- **Hard rules:** the agent never edits `vault/identity.md` outside
+  setup, never sends messages, never runs git, and never touches
+  files outside the vault.
 
 ## Security
 
-- API key is loaded only from `ANTHROPIC_API_KEY`. Never logged. Never
-  written to disk by this code. Never accepted as a CLI flag.
+- API key is loaded only from `ANTHROPIC_API_KEY` (env or `.env`).
+  Never logged. Never written to disk by this code. Never accepted
+  as a CLI flag.
 - The CLI refuses to read a `.env` with loose permissions on POSIX.
 - Auto-commit only stages files inside `vault/` — a stray secret at
-  repo root is not picked up.
-- Make the repo **private**. The vault contains real names and
-  conversations.
+  repo root won't be picked up.
+- The web UI binds to `127.0.0.1` by default — local-only. Don't
+  change that unless you know why.
+- Make the repo **private** before pushing. The vault contains real
+  names and conversations.
 - See [SECURITY.md](./SECURITY.md) for the full threat model.
 
 ## Customising
 
-- **Voice / identity / preferences.** Use `dcp setup` (or `/setup` in
-  the UI). Hand-editing those three files works too, but the
+- **Voice / identity / preferences.** Use the `/setup` page (or
+  `dcp setup`). Hand-editing those three files works too, but the
   interview is the intended path.
 - **Goals.** `vault/goals/_archetypes.md` is a small fixed list. Edit
-  it — but sparingly. Strategy cards reference these ids.
+  it sparingly. Strategy cards reference these ids.
 - **Strategies.** `vault/strategies/` contains opener and escalation
-  examples. Copy and edit. `compatible_goals` / `incompatible_goals`
-  determine which strategies are filtered out for a given match.
-- **City files.** `vault/cities/_template.md` is the schema. Drop new
-  ones in for each city you spend time in.
+  examples. Copy and edit. `compatible_goals` /
+  `incompatible_goals` filter which strategies the agent considers
+  for a given match.
+- **City files.** `vault/cities/_template.md` is the schema. Drop
+  one in for each city you spend real time in.
+
+## Deploying later
+
+Today this runs on your laptop only. Options for later:
+
+- **Mobile from anywhere via GitHub Codespaces.** A `.devcontainer/`
+  is included. Push the repo (private), set `ANTHROPIC_API_KEY` as a
+  Codespace secret, open in Codespaces from your phone browser, run
+  `dcp ui --host 0.0.0.0`. Cold-start adds ~30s.
+- **Tiny VPS / Render / Fly / Railway.** It's just a FastAPI app
+  with a writable filesystem. The vault would need to live on a
+  persistent volume, and you'd want to put the UI behind auth (it
+  has none right now — fine for localhost, NOT for the internet).
+
+Don't expose this to the public internet without adding auth.
 
 ## Troubleshooting
 
 - `dcp doctor` reports config without making API calls.
-- If auto-push fails, the commit is still local; push by hand.
-- If the agent says a match file is missing, run `dcp new-match` first.
-- If suggestions feel generic, your `voice.md` is empty or thin —
-  paste real messages.
+- "ANTHROPIC_API_KEY not set" → check `.env` exists and has the key.
+- Auto-push failure → the commit is still local; push by hand.
+- "match file not found" → run `dcp new-match` first.
+- Suggestions feel generic → your `voice.md` is empty or thin. Run
+  `dcp setup` again and paste real messages.
 
 ## License
 

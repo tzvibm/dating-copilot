@@ -12,15 +12,16 @@ This is a personal tool that handles two kinds of sensitive data:
 - The key is loaded from the `ANTHROPIC_API_KEY` environment variable.
   It is never read from a CLI flag, never logged, and never written to
   any file in this repo.
-- For local development, put it in `.env` (gitignored). The CLI will
-  load that file via `python-dotenv` if it exists.
-- For Codespaces, set `ANTHROPIC_API_KEY` as a **Codespace secret** under
-  the repository settings. The devcontainer declares it as a required
-  secret and GitHub injects it as an env var.
+- For local development (the main path), put it in `.env` (gitignored).
+  The CLI loads that file via `python-dotenv` if present and refuses
+  to read it if its POSIX mode is looser than `0600`.
+- The CLI never passes the key as an argument to subprocesses.
 - If `ANTHROPIC_API_KEY` is missing, the CLI exits with a clear error
   before any network call.
-- The CLI sets `os.environ["ANTHROPIC_API_KEY"]` for the SDK and never
-  passes the key as an argument to subprocesses.
+- (Codespaces, optional / future) Set `ANTHROPIC_API_KEY` as a
+  Codespace secret in repo settings; the devcontainer declares it as
+  required and GitHub injects it as an env var. Do not create a
+  `.env` file inside a Codespace.
 
 ## Repo hygiene
 
@@ -45,8 +46,11 @@ This is a personal tool that handles two kinds of sensitive data:
 
 - The repo should be **private**. There is no setting that protects you
   from an accidentally-public personal vault.
-- If you sync via GitHub, your conversations are stored on GitHub's
-  servers. That is the deployment trade-off documented in the design.
+- If you `git push` to GitHub, your conversations get stored on
+  GitHub's servers. If you want to avoid that, set
+  `DCP_AUTOPUSH=0` in `.env` and the agent will commit locally only.
+- The web UI binds to `127.0.0.1` by default — local-only, no auth.
+  Don't change `--host` to `0.0.0.0` on a network you don't trust.
 - If you want some vault content kept local-only, create
   `vault/private/` and uncomment the matching line in `.gitignore`.
 
