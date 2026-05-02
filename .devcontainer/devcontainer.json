@@ -1,0 +1,35 @@
+{
+  "name": "dating-copilot",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/node:1": { "version": "lts" }
+  },
+  "postCreateCommand": "pip install -e .",
+  "remoteEnv": {
+    "PYTHONUNBUFFERED": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "secrets": {
+    "ANTHROPIC_API_KEY": {
+      "description": "Anthropic API key. Set this as a Codespace secret at: Settings -> Codespaces -> Repository secrets. Get a key at https://console.anthropic.com/settings/keys",
+      "documentationUrl": "https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "yzhang.markdown-all-in-one",
+        "GitHub.vscode-pull-request-github"
+      ],
+      "settings": {
+        "files.exclude": {
+          "**/.env": true,
+          "**/__pycache__": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}{{ match.meta.name or match.slug }} — dating-copilot{% endblock %}
+{% block subtitle %}{{ match.slug }}{% endblock %}
+
+{% block content %}
+{% set meta = match.meta %}
+<section class="card">
+  <div class="meta-grid">
+    <div><span class="muted">name</span> <strong>{{ meta.name }}</strong></div>
+    <div><span class="muted">city</span> {{ meta.city }}</div>
+    <div><span class="muted">platform</span> {{ meta.platform }}</div>
+    <div><span class="muted">phase</span> <span class="phase phase-{{ meta.phase }}">{{ meta.phase }}</span> ({{ meta.phase_confidence }})</div>
+    <div><span class="muted">goal</span> {{ meta.goal_type }} ({{ meta.goal_confidence }})</div>
+    <div><span class="muted">days</span> {{ meta.days_remaining }}</div>
+    <div><span class="muted">last msg</span> {{ meta.last_message_at }}</div>
+    <div><span class="muted">last strategy</span> {{ meta.strategy_used_last }} → {{ meta.strategy_used_last_outcome }}</div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>suggest next message</h2>
+  <form action="/matches/{{ match.slug }}/suggest" method="post" enctype="multipart/form-data" class="grid">
+    <label class="full">
+      <span>her latest message</span>
+      <textarea name="her_message" rows="4" placeholder="paste exactly what she sent"></textarea>
+    </label>
+    <label class="full">
+      <span>or screenshot</span>
+      <input type="file" name="screenshot" accept="image/png,image/jpeg,image/webp,image/gif" />
+    </label>
+    <label class="full">
+      <span>context for this turn (optional)</span>
+      <textarea name="context" rows="2" placeholder="anything the agent should know just for this turn — e.g. 'I'm flying out Saturday, drop the hiking topic, she's a planner'"></textarea>
+    </label>
+    <label>
+      <span>mode</span>
+      <select name="mode">
+        {% for m in modes %}
+          <option value="{{ m }}" {% if m == 'options' %}selected{% endif %}>{{ m }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <button type="submit" class="primary">get suggestions</button>
+  </form>
+</section>
+
+{% if last_output %}
+<section class="card output">
+  <h2>agent reply</h2>
+  <div class="md">{{ last_output | md | safe }}</div>
+</section>
+
+<section class="card">
+  <h2>record what you sent</h2>
+  <p class="muted">If you sent one of the suggestions above as-is, type its number (1, 2, or 3). If you edited it, paste the verbatim text below.</p>
+  <form action="/matches/{{ match.slug }}/record-sent" method="post" class="grid">
+    <label>
+      <span>chosen option (number)</span>
+      <input name="chosen" placeholder="e.g. 2" />
+    </label>
+    <label class="full">
+      <span>or verbatim sent text</span>
+      <textarea name="edited_text" rows="3" placeholder="paste the exact message you sent if you edited it"></textarea>
+    </label>
+    <label class="full">
+      <span>note (optional)</span>
+      <input name="note" />
+    </label>
+    <button type="submit" class="primary">mark sent</button>
+  </form>
+</section>
+{% endif %}
+
+<section class="card">
+  <h2>label outcome</h2>
+  <form action="/matches/{{ match.slug }}/label" method="post" class="grid">
+    <label>
+      <span>outcome</span>
+      <select name="outcome">
+        <option value="replied_warm">replied_warm</option>
+        <option value="replied_cold">replied_cold</option>
+        <option value="no_reply">no_reply</option>
+        <option value="meet_set">meet_set</option>
+        <option value="meet_happened">meet_happened</option>
+        <option value="dead">dead</option>
+      </select>
+    </label>
+    <label class="full">
+      <span>note (optional)</span>
+      <input name="note" />
+    </label>
+    <button type="submit">record outcome</button>
+  </form>
+</section>
+
+<section class="card">
+  <h2>match file</h2>
+  <pre class="raw">{{ match.raw }}</pre>
+</section>
+{% endblock %}

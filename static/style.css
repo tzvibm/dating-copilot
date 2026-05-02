@@ -1,0 +1,150 @@
+:root {
+  --bg: #0e1116;
+  --fg: #e7e9ec;
+  --muted: #8b95a3;
+  --card: #161b22;
+  --border: #2a313a;
+  --accent: #6aa8ff;
+  --accent-fg: #0b1220;
+  --good: #4caf7d;
+  --warn: #d8a14a;
+  --bad: #d96363;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #fafafa;
+    --fg: #1b1f24;
+    --muted: #677484;
+    --card: #ffffff;
+    --border: #e2e6ec;
+    --accent: #2f6fe0;
+    --accent-fg: #ffffff;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: var(--muted); font-size: 0.9em; }
+
+.topbar {
+  display: flex; align-items: baseline; gap: 1rem;
+  padding: 0.75rem 1rem; border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; background: var(--bg); z-index: 10;
+}
+.brand { font-weight: 600; }
+main { max-width: 880px; margin: 0 auto; padding: 1rem; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.card h2 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+.card summary { cursor: pointer; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem 1rem;
+}
+.grid label { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
+.grid label span { font-size: 0.8rem; color: var(--muted); }
+.grid .full { grid-column: 1 / -1; }
+.grid button { grid-column: 1 / -1; justify-self: start; }
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.45rem 0.55rem;
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+}
+textarea { resize: vertical; min-height: 2.5rem; }
+
+button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--fg);
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
+}
+button.primary {
+  background: var(--accent);
+  color: var(--accent-fg);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+table.matches {
+  width: 100%;
+  border-collapse: collapse;
+}
+table.matches th, table.matches td {
+  text-align: left;
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+}
+table.matches th { color: var(--muted); font-weight: 500; }
+
+.phase {
+  display: inline-block;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  border: 1px solid var(--border);
+}
+.phase-opener     { background: rgba(106,168,255,0.12); }
+.phase-rapport    { background: rgba(106,168,255,0.18); }
+.phase-qualifying { background: rgba(216,161,74,0.18); }
+.phase-escalation { background: rgba(216,161,74,0.28); }
+.phase-logistics  { background: rgba(76,175,125,0.22); }
+.phase-confirm    { background: rgba(76,175,125,0.32); }
+.phase-recovery   { background: rgba(217,99,99,0.22); }
+.phase-dead       { background: rgba(217,99,99,0.32); color: var(--muted); }
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.4rem 0.8rem;
+  font-size: 0.92rem;
+}
+
+.output .md { font-size: 0.95rem; }
+.md pre { background: var(--bg); padding: 0.7rem; border-radius: 6px; overflow-x: auto; }
+.md code { background: rgba(127,127,127,0.15); padding: 0.05rem 0.25rem; border-radius: 4px; }
+.md h2 { font-size: 1rem; margin-top: 1rem; }
+.md h3 { font-size: 0.95rem; margin-top: 0.8rem; }
+.md ol, .md ul { padding-left: 1.2rem; }
+
+.raw {
+  background: var(--bg);
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+  max-height: 28rem;
+  overflow: auto;
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+  table.matches th:nth-child(7),
+  table.matches td:nth-child(7) { display: none; }
+}

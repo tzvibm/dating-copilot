@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block subtitle %}matches{% endblock %}
+
+{% block content %}
+<section>
+  <details class="card" {% if not matches %}open{% endif %}>
+    <summary><strong>+ new match</strong></summary>
+    <form action="/matches/new" method="post" class="grid">
+      <label>
+        <span>slug</span>
+        <input name="slug" placeholder="2026-05-sofia-cr" required pattern="[a-z0-9][a-z0-9\-]*" />
+      </label>
+      <label>
+        <span>name</span>
+        <input name="name" required />
+      </label>
+      <label>
+        <span>platform</span>
+        <select name="platform" required>
+          <option value="tinder">tinder</option>
+          <option value="hinge">hinge</option>
+          <option value="bumble">bumble</option>
+          <option value="feeld">feeld</option>
+          <option value="other">other</option>
+        </select>
+      </label>
+      <label>
+        <span>city</span>
+        <input name="city" placeholder="San José, CR" required />
+      </label>
+      <label>
+        <span>days remaining</span>
+        <input name="days_remaining" type="number" min="0" />
+      </label>
+      <label class="full">
+        <span>profile notes</span>
+        <textarea name="profile_notes" rows="2" placeholder="What stood out in her profile."></textarea>
+      </label>
+      <label class="full">
+        <span>context for this turn (optional)</span>
+        <textarea name="context" rows="2" placeholder="Anything the agent should know just for the bootstrap turn."></textarea>
+      </label>
+      <button type="submit" class="primary">create match</button>
+    </form>
+  </details>
+</section>
+
+<section>
+  {% if matches %}
+    <table class="matches">
+      <thead>
+        <tr>
+          <th>name</th><th>city</th><th>platform</th>
+          <th>phase</th><th>goal</th><th>days</th><th>last</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for m in matches %}
+          <tr>
+            <td><a href="/matches/{{ m.slug }}">{{ m.name }}</a></td>
+            <td>{{ m.city }}</td>
+            <td>{{ m.platform }}</td>
+            <td><span class="phase phase-{{ m.phase }}">{{ m.phase }}</span></td>
+            <td>{{ m.goal_type }}</td>
+            <td>{{ m.days_remaining }}</td>
+            <td class="muted">{{ m.last_message_at }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="muted">No matches yet. Create one above.</p>
+  {% endif %}
+</section>
+{% endblock %}
