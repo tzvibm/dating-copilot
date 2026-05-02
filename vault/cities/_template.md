@@ -34,3 +34,11 @@ last_updated: <YYYY-MM-DD>
 ## Open questions
 
 <!-- Things you noticed but haven't validated yet. -->
+
+## Pending observations
+
+<!-- Agent appends here when a match mentions something city-relevant
+     that isn't yet in the canonical sections. Format:
+     [YYYY-MM-DD] match=<slug> | <one-line fact>
+     After 3 occurrences (or one strong fact), the agent proposes
+     promoting it into the canonical sections above. -->

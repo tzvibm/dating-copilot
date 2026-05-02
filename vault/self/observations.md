@@ -9,7 +9,7 @@
 ## Format
 
 ```
-[YYYY-MM-DD HH:MM] match=<slug> | tag: <one of: voice, preference, strategy, goal, drift, other> | <one-line observation>
+[YYYY-MM-DD HH:MM] match=<slug> | tag: <one of: voice, preference, strategy, goal, archetype, drift, other> | <one-line observation>
 ```
 
 ---
