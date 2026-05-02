@@ -27,6 +27,13 @@ from rich.markdown import Markdown
 REPO_ROOT = Path(__file__).resolve().parent
 DEFAULT_VAULT = REPO_ROOT / "vault"
 ORCHESTRATOR_PROMPT = REPO_ROOT / "prompts" / "orchestrator.md"
+SETUP_PROMPT = REPO_ROOT / "prompts" / "setup.md"
+SETUP_COMPLETE_TOKEN = "SETUP_COMPLETE"
+SETUP_STUB_MARKERS = (
+    "<!-- 3-5 lines.",
+    "<!-- One paragraph on tone",
+    "<!-- The current season",
+)
 
 app = typer.Typer(
     add_completion=False,
@@ -153,6 +160,22 @@ def orchestrator_prompt() -> str:
     return ORCHESTRATOR_PROMPT.read_text(encoding="utf-8")
 
 
+def setup_prompt() -> str:
+    if not SETUP_PROMPT.exists():
+        raise FileNotFoundError(f"Missing setup prompt: {SETUP_PROMPT}")
+    return SETUP_PROMPT.read_text(encoding="utf-8")
+
+
+def needs_setup(vault: Path | None = None) -> bool:
+    """Heuristic: identity.md still has unmodified placeholder comments."""
+    v = vault or vault_dir()
+    p = v / "identity.md"
+    if not p.exists():
+        return True
+    text = p.read_text(encoding="utf-8")
+    return any(marker in text for marker in SETUP_STUB_MARKERS)
+
+
 def _extract_text(message: object) -> str:
     """Pull plain text out of an SDK message in a shape-tolerant way."""
     content = getattr(message, "content", None)
@@ -172,16 +195,26 @@ def _extract_text(message: object) -> str:
     return ""
 
 
-async def run_agent(user_message: str, vault: Path) -> str:
-    """Run a single agent turn. Returns the assistant's final text."""
+async def run_agent(
+    user_message: str,
+    vault: Path,
+    *,
+    system_prompt: str | None = None,
+    allowed_tools: list[str] | None = None,
+) -> str:
+    """Run a single agent turn. Returns the assistant's final text.
+
+    `system_prompt` defaults to the orchestrator prompt; setup uses its
+    own prompt that explicitly authorizes writing identity.md.
+    """
     # Deferred import so --help and config errors don't require the SDK.
     from claude_agent_sdk import ClaudeAgentOptions, query
 
     options = ClaudeAgentOptions(
-        system_prompt=orchestrator_prompt(),
+        system_prompt=system_prompt or orchestrator_prompt(),
         cwd=str(vault),
         model=model_id(),
-        allowed_tools=["Read", "Write", "Edit", "Glob", "Grep", "Bash"],
+        allowed_tools=allowed_tools or ["Read", "Write", "Edit", "Glob", "Grep", "Bash"],
         permission_mode="acceptEdits",
     )
 
@@ -191,6 +224,38 @@ async def run_agent(user_message: str, vault: Path) -> str:
         if text:
             chunks.append(text)
     return "".join(chunks).strip()
+
+
+def build_setup_user_message(history: list[tuple[str, str]]) -> str:
+    """Render the rolling conversation into one user message the
+    setup-prompted agent can continue from. Roles in `history` are the
+    strings 'USER' and 'AGENT'.
+    """
+    if not history:
+        return (
+            "COMMAND: setup\n\n"
+            "CONVERSATION_SO_FAR:\n[empty — this is the first turn]\n\n"
+            "CONTINUE:\nOpen the interview with a brief intro and the first question."
+        )
+    rendered = "\n".join(f"{role}: {text}" for role, text in history)
+    last_role = history[-1][0]
+    if last_role == "USER":
+        instruction = (
+            "Respond to the user's latest answer. Acknowledge briefly, "
+            "then ask the next question — or, if you have all 11 areas, "
+            "write the three files and end your message with the literal "
+            "token SETUP_COMPLETE on its own line."
+        )
+    else:
+        instruction = (
+            "(Unusual — last turn was already from you. Wait for the user "
+            "or restate the pending question.)"
+        )
+    return (
+        f"COMMAND: setup\n\n"
+        f"CONVERSATION_SO_FAR:\n{rendered}\n\n"
+        f"CONTINUE:\n{instruction}"
+    )
 
 
 def build_user_message(
@@ -389,6 +454,67 @@ def new_match(
 
 
 @app.command()
+def setup() -> None:
+    """Interactive interview that fills identity.md, preferences.md, and voice.md.
+
+    The agent asks questions one at a time. Answer each one in the
+    terminal (Ctrl-D when done with an answer; Ctrl-Z+Enter on Windows).
+    Type `quit` to stop early.
+    """
+    load_env()
+    require_api_key()
+    vault = vault_dir()
+
+    console.print(
+        Markdown(
+            "## dcp setup\n\n"
+            "I'll ask a few questions and write your `identity.md`, "
+            "`self/preferences.md`, and `self/voice.md`. After each "
+            "question, type your answer and press **Ctrl-D** (Ctrl-Z+Enter "
+            "on Windows). Type `quit` to stop early.\n"
+        )
+    )
+
+    history: list[tuple[str, str]] = []
+    while True:
+        user_msg = build_setup_user_message(history)
+        try:
+            output = asyncio.run(
+                run_agent(user_msg, vault, system_prompt=setup_prompt())
+            )
+        except KeyboardInterrupt:
+            console.print("\n[yellow]Interrupted. Re-run `dcp setup` to continue.[/yellow]")
+            break
+        if output:
+            console.print()
+            console.print(Markdown(output))
+        history.append(("AGENT", output))
+
+        if SETUP_COMPLETE_TOKEN in output:
+            break
+
+        console.print(
+            "\n[dim]your answer (Ctrl-D when done; type `quit` to stop):[/dim]"
+        )
+        try:
+            user_reply = sys.stdin.read().strip()
+        except KeyboardInterrupt:
+            console.print("\n[yellow]Stopped.[/yellow]")
+            break
+        if not user_reply or user_reply.lower() in ("quit", "exit", "stop"):
+            console.print(
+                "[yellow]Stopped before completion. Run `dcp setup` again "
+                "to pick up where you left off (the conversation does not "
+                "persist; you'll restart, but the agent only writes when "
+                "the interview completes).[/yellow]"
+            )
+            break
+        history.append(("USER", user_reply))
+
+    autocommit(vault, "agent: setup interview")
+
+
+@app.command()
 def ui(
     host: str = typer.Option("127.0.0.1", "--host", help="Bind host. Use 0.0.0.0 in Codespaces."),
     port: int = typer.Option(7878, "--port", help="Port."),
@@ -448,6 +574,18 @@ def doctor() -> None:
     else:
         err.print(f"[red]x orchestrator prompt missing: {ORCHESTRATOR_PROMPT}[/red]")
         issues += 1
+
+    if SETUP_PROMPT.exists():
+        console.print(f"[green]✓[/green] setup prompt: {SETUP_PROMPT}")
+    else:
+        err.print(f"[red]x setup prompt missing: {SETUP_PROMPT}[/red]")
+        issues += 1
+
+    if vault.exists() and needs_setup(vault):
+        console.print(
+            "[yellow]![/yellow] identity.md still has the placeholder stubs. "
+            "Run `dcp setup` to fill it in."
+        )
 
     env_path = REPO_ROOT / ".env"
     if env_path.exists() and os.name == "posix":

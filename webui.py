@@ -15,6 +15,7 @@ auto-commit all match the CLI exactly. There is no separate state.
 from __future__ import annotations
 
 import asyncio
+import json
 import re
 from datetime import datetime, timezone
 from pathlib import Path
@@ -160,7 +161,77 @@ def _save_screenshot(slug: str, upload: UploadFile) -> Path:
 def index(request: Request):
     return templates.TemplateResponse(
         "index.html",
-        {"request": request, "matches": _list_matches()},
+        {
+            "request": request,
+            "matches": _list_matches(),
+            "needs_setup": dcp.needs_setup(_vault()),
+        },
+    )
+
+
+# ---------------------------------------------------------------------------
+# Setup wizard
+# ---------------------------------------------------------------------------
+
+
+@app.get("/setup", response_class=HTMLResponse)
+async def setup_get(request: Request):
+    """Render the setup page with an empty conversation. The first POST
+    triggers the agent's opening question."""
+    return templates.TemplateResponse(
+        "setup.html",
+        {
+            "request": request,
+            "history": [],
+            "complete": False,
+        },
+    )
+
+
+@app.post("/setup", response_class=HTMLResponse)
+async def setup_post(
+    request: Request,
+    history_json: str = Form("[]"),
+    user_reply: str = Form(""),
+):
+    try:
+        raw = json.loads(history_json)
+        history: list[list[str]] = [
+            [str(t[0]), str(t[1])] for t in raw if isinstance(t, list) and len(t) == 2
+        ]
+    except (json.JSONDecodeError, TypeError, ValueError):
+        history = []
+
+    user_reply = user_reply.strip()
+    if user_reply:
+        history.append(["USER", user_reply])
+
+    history_tuples = [(h[0], h[1]) for h in history]
+    user_msg = dcp.build_setup_user_message(history_tuples)
+    dcp.load_env()
+    dcp.require_api_key()
+    output = await dcp.run_agent(
+        user_msg,
+        _vault(),
+        system_prompt=dcp.setup_prompt(),
+        allowed_tools=["Read", "Write", "Edit", "Glob", "Grep"],
+    )
+    history.append(["AGENT", output])
+
+    complete = dcp.SETUP_COMPLETE_TOKEN in output
+    if complete:
+        try:
+            dcp.autocommit(_vault(), "agent: setup interview")
+        except Exception:  # auto-commit is best-effort; never fail the request
+            pass
+
+    return templates.TemplateResponse(
+        "setup.html",
+        {
+            "request": request,
+            "history": history,
+            "complete": complete,
+        },
     )
 
 

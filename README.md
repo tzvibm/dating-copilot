@@ -31,6 +31,7 @@ cp .env.example .env
 chmod 600 .env                    # required; the CLI refuses loose perms
 $EDITOR .env                      # paste your ANTHROPIC_API_KEY
 dcp doctor                        # verify config
+dcp setup                         # interactive interview — see "Profile setup" below
 ```
 
 Get an Anthropic key at https://console.anthropic.com/settings/keys.
@@ -44,6 +45,25 @@ Get an Anthropic key at https://console.anthropic.com/settings/keys.
    as required, so GitHub injects it as an env var. No `.env` file
    needed; do not create one in the Codespace.
 4. In the Codespace terminal: `dcp doctor`.
+
+## Profile setup
+
+Don't edit the markdown files in `vault/identity.md`, `vault/self/voice.md`,
+or `vault/self/preferences.md` by hand. Run an interview instead:
+
+```bash
+dcp setup
+```
+
+The agent walks through 11 short questions: who you are, the current
+season, what you're optimising for (and what you're explicitly not),
+your default match goal, voice notes, 8–15 real message samples, types
+that work, types that don't, date activities, and energy patterns. It
+writes the three files when you're done. The interview is also
+available in the web UI at `/setup` if you'd rather do it from your
+phone.
+
+You can re-run setup any time to refresh.
 
 ## Usage
 
@@ -128,11 +148,9 @@ repo) for the full rationale.
 
 ## Customising
 
-- **Voice.** Replace the placeholders in `vault/self/voice.md` with
-  ~10 real messages you've sent. The agent calibrates from these.
-- **Identity.** Fill in `vault/identity.md` by hand. Set the default
-  match goal at the bottom. The agent reads this every turn but never
-  writes to it.
+- **Voice / identity / preferences.** Use `dcp setup` (or `/setup` in
+  the UI). Hand-editing those three files works too, but the
+  interview is the intended path.
 - **Goals.** `vault/goals/_archetypes.md` is a small fixed list. Edit
   it — but sparingly. Strategy cards reference these ids.
 - **Strategies.** `vault/strategies/` contains opener and escalation

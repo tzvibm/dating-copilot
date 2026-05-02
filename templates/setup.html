@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}setup — dating-copilot{% endblock %}
+{% block subtitle %}setup{% endblock %}
+
+{% block content %}
+<section class="card">
+  <h2>profile setup</h2>
+  <p class="muted">the agent will ask questions and write your <code>identity.md</code>, <code>self/voice.md</code>, and <code>self/preferences.md</code>. answer one question at a time.</p>
+
+  {% if complete %}
+    <div class="banner good">
+      setup complete. <a href="/">go to matches →</a>
+    </div>
+  {% endif %}
+
+  <div class="conversation">
+    {% for role, text in history %}
+      <div class="turn turn-{{ role|lower }}">
+        <div class="role">{{ role|lower }}</div>
+        <div class="md">{{ text | md | safe }}</div>
+      </div>
+    {% endfor %}
+    {% if not history %}
+      <div class="muted">tap <em>start</em> to begin.</div>
+    {% endif %}
+  </div>
+
+  {% if not complete %}
+    <form action="/setup" method="post" class="grid">
+      <input type="hidden" name="history_json" value='{{ history | tojson }}' />
+      {% if history %}
+        <label class="full">
+          <span>your answer</span>
+          <textarea name="user_reply" rows="6" autofocus required placeholder="answer the question above. paste freely."></textarea>
+        </label>
+      {% else %}
+        <input type="hidden" name="user_reply" value="" />
+      {% endif %}
+      <button type="submit" class="primary">
+        {% if history %}submit{% else %}start{% endif %}
+      </button>
+    </form>
+  {% endif %}
+</section>
+{% endblock %}

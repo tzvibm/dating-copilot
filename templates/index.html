@@ -2,6 +2,13 @@
 {% block subtitle %}matches{% endblock %}
 
 {% block content %}
+{% if needs_setup %}
+<div class="banner warn">
+  your profile isn't set up yet. <a href="/setup">run setup →</a>
+  <span class="muted"> &middot; the agent will interview you and fill in identity, voice, and preferences.</span>
+</div>
+{% endif %}
+
 <section>
   <details class="card" {% if not matches %}open{% endif %}>
     <summary><strong>+ new match</strong></summary>
