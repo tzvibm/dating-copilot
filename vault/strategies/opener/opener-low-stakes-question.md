@@ -3,10 +3,11 @@ id: opener-low-stakes-question
 phase: opener
 status: active
 created: 2026-05-02
-times_used: 0
-times_used_well: 0
-compatible_goals: [quick-meet-window, flexible-short-window, extended-window]
 incompatible_goals: [decline-gracefully, just-being-polite]
+goal_stats:
+  quick-meet-window: { used: 0, used_well: 0 }
+  flexible-short-window: { used: 0, used_well: 0 }
+  extended-window: { used: 0, used_well: 0 }
 ---
 
 ## What it is
@@ -33,13 +34,19 @@ read on someone".
 - Stack of two questions in one message — interrogation.
 - Question is about her looks or attractiveness — burns the gambit.
 
-## Examples that worked
+## Outcomes by goal
 
-<!-- - [[YYYY-MM-name-city]] turn 1 -->
+### quick-meet-window
 
-## Examples that failed
+<!-- (no records yet) -->
 
-<!-- - [[YYYY-MM-name-city]] turn 1 -->
+### flexible-short-window
+
+<!-- (no records yet) -->
+
+### extended-window
+
+<!-- (no records yet) -->
 
 ---
 

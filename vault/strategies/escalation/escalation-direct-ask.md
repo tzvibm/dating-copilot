@@ -3,10 +3,10 @@ id: escalation-direct-ask
 phase: escalation
 status: active
 created: 2026-05-02
-times_used: 0
-times_used_well: 0
-compatible_goals: [quick-meet-window, flexible-short-window]
 incompatible_goals: [extended-window, decline-gracefully, just-being-polite]
+goal_stats:
+  quick-meet-window: { used: 0, used_well: 0 }
+  flexible-short-window: { used: 0, used_well: 0 }
 ---
 
 ## What it is
@@ -28,13 +28,15 @@ when the window is short.
 - She's been giving short replies; ask reads as pressure.
 - No prior signal of warmth or interest in meeting.
 
-## Examples that worked
+## Outcomes by goal
 
-<!-- - [[YYYY-MM-name-city]] turn N -->
+### quick-meet-window
 
-## Examples that failed
+<!-- (no records yet) -->
 
-<!-- - [[YYYY-MM-name-city]] turn N -->
+### flexible-short-window
+
+<!-- (no records yet) -->
 
 ---
 

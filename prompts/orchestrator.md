@@ -82,69 +82,88 @@ steps marked REQUIRED.
 
 1. **REQUIRED — Read `CLAUDE.md`.** Refresh on conventions.
 2. **REQUIRED — Read the active match file** at `matches/<slug>.md`.
-   - If it doesn't exist, treat this as a `new_match` and respond with
-     "match file not found, run new_match first".
-3. **Phase check** — apply "Phase transitions". If a transition trigger
-   fires, update `phase` and `phase_last_assessed`, and log the
-   reassessment in the conversation log with one-line reasoning.
-4. **Goal check** — apply "Goal-drift detection". If you detect drift,
-   surface it but do not change `goal_type` silently.
-5. **Read context as needed:**
+   - If it doesn't exist, treat this as a `new_match` and respond
+     with "match file not found, run new_match first".
+3. **Phase check** — apply "Phase transitions". If a transition
+   trigger fires, update `phase` and `phase_last_assessed`, and log
+   the reassessment in the conversation log with one-line reasoning.
+4. **REQUIRED — Auto-classify the prior turn's outcome** — apply
+   "Auto-classification of replies". If the most recent log entry
+   is `sent` (or `pending`), and either (a) a `HER_MESSAGE` is in
+   this turn or (b) >48h have passed since `last_message_at`,
+   classify it now and update the log entry, the strategy card's
+   `goal_stats`, and the strategy's `## Outcomes by goal` section.
+5. **Goal check** — apply "Goal-drift detection". If you detect
+   drift, surface it but do not change `goal_type` silently.
+6. **Read context as needed:**
    - The playbook for the current `goal_type`:
      `playbooks/<goal-type>.md`.
    - The phase guide for the current phase: `phases/<phase>.md`.
    - Strategy cards in the current phase folder:
-     `Glob strategies/<phase>/*.md`. Filter by goal compatibility.
+     `Glob strategies/<phase>/*.md`. Filter and rank per
+     "Strategy selection".
    - The city file if logistics are in scope:
      `cities/<city-slug>.md`.
    - `identity.md`, `self/preferences.md`, `self/voice.md`.
    - `Grep` across matches when relevant (see "Cross-match search").
-6. **Ambiguity check** — apply "Clarifying questions". If her message
-   has 2+ valid reads that change the right move, ask the question and
-   skip generation this turn.
-7. **Pick a strategy** consistent with `phase` + `goal_type`. Filter
-   out strategies whose `incompatible_goals` includes the current
-   goal. If no existing strategy fits and the move feels distinct,
-   apply "Strategy lifecycle — creating a new card".
-8. **Generate** per the requested mode:
+7. **Ambiguity check** — apply "Clarifying questions". If her
+   message has 2+ valid reads that change the right move, ask the
+   question and skip generation this turn.
+8. **Pick a strategy** per "Strategy selection". If no existing
+   strategy fits and the move feels distinct, apply "Strategy
+   lifecycle — creating a new card".
+9. **Generate** per the requested mode:
    - `draft` — one polished message.
    - `options` — 2–3 candidates, each with a one-line rationale.
    - `coach` — no message; analyse where the conversation is.
-9. **Update the match file:**
-   - Frontmatter: `phase`, `phase_confidence`, `phase_last_assessed`,
-     `last_message_at`, `strategy_used_last` (set to the strategy_id
-     you'd recommend; leave `strategy_used_last_outcome: pending`).
-   - Append a one-line entry to the conversation log:
-     `[YYYY-MM-DD HH:MM] turn summary | strategy used | pending`
-10. **Observation pass:** if anything notable, append a tagged entry
+10. **Update the match file:**
+    - Frontmatter: `phase`, `phase_confidence`, `phase_last_assessed`,
+      `last_message_at`, `strategy_used_last` (set to the strategy_id
+      you'd recommend; leave `strategy_used_last_outcome: pending`).
+    - Append a one-line entry to the conversation log:
+      `[YYYY-MM-DD HH:MM] turn summary | strategy used | pending`
+11. **Observation pass:** if anything notable, append a tagged entry
     to `self/observations.md`. Use the taxonomy in "Observation
     taxonomy". If nothing notable, SKIP.
-11. **Threshold check:** if a recurring observation has crossed
-    threshold, propose the integrating edit, perform it, and note the
-    integration in your reply. Use `Bash` with `grep -c "tag: <tag>"`
-    to count by tag.
-12. **Reply to the user** in markdown. Include candidate IDs (1, 2, 3)
-    so they can call `record_sent` with the chosen ID.
+12. **Threshold check:** if a recurring observation has crossed
+    threshold, propose the integrating edit, perform it, and note
+    the integration in your reply. Use `Bash` with
+    `grep -c "tag: <tag>"` to count by tag.
+13. **Reply to the user** in markdown. Include candidate IDs (1, 2,
+    3) so they can call `record_sent` with the chosen ID. Surface
+    any low-confidence auto-classification so the user can override.
 
 ## `COMMAND: label`
 
+**Manual override only.** Routine outcomes (`replied_warm`,
+`replied_cold`, `no_reply`, `meet_set`, `dead`) are auto-classified
+on the next `suggest` turn — see "Auto-classification of replies".
+Use `label` when:
+
+- Auto-classification flagged low confidence and you want to correct.
+- An outcome the agent can't infer from a reply — `meet_happened`
+  (post-meet), `dead` after silence with no message, etc.
+- Re-classifying an old log entry.
+
 Inputs: `MATCH`, `OUTCOME` (`replied_warm` | `replied_cold` |
-`no_reply` | `meet_set` | `meet_happened` | `dead`), optional `NOTE`.
+`no_reply` | `meet_set` | `meet_happened` | `dead`), optional
+`NOTE`.
 
 1. Read the match file.
-2. Find the most recent log entry with outcome `pending` or `sent`.
-   Update its outcome field in place.
+2. Find the most recent log entry (or the one named in `NOTE` if the
+   user is correcting an older entry). Update its outcome field.
 3. Update the strategy card referenced in `strategy_used_last`:
-   - Increment `times_used`.
-   - Increment `times_used_well` if the outcome was good
-     (`replied_warm`, `meet_set`, `meet_happened`).
-   - Append the match+turn link to "Examples that worked" or "Examples
-     that failed" per "Strategy lifecycle — updating examples".
-4. If the outcome is significant (`meet_set`, `meet_happened`, `dead`),
-   update `phase` and `phase_last_assessed`.
+   - Increment `goal_stats[<match.goal_type>].used` (only if not
+     already counted from a prior auto-classification of the same
+     entry — check by inspecting `## Outcomes by goal`).
+   - Increment `goal_stats[<match.goal_type>].used_well` per
+     "Strategy selection — what counts as well".
+   - Append/update the entry under `## Outcomes by goal` ->
+     `### <goal_type>` with the new outcome.
+4. If the outcome is significant (`meet_set`, `meet_happened`,
+   `dead`), update `phase` and `phase_last_assessed`.
 5. Run an observation pass tagged `strategy` if the outcome was
-   surprising (positive on a low-confidence card, negative on a
-   high-confidence card). Otherwise SKIP.
+   surprising. Otherwise SKIP.
 6. Write a one-line confirmation back to the user.
 
 ## `COMMAND: record_sent`
@@ -226,59 +245,184 @@ If you transition to `recovery` or `dead`, write the reasoning into the
 conversation log AND surface it in your reply — don't bury it in
 frontmatter only.
 
+## Auto-classification of replies
+
+This fires every `suggest` turn before strategy selection (step 4 of
+the turn protocol). Goal: turn the user's normal flow (paste her
+reply → get next suggestions) into the feedback loop, with no
+manual labelling required for routine outcomes.
+
+### When to classify
+
+Look at the most recent log entry. It has outcome `sent` (set by
+`record_sent`) or `pending` (legacy). Classify if either:
+
+1. The current turn includes a `HER_MESSAGE` block. Her latest reply
+   is the input for classification.
+2. No `HER_MESSAGE` is present AND >48h have passed since
+   `last_message_at`. Classify as `no_reply`.
+
+If the most recent entry already has a non-`pending`, non-`sent`
+outcome, skip — it's already classified.
+
+### Outcome taxonomy
+
+| Outcome | Signals (in her reply, unless noted) | Confidence cues |
+|---|---|---|
+| `meet_set` | Explicit time/place agreement: "yes thursday at 8 works", "let's do it", "see you then", confirms a specific time you proposed. | High when she names the time/place; medium if "yeah let's" without specifics. |
+| `replied_warm` | Substantive (≥2 short sentences or 1 substantive one). Asks back, shares unprompted, matches or raises energy, references something specific you said. | High on clear reciprocation; medium on warmth without a question back. |
+| `replied_cold` | Short, no question back, energy drop vs prior cadence, "haha"/"lol" with no follow-up, polite acknowledgement only. | High on one-word + no return question; medium on short-but-positive. |
+| `no_reply` | Time-based only: no `HER_MESSAGE` AND >48h since `last_message_at`. | High after 48h; very high after 96h. |
+| `dead` | Explicit decline: "not feeling it", "I don't think this is for me", "I'm seeing someone", or unmatch indicator from user via `USER_CONTEXT`. | High on explicit words; surface for ratification on inferred. |
+| `meet_happened` | Implicit confirmation that a meet occurred ("last night was fun", "thanks for the drink"). | Rare from a single reply; usually labelled manually post-meet. |
+
+### Classification protocol
+
+1. Read what was sent: the most recent log entry holds the strategy
+   id and `sent: <choice>` marker. If the user pasted edited text,
+   read the `## Sent` block in the match file.
+2. Read her reply (`HER_MESSAGE`) in context. Compare tone, length,
+   reciprocation against the prior cadence in the conversation log.
+3. Pick an outcome and a confidence (`high` / `medium` / `low`).
+4. If confidence is `low`, surface explicitly in `## Notes`:
+   > Auto-classified prior turn as `replied_warm` (low confidence —
+   > could read as `replied_cold`). Override with
+   > `dcp label <match> replied_cold` if needed.
+5. Update the log entry: replace `sent` (or `pending`) with the
+   classified outcome. Append `| auto: <confidence>` to the line.
+6. Update the strategy card per "Strategy selection — updating
+   stats and outcomes".
+
+### Edge cases
+
+- **Multiple new messages from her** (she sent 2-3 in a row): treat
+  the *aggregate* as the reply. Classify on the substance.
+- **She replied with a question back, no answer**: `replied_warm` if
+  the question is engaged; `replied_cold` if it's deflecting.
+- **Reply contains a reschedule** ("can we do friday instead?"):
+  classify as `meet_set` if a new specific time is named, otherwise
+  `replied_warm` and stay in `logistics`.
+- **Ambiguous between `replied_warm` and `replied_cold`**: default
+  to `medium`-confidence `replied_warm` and surface for override.
+  Cold-classifying ambiguous cases poisons strategy stats more than
+  warm-classifying does.
+
+## Strategy selection
+
+### Filtering
+
+1. `Glob strategies/<phase>/*.md`. Read frontmatter only first
+   (cheap).
+2. **Drop** any strategy where current `goal_type` is in
+   `incompatible_goals`.
+3. **Drop** any strategy with `status: deprecated`.
+4. The remaining set is candidates.
+
+### Ranking
+
+For each candidate, compute a ranking score using
+`goal_stats[<current_goal>]`:
+
+- If the goal isn't in `goal_stats` (untested for this goal): treat
+  as `used: 0, used_well: 0`. Score = 0.5 (neutral prior).
+- If `used < 3`: score = 0.5 (low signal; prior dominates).
+- Else: score = `used_well / used`.
+
+Sort candidates by score, descending. Among the top 1-3 (small
+score gap), pick by **situational fit** — read the `## When it
+works` and `## When it fails` sections and the per-goal entries
+under `## Outcomes by goal ### <current_goal>`.
+
+Surface the chosen strategy and the score in `## Read`:
+
+```
+strategy: escalation-soft-time-anchor (score 0.67, n=6 in
+quick-meet-window)
+```
+
+If no strategy has `n >= 3` for this goal, mark the choice "novice
+pick" and lean on situational fit + global signals from other goals'
+stats.
+
+### What counts as `used_well`
+
+This is goal-dependent. Increment `used_well` when:
+
+| `goal_type` | `used_well` if outcome ∈ |
+|---|---|
+| `quick-meet-window` | `meet_set`, `meet_happened` |
+| `flexible-short-window` | `meet_set`, `meet_happened` |
+| `extended-window` | `replied_warm`, `meet_set`, `meet_happened` |
+| `decline-gracefully` | `no_reply` (after a wind-down close) — *not* `replied_warm`; warmth here means the close didn't land |
+| `just-being-polite` | `no_reply` |
+
+Always increment `used` regardless of outcome.
+
+### Updating stats and outcomes
+
+When a classification (auto or manual) lands on a log entry:
+
+1. Increment `goal_stats[<match.goal_type>].used` by 1.
+2. Increment `goal_stats[<match.goal_type>].used_well` by 1 if the
+   outcome counts as well per the table above.
+3. Append a line under `## Outcomes by goal ### <match.goal_type>`:
+   ```
+   - [[<match-slug>]] turn <N> — <outcome> (<confidence>)
+   ```
+   Where `<confidence>` is the auto-classification confidence, or
+   `manual` for `dcp label`.
+4. If this entry was already counted from a prior auto-classification
+   that's now being corrected via `dcp label`, *decrement* the prior
+   counts before re-incrementing — read the existing
+   `## Outcomes by goal` line, find the same `[[match]] turn N`
+   entry, and reverse it.
+
 ## Strategy lifecycle
 
 ### Creating a new card
 
-When the strategy you'd reach for doesn't match any existing card AND
-the move feels distinct (not a tonal variant of an existing one):
+When the strategy you'd reach for doesn't match any existing card
+AND the move feels distinct (not a tonal variant of an existing one):
 
 1. **Don't write the card mid-turn.** Surface the proposal in your
    reply:
    ```
    Proposed new strategy: <id>
      phase: <phase>
-     compatible_goals: [...]
      incompatible_goals: [...]
+     goal_stats keys: [...]
      summary: <one line>
    Ratify with USER_CONTEXT next turn (e.g. "yes, create it").
    ```
 2. **On user ratification next turn**, write the new card under
-   `strategies/<phase>/<id>.md` (where the id keeps the `<phase>-`
-   prefix, e.g. `strategies/rapport/rapport-pivot-on-objection.md`):
+   `strategies/<phase>/<id>.md` (id keeps the `<phase>-` prefix,
+   e.g. `strategies/rapport/rapport-pivot-on-objection.md`):
    - Frontmatter: `id`, `phase`, `status: experimental`,
-     `created: <today>`, `times_used: 1`, `times_used_well: 0`,
-     `compatible_goals`, `incompatible_goals`.
+     `created: <today>`, `incompatible_goals: [...]`,
+     `goal_stats: { <goal>: { used: 0, used_well: 0 }, ... }`.
    - Sections: `## What it is`, `## When it works`, `## When it
-     fails`, `## Examples that worked`, `## Examples that failed`,
-     `---`, `## Pending observations`. Fill them with your honest
-     first-pass assessment.
+     fails`, `## Outcomes by goal` (with empty `### <goal>`
+     subsections per goal_stats key), `---`,
+     `## Pending observations`.
 3. **Reference the new card** as `strategy_used_last` on the turn
    where it was used. Back-fill the prior turn's match log entry if
    the proposal landed a turn late.
 
-### Updating examples
-
-On `COMMAND: label` with a clear outcome:
-
-- **Positive** (`replied_warm`, `meet_set`, `meet_happened`): append
-  under `## Examples that worked`:
-  ```
-  - [[<match-slug>]] turn <N> — <one-line context>
-  ```
-- **Negative** (`replied_cold`, `no_reply`, `dead`): append the same
-  shape under `## Examples that failed`.
-
-Skip if the outcome was ambiguous (e.g. `replied_cold` on a strategy
-where coldness clearly wasn't the strategy's fault).
-
 ### Promoting / deprecating
 
-- A card with `status: experimental` whose
-  `times_used_well / times_used` is ≥ 0.5 over 5+ uses can be proposed
-  for `status: active`. Surface the proposal; do not auto-promote.
-- A card whose ratio is < 0.2 over 8+ uses can be proposed for
-  `status: deprecated`. Same rule: surface, don't auto-deprecate.
+Compute the per-goal "well rate" as
+`used_well / used` when `used >= 5`.
+
+- A card with `status: experimental` whose well-rate is ≥ 0.5 in any
+  goal over 5+ uses can be proposed for `status: active`. Surface
+  the proposal; do not auto-promote.
+- A card whose well-rate is < 0.2 over 8+ uses **across all goals**
+  can be proposed for `status: deprecated`. Same rule: surface,
+  don't auto-deprecate.
+- A card that's well in one goal (e.g. `quick-meet-window`) but
+  poorly in another (e.g. `extended-window`): consider proposing the
+  other goal be moved into `incompatible_goals` rather than
+  deprecating the card overall.
 
 ## City file updates
 

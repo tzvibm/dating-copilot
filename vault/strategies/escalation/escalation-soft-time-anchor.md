@@ -3,10 +3,10 @@ id: escalation-soft-time-anchor
 phase: escalation
 status: active
 created: 2026-04-01
-times_used: 0
-times_used_well: 0
-compatible_goals: [quick-meet-window, flexible-short-window]
 incompatible_goals: [extended-window, decline-gracefully, just-being-polite]
+goal_stats:
+  quick-meet-window: { used: 0, used_well: 0 }
+  flexible-short-window: { used: 0, used_well: 0 }
 ---
 
 ## What it is
@@ -32,13 +32,15 @@ like she's rejecting a hard ask.
 - Conversation is under 8 messages — premature.
 - She's already proposed a specific time; mirror her instead.
 
-## Examples that worked
+## Outcomes by goal
 
-<!-- - [[2026-04-marina-cr]] turn 11 -->
+### quick-meet-window
 
-## Examples that failed
+<!-- (no records yet) -->
 
-<!-- - [[2026-04-anna-cr]] turn 7 -->
+### flexible-short-window
+
+<!-- (no records yet) -->
 
 ---
 

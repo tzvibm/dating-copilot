@@ -71,6 +71,9 @@ on `record_sent`, then `replied_*` / `no_reply` / `meet_set` etc. on
 
 ## Strategy cards
 
+Path: `strategies/<phase>/<id>.md`. Id keeps the `<phase>-` prefix
+for clarity in match log entries.
+
 Frontmatter:
 
 ```yaml
@@ -79,16 +82,28 @@ id: <slug>
 phase: <phase>
 status: <active|deprecated|experimental>
 created: <YYYY-MM-DD>
-times_used: <int>
-times_used_well: <int>
-compatible_goals: [<goal_type>, ...]
 incompatible_goals: [<goal_type>, ...]
+goal_stats:
+  <goal_type>: { used: <int>, used_well: <int> }
+  <goal_type>: { used: <int>, used_well: <int> }
 ---
 ```
 
-Body sections: `## What it is`, `## When it works`, `## When it fails`,
-`## Examples that worked`, `## Examples that failed`, `---`,
-`## Pending observations`.
+`goal_stats` keys are the goals this strategy applies to (compat is
+implicit from the keys). `incompatible_goals` is the hard exclusion
+list; the agent filters strategies whose current goal is in this
+list during selection.
+
+Body sections, in order:
+- `## What it is`
+- `## When it works`
+- `## When it fails`
+- `## Outcomes by goal` — with `### <goal_type>` subsections, one per
+  `goal_stats` key. Each subsection accumulates classification entries
+  like `- [[<match-slug>]] turn N — replied_warm (high)`.
+- `---`
+- `## Pending observations` — agent appends here; thresholded
+  observations integrate into the interpretive sections above.
 
 ## Threshold rules for canonical edits
 

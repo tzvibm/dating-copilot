@@ -3,10 +3,11 @@ id: logistics-day-of-confirm
 phase: logistics
 status: active
 created: 2026-05-02
-times_used: 0
-times_used_well: 0
-compatible_goals: [quick-meet-window, flexible-short-window, extended-window]
 incompatible_goals: [decline-gracefully, just-being-polite]
+goal_stats:
+  quick-meet-window: { used: 0, used_well: 0 }
+  flexible-short-window: { used: 0, used_well: 0 }
+  extended-window: { used: 0, used_well: 0 }
 ---
 
 ## What it is
@@ -30,13 +31,19 @@ confirmation tone.
 - Stacking with new info ("by the way I made a reservation at X
   instead") — destabilises the plan.
 
-## Examples that worked
+## Outcomes by goal
 
-<!-- - [[YYYY-MM-name-city]] turn N -->
+### quick-meet-window
 
-## Examples that failed
+<!-- (no records yet) -->
 
-<!-- - [[YYYY-MM-name-city]] turn N -->
+### flexible-short-window
+
+<!-- (no records yet) -->
+
+### extended-window
+
+<!-- (no records yet) -->
 
 ---
 
