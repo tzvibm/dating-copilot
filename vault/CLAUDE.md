@@ -3,6 +3,20 @@
 This file is the agent's day-one onboarding doc. Keep it short and
 correct. The orchestrator prompt assumes these conventions hold.
 
+## Reference docs
+
+- `_psychology.md` — canonical psychology grounding. 19 named
+  mechanisms (pre-suasive frame, reciprocity gradient, commitment
+  ladder, reactance, sociometer, misattribution of arousal,
+  Zeigarnik, SDT autonomy/competence/relatedness, hyperpersonal
+  effect, etc.) with theory, dating application, and efficacy-
+  failure mode. Plus phase psychological objectives, goal-type
+  weighting, and a failure-mode catalog. Phase, playbook, and
+  strategy files cite mechanisms by handle (e.g. *operates via
+  reactance — A9*). Read when reasoning about why a move lands or
+  fails, or when picking between strategies that target similar
+  surface moves but different subconscious dynamics.
+
 ## Filenames
 
 - Match slugs: `YYYY-MM-<firstname>-<city-code>.md` — e.g.
@@ -32,6 +46,14 @@ matched: <YYYY-MM-DD>
 phase: <opener|rapport|qualifying|escalation|logistics|confirm|recovery|dead>
 phase_confidence: <low|medium|high>
 phase_last_assessed: <YYYY-MM-DDTHH:MM>
+phase_progress:
+  opener: <0-100>
+  rapport: <0-100>
+  qualifying: <0-100>
+  escalation: <0-100>
+  logistics: <0-100>
+  confirm: <0-100>
+turn_micro_goal: <one-line: which phase % to raise, by how much, via what>
 days_remaining: <int or null>
 distance_km: <int or null>
 goal: <free-form one-liner, e.g. "drinks this week">
@@ -47,18 +69,90 @@ strategy_used_last_outcome: <pending|sent|replied_warm|replied_cold|no_reply|mee
 ---
 ```
 
+`phase` names the dominant phase for routing playbooks. `phase_progress`
+is the multi-axis 0-100 read used to gate strategy choice (see the
+"Phase progress model" section in `prompts/orchestrator.md`).
+`turn_micro_goal` is rewritten every `suggest` turn.
+
 ## Match-file body sections (in this order)
 
 ```
 ## Profile
 ## What's working
 ## What to avoid
+## Match strategy
 ## Open threads
 ## Messages
 ## Conversation log
 ## Sent (verbatim, optional)
 ## Screenshots (optional, one entry per drop)
 ```
+
+### `## Match strategy` — the per-match evolving plan
+
+This is the unique-to-this-match thread the agent is running. It is
+*not* a copy of any strategy card. Strategy cards in the library are
+inspiration; this section is the actual plan.
+
+```
+## Match strategy
+
+**Current plan:** <2-3 sentences. The unique-to-this-match thread the
+agent is running. Evolves with phase progress.>
+
+**Next milestone:** <which phase_progress to raise, target value, why
+that's the bottleneck right now (consistent with goal_type).>
+
+**Recent shifts:** <2-5 dated bullets — what moved which %, last few
+turns. Pruned to the most recent ~5.>
+```
+
+The orchestrator updates this every `suggest` turn (see step 8 of
+`COMMAND: suggest`).
+
+## Goal hierarchy
+
+Three nested levels. Each lower level must serve the level above it.
+
+1. **Identity goal** — what the user wants from dating overall. Lives
+   in `identity.md`. Stable across matches. The agent reads it but
+   never writes it.
+
+2. **Per-match goal** — what success looks like for *this* match.
+   Lives in match frontmatter as `goal` + `goal_type` + `goal_basis`.
+   Set on `new_match`, only changes on confirmed goal-drift.
+
+3. **Turn micro-goal** — what *this turn's message* is supposed to
+   move. Lives in match frontmatter as `turn_micro_goal`, rewritten
+   every `suggest`. Always names a specific phase-progress shift,
+   e.g. "raise rapport 30 → 50 by getting her to volunteer one
+   concrete preference".
+
+The chain that runs every turn:
+
+```
+identity goal
+   ↓ informs which match goals make sense
+per-match goal (goal_type)
+   ↓ informs which phase you're aiming at and how fast
+phase-progress map + turn micro-goal
+   ↓ informs which move/strategy to pick
+chosen move (existing card or new card)
+   ↓
+the message
+```
+
+Coherence checks the orchestrator runs every turn:
+
+- A per-match goal that contradicts identity must be flagged as
+  goal-drift before the turn proceeds.
+- A turn micro-goal that doesn't advance the per-match goal is a bug
+  (e.g. padding rapport when goal_type is `quick-meet-window` and
+  rapport is already 70 — the micro-goal should be advancing
+  escalation instead).
+- The chosen move must serve the turn micro-goal. If the closest
+  existing strategy card serves a different micro-goal, write a new
+  card; don't bend the move to fit the card.
 
 ## Messages section — verbatim thread
 
@@ -93,7 +187,8 @@ One line per turn. Newest at the bottom.
 
 `outcome` starts as `pending` when `suggest` writes it, becomes `sent`
 on `record_sent`, then `replied_*` / `no_reply` / `meet_set` etc. on
-`label`.
+`label`. `unsent` is set by `COMMAND: unsend` when the user retracts
+a sent message — it is excluded from all strategy goal_stats math.
 
 ## Strategy cards
 

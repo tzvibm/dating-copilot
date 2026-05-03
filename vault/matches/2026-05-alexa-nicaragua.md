@@ -51,12 +51,10 @@ strategy_used_last_outcome: sent
 ## Open threads
 
 - user-note: matched 1 mile away in Granada — logistics are trivial, the only question is when.
-
 ## Messages
 
 - me  [2026-05-01T19:49]: Nice to meet you
 - her [2026-05-01T20:42]: Nice to meet you too
-- me  [2026-05-03T13:30]: Bet you know this city better than I do. Drinks this week?
 
 ## Conversation log
 
