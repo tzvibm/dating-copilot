@@ -6,15 +6,15 @@ city: Granada, NI
 matched: 2026-05-02
 phase: rapport
 phase_confidence: medium
-phase_last_assessed: 2026-05-03T11:00
+phase_last_assessed: 2026-05-03T14:00
 phase_progress:
   opener: 80
-  rapport: 40
+  rapport: 45
   qualifying: 30
   escalation: 10
   logistics: 0
   confirm: 0
-turn_micro_goal: null
+turn_micro_goal: raise rapport 45 → 60 by getting her to engage with actual content (defend, answer, or react) via targeted reaction-generating move
 days_remaining: null
 distance_km: 10
 goal: invite her to my hotel room directly for drinks
@@ -75,13 +75,14 @@ strategy_used_last_outcome: replied_warm
 
 ## Match strategy
 
-**Current plan:** Set a direct flirty/sexual register in the next message — rapport at 40 meets the casual-sex floor ("engaged and not cold"). Push escalation and logistics in the same or back-to-back turns. The invite is hotel drinks, direct, no pretense. She's been warm but hasn't been given a clear register to match yet; set it now and get a yes or no.
+**Current plan:** Two successive meet-framing messages both got warm but content-free dodges — she responds with greeting energy but doesn't engage with questions. Rapport is at 45 under casual-sex scoring; need 60 before the escalation backstop clears. This turn uses a reaction-generating move (tease or disqualifier of her dodge/local-credentials) to get her to actually respond to something. Once rapport clears 60, set the flirty register and push hotel invite directly.
 
-**Next milestone:** escalation 10 → 60 — get her to match the flirty/suggestive register or accept a direct invite; this is the gating signal under casual-sex before logistics ask.
+**Next milestone:** rapport 45 → 60 — get her to engage with real content this turn; this unblocks the escalation push next turn.
 
 **Recent shifts:**
 - 2026-05-03: rapport at 20 — premature escalation-direct-ask (rapport ~20, gate requires 60) got warm dodge ("Hiiiii"); dropping back to rapport-building this turn.
 - 2026-05-03: goal changed: quick-meet-window → casual-sex (user wants clear yes/no; re-scored: opener 100→80, rapport 20→40, qualifying 5→30; rapport at casual-sex floor, escalation is the bottleneck).
+- 2026-05-03: rapport 40 → 45 — second warm dodge ("Hiiiii" to meet-framing) confirms she's warm but not yet engaging; needs one real reaction-generating turn before escalation.
 
 ## Open threads
 
@@ -110,5 +111,6 @@ strategy_used_last_outcome: replied_warm
 [2026-05-03 10:30] turn 7 | her: "Hiiiii" — warm dodge of direct-ask; me: frame-hold tease | rapport-frame-control | unsent
 [2026-05-03 11:00] turn 8 | me: rapport recovery — social-proof take from Granada after premature escalation | rapport-social-proof | pending
 [2026-05-03 11:15] goal changed: quick-meet-window → casual-sex | n/a | manual
+[2026-05-03 14:00] turn 9 | rapport tease/disqualifier of her dodge — targeting rapport 45→60 | rapport-disqualifier | pending
 
 ## Sent

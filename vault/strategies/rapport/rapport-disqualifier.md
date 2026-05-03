@@ -11,6 +11,7 @@ goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
   extended-window: { used: 0, used_well: 0 }
+  casual-sex: { used: 0, used_well: 0 }
 ---
 
 ## What it is

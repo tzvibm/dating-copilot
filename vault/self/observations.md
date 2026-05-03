@@ -19,3 +19,4 @@
 [2026-05-03 15:00] match=2026-05-alexa-nicaragua | other: 3 consecutive unsent suggest turns on same dead thread — user iterating on options without committing; worth monitoring if pattern repeats across matches
 [2026-05-03 11:00] match=2026-05-jossy-nicaragua | strategy: escalation-direct-ask fired with rapport ~20 (gate: 60) — warm dodge result; confirms gate exists for a reason, even on quick-meet-window goals
 [2026-05-03 11:00] match=2026-05-jossy-nicaragua | archetype: sugar-curious-big-texter is warm but superficial early — lots of greeting energy, no topic engagement yet; may need stronger take/pull to cut through
+[2026-05-03 14:00] match=2026-05-jossy-nicaragua | strategy: two successive meet-framing messages (turns 5-6, turn 8) both produced warm content-free dodges from sugar-curious archetype — rapport must hit actual floor before any meet-framing lands; disqualifier or playful-tease to force engagement next
