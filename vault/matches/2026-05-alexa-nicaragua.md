@@ -6,7 +6,7 @@ city: Granada, Nicaragua
 matched: 2026-05-02
 phase: opener
 phase_confidence: medium
-phase_last_assessed: 2026-05-03T15:30
+phase_last_assessed: 2026-05-03T16:30
 phase_progress:
   opener: 20
   rapport: 0
@@ -14,7 +14,7 @@ phase_progress:
   escalation: 0
   logistics: 0
   confirm: 0
-turn_micro_goal: null
+turn_micro_goal: "raise opener 20 → 60 by re-engaging DOA thread at flirty/direct register with a today-specific meet ask; get any positive reply enabling logistics close tonight"
 days_remaining: null
 distance_km: 2
 goal: same-day sex meetup — extremely flirty, suggestive approach
@@ -61,14 +61,13 @@ strategy_used_last_outcome: pending
 
 **Current plan:** Thread dead ~41h after polite-ack exchange. Under casual-sex with today-only constraint, there is zero margin for rapport — the first real message must set a flirty/suggestive register and point at meeting today. One shot: if she matches the energy, close logistics (time + place today) immediately. If she doesn't, it's a no.
 
-**Next milestone:** raise opener 20 → 60 with a reply that matches the flirty/suggestive register; close logistics (specific time + place today) in the same or next turn.
+**Next milestone:** raise opener 20 → 60 with any positive re-engagement; close logistics (specific time today) in same or next turn — today only.
 
 **Recent shifts:**
-- 2026-05-03: opener at 20; polite ack only; prior suggest never sent; re-suggesting with tighter options.
-- 2026-05-03: cleaned up erroneous strategy card stats from unsent prior suggest.
 - 2026-05-03: turn 5 re-suggest; opener still 20; three distinct moves generated.
 - 2026-05-03: turn 6 re-suggest; three options generated; opener at 20.
 - 2026-05-03: goal changed: quick-meet-window → casual-sex (only in town today; same-day or nothing). Phase_progress re-scored under new lens: raw scores unchanged (opener 20, all others 0); bars now set per casual-sex scoring overrides.
+- 2026-05-03: turn 7 re-suggest under casual-sex; three genuinely distinct approaches: scarcity-direct / cold-brevity / interest-fork.
 
 ## Open threads
 
@@ -87,3 +86,4 @@ strategy_used_last_outcome: pending
 [2026-05-03 15:00] turn 5 | re-suggest: scarcity-direct / food-invite / confident-type tease | opener-scarcity-direct-ask / opener-lead-with-take / opener-confident-read | pending
 [2026-05-03 15:30] turn 6 | re-suggest: scarcity-direct (⚠escalation backstop) / foodie-take / phone-caller-read | opener-scarcity-direct-ask / opener-lead-with-take / opener-confident-read | pending
 [2026-05-03 16:00] goal changed: quick-meet-window → casual-sex | n/a | manual
+[2026-05-03 16:30] turn 7 | options suggest — casual-sex DOA reset; 3 distinct moves: scarcity-direct / cold-brevity / interest-fork | opener-scarcity-direct-ask / opener-cold-brevity-ask / opener-scarcity-direct-ask(fork) | pending
