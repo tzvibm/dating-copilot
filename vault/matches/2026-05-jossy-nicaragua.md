@@ -89,7 +89,6 @@ strategy_used_last_outcome: replied_warm
 - Language exchange angle — she lists it as an interest and speaks both languages. Easy thread to open.
 - 4/20 reference in bio — open thread if you want to play that frame.
 - Granada-local — she lives here, you're a visitor. Asymmetric logistics knowledge in your favour to ask, hers to share.
-
 ## Messages
 
 - her [2026-05-02T19:27]: ❤️
@@ -99,6 +98,7 @@ strategy_used_last_outcome: replied_warm
 - her [2026-05-02T19:27]: Nice to meet you too!
 - me  [2026-05-03T10:27]: likewise. real question -- if you were picking the spot in Granada, where are we ending up
 - her [2026-05-03T10:27]: Hiiiii
+- me  [2026-05-03T12:43]: Not an answer 😈
 
 ## Conversation log
 
