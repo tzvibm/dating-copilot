@@ -16,7 +16,7 @@ goal_set_at: 2026-05-02
 goal_basis: "default from identity; flagged — her profile says long-term partner, may need recalibration after opener"
 girl_archetype: "self-care-glam / foodie-romantic"
 profile_analyzed_at: 2026-05-02
-last_message_at: null
+last_message_at: 2026-05-02T14:00
 strategy_used_last: opener-prompt-flip
 strategy_used_last_outcome: pending
 ---
@@ -86,6 +86,8 @@ archetype: self-care-glam / foodie-romantic
 
 ## Conversation log
 
-[2026-05-02 00:00] opener — options generated, no prior thread | opener-prompt-flip | pending
+[2026-05-02 00:00] opener — options generated, no prior thread | opener-prompt-flip | sent: Been in Granada a week — Nicaragua keeps exceeding expectations, mostly the food. What city are you in?
 
 ## Sent
+
+[2026-05-02 14:00] Been in Granada a week — Nicaragua keeps exceeding expectations, mostly the food. What city are you in?
