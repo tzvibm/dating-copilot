@@ -76,6 +76,8 @@ strategy_used_last_outcome: pending
 
 - me  [2026-05-01T19:49]: Nice to meet you
 - her [2026-05-01T20:42]: Nice to meet you too
+- me  [2026-05-03T12:23]: Bet you know this city better than I do, Drinks this week?
+- her [2026-05-03T12:23]: Of course 🤭\nBut I'm not from this city jajaj
 
 ## Conversation log
 
