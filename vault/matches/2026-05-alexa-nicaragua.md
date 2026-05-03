@@ -6,7 +6,7 @@ city: Granada, Nicaragua
 matched: 2026-05-02
 phase: opener
 phase_confidence: medium
-phase_last_assessed: 2026-05-03T15:00
+phase_last_assessed: 2026-05-03T15:30
 phase_progress:
   opener: 20
   rapport: 0
@@ -14,7 +14,7 @@ phase_progress:
   escalation: 0
   logistics: 0
   confirm: 0
-turn_micro_goal: raise opener 20 → 70 by earning a substantive reply and signaling meet-readiness in a single move
+turn_micro_goal: raise opener 20 → 70 by earning a substantive reply that breaks the polite-ack deadlock
 days_remaining: null
 distance_km: 2
 goal: drinks this week
@@ -67,6 +67,7 @@ strategy_used_last_outcome: pending
 - 2026-05-03: opener at 20; polite ack only; prior suggest never sent; re-suggesting with tighter options.
 - 2026-05-03: cleaned up erroneous strategy card stats from unsent prior suggest.
 - 2026-05-03: turn 5 re-suggest; opener still 20; three distinct moves generated (scarcity-direct / food-invite / confident-type tease).
+- 2026-05-03: turn 6 re-suggest; three options (scarcity-direct ⚠gate / foodie-take / phone-caller-read); opener at 20.
 
 ## Open threads
 
@@ -83,3 +84,4 @@ strategy_used_last_outcome: pending
 [2026-05-03 14:00] turn 3 | options suggest — dead opener reset | opener-flirty-edge / opener-lead-with-take / opener-scarcity-direct-ask | unsent (re-suggested turn 4)
 [2026-05-03 14:30] turn 4 | re-suggest: 3-way dead-opener reset targeting meet-signal | opener-scarcity-direct-ask / recovery-bold-reset / opener-lead-with-take | unsent
 [2026-05-03 15:00] turn 5 | re-suggest: scarcity-direct / food-invite / confident-type tease | opener-scarcity-direct-ask / opener-lead-with-take / opener-confident-read | pending
+[2026-05-03 15:30] turn 6 | re-suggest: scarcity-direct (⚠escalation backstop) / foodie-take / phone-caller-read | opener-scarcity-direct-ask / opener-lead-with-take / opener-confident-read | pending
