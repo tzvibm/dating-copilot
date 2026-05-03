@@ -6,7 +6,7 @@ city: Granada, Nicaragua
 matched: 2026-05-02
 phase: opener
 phase_confidence: medium
-phase_last_assessed: 2026-05-03T14:00
+phase_last_assessed: 2026-05-03T14:30
 phase_progress:
   opener: 20
   rapport: 0
@@ -14,7 +14,7 @@ phase_progress:
   escalation: 0
   logistics: 0
   confirm: 0
-turn_micro_goal: raise opener 20 → 60 by breaking the dead exchange with a message that has personality and earns a real reply
+turn_micro_goal: raise opener 20 → 70 by earning a substantive reply and signaling meet-readiness in a single move
 days_remaining: null
 distance_km: 2
 goal: drinks this week
@@ -24,9 +24,9 @@ goal_set_at: 2026-05-02
 goal_basis: default from identity; no signal from her yet to override
 girl_archetype: active foodie, cafe-hopper, phone-caller, "still figuring it out"
 profile_analyzed_at: 2026-05-02
-last_message_at: 2026-05-03T13:30
-strategy_used_last: opener-flirty-edge
-strategy_used_last_outcome: pending
+last_message_at: 2026-05-01T20:42
+strategy_used_last: null
+strategy_used_last_outcome: null
 ---
 
 ## Profile
@@ -59,12 +59,13 @@ strategy_used_last_outcome: pending
 
 ## Match strategy
 
-**Current plan:** Thread dead from bland opener exchange. Reset with a message that has real energy — either a flirty tease to establish register, or a direct invite that leverages 1-mile proximity and real time scarcity. Goal is one substantive reply, then push straight to logistics.
+**Current plan:** Thread ~41h dead after polite-ack exchange. Real scarcity (user leaving Granada in a few days) and trivial logistics (1 mile) mean there's no reason to pad rapport — the move is a single message that either resets with energy and points at a meet, or goes directly for the invite. One real reply, then push straight to logistics.
 
-**Next milestone:** raise opener → 60 with a real reply this turn; pivot immediately to meet-ask if she engages.
+**Next milestone:** raise opener 20 → 70 with a substantive reply; if she bites, push straight to a specific day/time (logistics 0 → 60) next turn.
 
 **Recent shifts:**
-- 2026-05-03: opener scored 20 (polite mirror ack only); no message landed yet with personality.
+- 2026-05-03: opener at 20; polite ack only; prior suggest never sent; re-suggesting with tighter options.
+- 2026-05-03: cleaned up erroneous strategy card stats from unsent prior suggest.
 
 ## Open threads
 
@@ -78,4 +79,5 @@ strategy_used_last_outcome: pending
 
 [2026-05-01 19:49] turn 1 | me: bland opener "Nice to meet you" | none | imported
 [2026-05-01 20:42] turn 2 | her: polite reciprocal ack "Nice to meet you too" | n/a | imported
-[2026-05-03 14:00] turn 3 | options suggest — dead opener reset | opener-flirty-edge / opener-lead-with-take / opener-scarcity-direct-ask | pending
+[2026-05-03 14:00] turn 3 | options suggest — dead opener reset | opener-flirty-edge / opener-lead-with-take / opener-scarcity-direct-ask | unsent (re-suggested turn 4)
+[2026-05-03 14:30] turn 4 | re-suggest: 3-way dead-opener reset targeting meet-signal | opener-scarcity-direct-ask / recovery-bold-reset / opener-lead-with-take | pending

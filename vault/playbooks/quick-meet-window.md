@@ -1,121 +1,170 @@
 ---
 goal_type: quick-meet-window
 created: 2026-05-02
-last_reviewed: 2026-05-02
+last_reviewed: 2026-05-03
 ---
 
 # Playbook: quick-meet-window
 
-The full arc when you're optimising for a real meet within the
-current trip / week. Casual, honest about timeline, no pretense of
-long-term.
+The arc when there's a real, time-bounded window — a trip, a visit, a
+finite overlap of cities — and the optimisation target is a meet
+inside it.
 
-## Premise
+## Psychological frame
 
-You have ~5–14 days of overlap. The signal is "if we click, let's
-meet while we both can." Not aggressive, not deceptive — explicit
-about the window where it comes up naturally.
+This goal_type runs on **A7 scarcity (real options)** as the framing
+layer everything else hangs off. The window is a fact, not a tactic;
+manufactured urgency reads as theatre and inverts. **A3 commitment
+ladder** is compressed — fewer rungs, each carrying more weight, so
+**A1 pre-suasion** does extra work because there's less recovery time
+from a weak opener. **I9 time distortion** is the operational
+multiplier: a high-density 20-minute exchange does the work of three
+days of low-density texts, so emotional arc compresses into clock-time
+arc. **A18 hyperpersonal** asymmetry compounds in this direction —
+when the frame is strong and the tempo is real, ambiguity reads warm
+fast; when the frame is weak, the same ambiguity reads cold and the
+window closes before rapport ever builds.
 
-## Pacing target
+The frame to install: *if this happens it has to be soon, and that's
+fine because my life is already running and you'd be joining
+something*. **I11 statement-of-intent** is on the table here — direct
+game without the rapport scaffold rides on the bet that frame
+confidence + real scarcity substitute for warmth investment. It works
+when the scarcity is genuine and the voice can carry it; it fails
+loudly otherwise.
 
-- **Day 0**: opener.
-- **Day 0–1**: rapport, 3–5 of your turns.
-- **Day 1–2**: qualifying compresses; if she's reciprocating, skip
-  to escalation.
-- **Day 2–3**: escalation. Soft-anchor or direct ask depending on
-  signals.
-- **Day 3–4**: logistics. Lock day + place.
-- **Day 4–5+**: confirm + meet.
+## Phase-progress allocation
 
-If you're past day 5 and still in rapport, the playbook isn't
-working — investigate (goal-drift, voice mismatch, or wrong
-archetype).
+- **opener** — target 60+ in one to two turns. The opener carries
+  more frame-load than in any other goal_type. **A1** and **A18** get
+  re-weighted up; weak opener has nowhere to recover to.
+- **rapport** — target ~50–60, not 80. Cap at 3–5 of your turns.
+  **A2 reciprocity gradient** still applies but the gradient runs
+  faster. Don't over-invest in mutual texture; the meet is the
+  texture.
+- **qualifying** — often folded into rapport or skipped entirely.
+  Target 30–50. **A11 self-perception** still wants one micro-
+  qualifying beat to stick the ladder, but don't run the full arc.
+- **escalation** — push in parallel with late rapport, not after it.
+  Target 60+ by day 2–3. **A7** and **I11** get re-weighted up; **F8
+  Star** (mystery-distance) gets re-weighted down — Star evaporates
+  on a quick clock.
+- **logistics** — target 80+ by day 3–4. **A16 autonomy-supportive
+  choice architecture** matters more here, not less; pressure under
+  scarcity converts to revulsion fast.
+- **confirm** — short and warm. **A10 sociometer** is the only thing
+  to watch; over-confirmation undoes everything.
 
-## Phase-by-phase
+## Timeline
 
-### opener
-- **Default picks** (in rough preference order, calibrate to her
-  profile + your voice notes):
-  - `opener-callback-to-photo` if photos have a *specific*
-    grabbable detail. Data-backed top-converter when phrased as a
-    5-second-to-answer noticing, not vague compliment.
-  - `opener-flirty-edge` if voice notes allow flirty register and
-    photos are generic. One sentence with temperature.
-  - `opener-lead-with-take` to skip profile anchoring entirely;
-    her vibe calibrates the topic register, the message is your
-    own move.
-  - `opener-scarcity-direct-ask` when you genuinely have only a
-    few days left in town. The scarcity is real, not manufactured.
-- **Avoid**: leading with the travel timeline as the headline —
-  reads transactional. Let it come up naturally in rapport when she
-  asks "where are you from."
+Field-tested, durable:
 
-### rapport
-- 3–5 of your turns max. Cap it.
-- **Default picks**:
-  - `rapport-share-then-volley` — share + invite her to match.
-  - `rapport-playful-tease` — tease her *takes* (never her body)
-    to raise temperature without grinding.
-  - `rapport-mirror-then-pivot` — match her energy, then introduce
-    one adjacent angle.
-  - `rapport-frame-control` — when she tests, brief acknowledge +
-    redirect to your move. Don't fold.
-  - `rapport-social-proof` — drop one offhand life-context line
-    ("we ended up at hideout last night"). Real, never performance.
-- Drop your travel context naturally when she asks; don't volunteer
-  preemptively.
+- **Day 0** — opener. Frame ceiling set high in one shot.
+- **Day 0–1** — rapport, 3–5 of your turns.
+- **Day 1–2** — qualifying compresses. If she's reciprocating warmly,
+  skip into escalation.
+- **Day 2–3** — escalation. Soft-anchor or direct ask depending on
+  signals. Field-tested ask window: **messages 5–7 in a warm thread**,
+  faster than the 7–11 default.
+- **Day 3–4** — logistics. Lock day + place in two volleys max.
+- **Day 4–5+** — confirm + meet.
 
-### qualifying
-- Compress hard. 1–2 turns max, often skipped entirely.
-- `qualifying-ask-take` — one fork-question to find a real read.
-- `rapport-share-then-volley` to test fit while keeping warmth.
+Past day 5 still in rapport: the playbook isn't running. Either the
+goal_type is wrong, the opener didn't compound (A1 + A18 failure), or
+the user is avoiding escalation. Surface goal-drift before suggesting
+another rapport turn.
 
-### escalation
-- The high-leverage phase. **Field-tested ask window: messages
-  7-11**, faster (5-7) when signals are hot.
-- **Default picks**:
-  - `escalation-specific-invite` — top-converter. Yes/no with one
-    time + one place. Default when rapport is warm.
-  - `escalation-direct-ask` — when window is ≤ 4 days, she's a
-    planner, or she's already implied wanting to meet.
-  - `escalation-time-bridge` — drop "when we get drinks" 1-2 turns
-    before the formal ask. Makes the eventual invite just logistics.
-  - `escalation-soft-time-anchor` — when `days_remaining > 4` and
-    she's not a planner type.
-  - `escalation-activity-anchor` — when she's volunteered a place
-    or activity to do.
-  - `escalation-phone-bridge` — when her bio explicitly says she's
-    a phone-caller, or text is plateauing.
+**Channel-jumps** (voice note, phone) compress timeline sharply under
+scarcity — a 90-second voice note around day 2 can collapse two days
+of text rapport into one move (**I9** time distortion + **A18**
+amplification).
 
-### logistics
-- `logistics-two-option-close` is default.
-- `logistics-specific-place` when you've used `cities/<slug>.md`
-  to pick a real default.
-- Don't drag scheduling. Two volleys max.
+## Strategy priors
 
-### confirm
-- `logistics-day-of-confirm` only. Otherwise silent.
+**opener** — favored: `opener-callback-to-photo` (A2 reciprocity at
+manageable size, top-converter when a specific detail exists),
+`opener-lead-with-take` (A14 otherness + I1 cocky-funny),
+`opener-flirty-edge` (A12 misattribution priming),
+`opener-scarcity-direct-ask` (I11 statement-of-intent + A7) when
+scarcity is real and voice carries it. Inappropriate:
+`opener-low-stakes-question` (cognitive-ease fallback wastes the
+high-leverage opener slot here).
 
-### recovery
-- One attempt only on this goal type.
-- `recovery-bold-reset` first — new energy from your world, no
-  acknowledgment of the silence.
-- `recovery-clean-reopen` as fallback. If neither lands, mark dead,
-  move on.
+**rapport** — favored: `rapport-share-then-volley`,
+`rapport-playful-tease` (A12 light tension), `rapport-frame-control`
+(I7), `rapport-social-proof` (A4 incidental, A8 phantom). Re-weight up
+**F1 Rake** and **I2 push-pull** — temperature-raising moves earn
+their place here. Re-weight down **F6 Charmer** (return-attention-to-
+her registers as time-luxury this goal doesn't have) and **F8 Star**
+(mystery-distance burns clock).
 
-## Failure modes
+**qualifying** — fold into rapport. `qualifying-ask-take` once if at
+all. **I12 five-questions** can compress qualifying into one turn
+when energy is high.
 
-- **Over-rapport**: you're 8 days in and still in rapport. Goal
-  was wrong (this isn't `quick-meet-window`) or escalation is being
-  avoided. Surface the drift.
-- **Premature ask**: escalating before mutual reciprocation. She
-  goes cold. Recover once with `recovery-clean-reopen`.
-- **Plan inflation**: scheduling drags into 5+ message volleys.
-  Collapse with `logistics-two-option-close` and accept whichever
-  she picks.
+**escalation** — favored: `escalation-specific-invite` (top-converter,
+A16 autonomy-supportive), `escalation-direct-ask` (I11 + A7) when
+window ≤ 4 days or she's a planner, `escalation-time-bridge` (H7
+insinuation) one to two turns before the formal ask,
+`escalation-soft-time-anchor` when she's not a planner type,
+`escalation-phone-bridge` (channel-jump) if text is plateauing.
 
-## What success looks like
+**logistics** — favored: `logistics-two-option-close` (A16 + A17
+no-as-safety), `logistics-specific-place` when a city default exists.
+Inappropriate: open-ended availability ("whenever works") — collapses
+A7 entirely.
 
-A ~4–7 day arc from match to a meet that happens. Both of you
-honest about the timeline, both having a real time. No pretense
-of follow-up unless you both want one.
+## Failure modes (goal-specific)
+
+- **Manufactured urgency without real scarcity → A7 detection → frame
+  collapse.** "I have limited time this week" with no actual
+  constraint pattern-matches as theatre, which inverts scarcity and
+  lowers the sociometer reading on him simultaneously.
+- **Headlining the timeline → A1 frame poisoning + transactional
+  read.** Leading with "I'm only here three days" anchors the thread
+  as a logistics negotiation. The window is a fact that *leaks*
+  through context (declined Thursday, mention of flying out), not a
+  headline.
+- **Skipping rungs under time pressure → A3 ladder violation.**
+  Asking for the meet before any micro-investment has compounded
+  triggers refusal — the brain rejects moves that don't match prior
+  consistency. Direct game (I11) is *not* skipping rungs; it's
+  collapsing them through frame confidence. Different mechanism.
+- **Over-availability under scarcity → A7 collapse, double leak.**
+  Reorganising your life around her schedule on a quick-meet read
+  signals the opposite of the frame you've installed. The bug
+  signature: scarcity-leak in the opener, full-availability in
+  logistics — she pattern-matches the contradiction and both moves
+  collapse.
+- **Pen-pal drift past day 5 → goal-type misclassification.** When
+  rapport extends past where escalation should have fired, it isn't
+  "patient rapport" — the goal_type was wrong from the start.
+- **Anxious double-text on a slow reply → A10 sociometer leak under
+  amplified stakes.** Quick-meet windows make every reply feel high-
+  stakes, which makes anxious moves more tempting and more costly.
+  H2 calculated absence almost always beats the double-text here.
+
+## Strategy selection priors
+
+Mechanism categories that **dominate** under quick-meet-window:
+
+- **A7 scarcity** as ambient texture, never headline.
+- **I9 time distortion** through density — voice notes, narrative
+  compression (I10), one substantive turn over five small ones.
+- **I11 statement-of-intent** when voice and scarcity align.
+- **A1 pre-suasive frame** doing extra ceiling work.
+- **A3 commitment ladder** compressed — each rung carries more
+  weight.
+- **F1 Rake** and **F7 Charismatic** as live registers.
+- **H7 art of insinuation** in the bridge from rapport to the ask
+  ("when we get drinks" before "thursday at 8").
+
+Mechanism categories to **suppress**:
+
+- **F8 Star** (extended mystery) — evaporates on a clock.
+- **F6 Charmer** in pure return-attention mode — burns scarcity-
+  signal.
+- **A13 variable-ratio reinforcement** at extended-window cadence —
+  the slot-machine schedule is wrong tooling for this timeline.
+- **A15 open loops** that promise long-arc payoff — keep loops short
+  and resolvable inside the window.

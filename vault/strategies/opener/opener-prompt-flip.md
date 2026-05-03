@@ -12,24 +12,96 @@ goal_stats:
 
 ## What it is
 
-Take her dating-app prompt (Hinge prompt, Tinder bio line) and flip
-it back at her with your own take, not a question. The point is to
-show you read it AND have a position, not to interrogate her.
+**Targets:** opener 0 → 60+ via frame inversion on a surface she
+explicitly authored.
 
-Example: prompt "Two truths and a lie" → "your two truths better be
-the boring ones because the lie is the only thing I'm reading first."
+**Mechanisms:** A1 pre-suasive frame inversion + A9 light reactance
++ A11 self-perception (her prompt becomes a stake she defends) + A2
+specific-noticing reciprocity.
+
+The move takes a prompt or bio line she explicitly wrote — a Hinge
+prompt answer, a Tinder bio one-liner, a Bumble caption — and flips
+it back as *his* take, not as a question about hers. He doesn't ask
+her to elaborate; he registers a position on her position. Reading
++ having an opinion = the entire move.
+
+The mechanism is the frame inversion (A1). The default opener-
+posture for any prompt-referencing message is interview ("what's
+your two truths?") — that anchors low. Flipping the prompt as a
+take instead inverts who's auditioning whom: she wrote it; he's
+the one with the verdict. That carries A9 light reactance because
+his read installs a tiny freedom (his approval, his interest in her
+take) she has slight motivation to claim or contest. Because the
+prompt was her own deliberate authoring, engaging with it is A2
+specific-noticing at high resolution — she chose to put that line
+in front of strangers, and a flip *on the line itself* shows he
+read what she chose to show, not generic profile-acknowledgment.
+Self-perception (A11) compounds: the moment she defends, expands,
+or pushes back on his take, she's invested in *her* prompt as a
+stake, which raises her felt interest by the Bem mechanism.
+
+The card's flavour is *frame-inversion specialist*. It carries a
+specific risk profile — generic prompts give nothing to flip, and
+the move tips into roast-frame fast if the read leans mean. The
+target is confident reads, not dunks.
+
+Example illustrations:
+
+- (prompt: *Two truths and a lie*) "your two truths better be the
+  boring ones. the lie is the only thing I'm reading first."
+- (prompt: *I'm overly competitive about*) "this is going to come
+  up at a bar at some point and someone's going to lose."
+- (prompt: *The way to win me over is*) "noted. and slightly
+  intimidating."
+- (bio: *just here for the food recs*) "I do have a list. you'd
+  have to earn it."
+
+Each registers a position on what she wrote, doesn't ask her to
+explain herself, and leaves one open loop (A15) for her to push
+back on or expand.
 
 ## When it works
 
-- Her prompts have texture (a take, a joke, a specific reference).
-- You can land a one-line read that's confident, not snarky.
-- The flip moves the conversation forward; you're not just dunking.
+- Her prompt or bio has texture — a take, a joke, a specific
+  reference, anything with point of view. Generic prompts ("looking
+  for someone who...") give no surface for the flip; the A1
+  inversion can't fire on a substrate that has no frame to invert.
+- The flip is one line, confident, and reads as *his* take rather
+  than a graded report on hers. The move is a position, not a
+  review.
+- The flip lands warmer than her prompt was (A12 misattribution
+  needs warmth substrate) or at exactly her register. Going colder
+  than her own prompt reads as critique.
+- The user's voice (`voice.md`) supports having a position. If the
+  user's register skews observational/curious, lead-with-take is
+  a better fit for the same ceiling.
 
 ## When it fails
 
-- Generic prompts ("looking for someone who…") with nothing to flip.
-- Your flip reads as roast — kills the warmth before it starts.
-- The flip is longer than her prompt; you're trying too hard.
+- **Generic prompt with nothing to flip → A1 mechanism absent.**
+  "Looking for someone genuine" doesn't have a frame to invert.
+  Forcing a flip on it produces filler; pick a different opener.
+- **Flip reads as roast → A9 miscalibrated + A14 cruelty register.**
+  Reactance only generates pull when the freedom installed is
+  attractive to claim. A mean read installs a freedom (his
+  approval) she'd rather not need. Brain doesn't misattribute the
+  hit as attraction.
+- **Flip is longer than the prompt → A2 inversion + I6 DLV.** Effort
+  asymmetry reads as trying-too-hard; the prompt was one line, the
+  flip should be too. Length signals optimisation-for-impressing.
+- **Flip ends in a question, not a take → A1 mechanism collapses.**
+  "Two truths and a lie. what's the lie?" is interview-frame in
+  costume. The move requires landing on a position; the open loop
+  is implicit, never asked.
+- **Flip references her bio as the subject → A16 autonomy
+  violation.** Bio quoting as topic puts her in performance-frame
+  ("did he correctly process my profile"). The flip uses the prompt
+  as a *trigger* for his take; the take itself has to stand alone
+  semantically.
+- **Hot-take swing on a sensitive prompt → A12 fails on real-
+  insecurity targets.** If her prompt is earnest or vulnerable, the
+  flip-as-tease register reads as cold. Read register before
+  flipping.
 
 ## Outcomes by goal
 
