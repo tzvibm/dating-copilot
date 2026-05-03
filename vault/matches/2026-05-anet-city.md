@@ -18,7 +18,7 @@ girl_archetype: "self-care-glam / foodie-romantic"
 profile_analyzed_at: 2026-05-02
 last_message_at: 2026-05-02T14:00
 strategy_used_last: opener-prompt-flip
-strategy_used_last_outcome: pending
+strategy_used_last_outcome: sent
 ---
 
 ## Profile
