@@ -15,7 +15,7 @@ goal_set_at: 2026-05-02
 goal_basis: default from identity; no signal from her yet to override
 girl_archetype: active foodie, cafe-hopper, phone-caller, "still figuring it out"
 profile_analyzed_at: 2026-05-02
-last_message_at: 2026-05-01T20:42
+last_message_at: 2026-05-03T13:30
 strategy_used_last: opener-scarcity-direct-ask
 strategy_used_last_outcome: pending
 ---
@@ -56,6 +56,7 @@ strategy_used_last_outcome: pending
 
 - me  [2026-05-01T19:49]: Nice to meet you
 - her [2026-05-01T20:42]: Nice to meet you too
+- me  [2026-05-03T13:30]: Bet you know this city better than I do. Drinks this week?
 
 ## Conversation log
 
@@ -66,4 +67,8 @@ strategy_used_last_outcome: pending
 [2026-05-02 12:00] turn 5 | suggest options (3): scarcity-direct-ask / self-lead-invite / flirty-edge-direct-ask | opener-scarcity-direct-ask | pending
 [2026-05-02 14:00] turn 6 | suggest options (3): scarcity-direct-ask / lead-with-take / flirty-edge | opener-scarcity-direct-ask | pending
 [2026-05-03 12:00] turn 7 | suggest draft: scarcity + tonight ask | opener-scarcity-direct-ask | pending
-[2026-05-03 12:30] turn 8 | suggest options (3): scarcity-direct / lead-with-take / flirty-edge | opener-scarcity-direct-ask | pending
+[2026-05-03 12:30] turn 8 | suggest options (3): scarcity-direct / lead-with-take / flirty-edge | opener-scarcity-direct-ask | sent: Bet you know this city better than I do. Drinks this week?
+
+## Sent
+
+- [2026-05-03 13:30] Bet you know this city better than I do. Drinks this week?
