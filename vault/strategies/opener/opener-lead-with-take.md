@@ -21,17 +21,19 @@ auditioning by referencing her profile back at her.
 The point: she should learn one thing about *you* from your opener.
 Not the other way around.
 
-Examples (note the brevity — one or two short sentences, no em
-dashes, no compound clauses):
+Examples (short, direct, no decoding needed):
 
-- (Profile reads "creative / cafe-hopper") "on a quest for a cafe
-  here that isn't lo-fi only. accepting recommendations 😈"
-- (Profile reads "outdoorsy") "friday night or saturday morning.
-  one of those is clearly the right answer."
-- (Profile reads "planner type") "thursday calendar's looking too
-  empty. need to fix that."
-- (Profile reads "bookish") "the bookstore on this block is
-  dangerous. someone needs to slow me down."
+- (Profile reads "creative / cafe-hopper") "thursday after 7. cafe
+  somewhere good. you in?"
+- (Profile reads "outdoorsy") "saturday morning hike or friday
+  drinks. dealer's choice."
+- (Profile reads "planner type") "thursday's empty on my calendar.
+  that's a problem. drinks?"
+- (Profile reads "bookish") "drinks this week. you pick the bar."
+
+Note: each example has ONE clear ask. No "feels criminal not to
+share" subtext. No poetic hedging. The reader can answer in five
+seconds.
 
 ## When it works
 

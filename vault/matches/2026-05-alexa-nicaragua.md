@@ -5,7 +5,7 @@ city: Granada, Nicaragua
 matched: 2026-05-02
 phase: opener
 phase_confidence: medium
-phase_last_assessed: 2026-05-02T09:00
+phase_last_assessed: 2026-05-02T14:00
 days_remaining: null
 distance_km: 2
 goal: drinks this week
@@ -63,3 +63,5 @@ strategy_used_last_outcome: pending
 [2026-05-01 20:42] turn 2 | her: polite reciprocal ack "Nice to meet you too" | n/a | imported
 [2026-05-02 00:00] turn 3 | me: recovering from bland opener, scarcity + local-knowledge hook | opener-lead-with-take | pending
 [2026-05-02 09:00] turn 4 | suggest options (3): scarcity-direct-ask / flirty-edge-reset / lead-with-take | opener-scarcity-direct-ask | pending
+[2026-05-02 12:00] turn 5 | suggest options (3): scarcity-direct-ask / self-lead-invite / flirty-edge-direct-ask | opener-scarcity-direct-ask | pending
+[2026-05-02 14:00] turn 6 | suggest options (3): scarcity-direct-ask / lead-with-take / flirty-edge | opener-scarcity-direct-ask | pending
