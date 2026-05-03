@@ -32,6 +32,7 @@ phase: <opener|rapport|qualifying|escalation|logistics|confirm|recovery|dead>
 phase_confidence: <low|medium|high>
 phase_last_assessed: <YYYY-MM-DDTHH:MM>
 days_remaining: <int or null>
+distance_km: <int or null>
 goal: <free-form one-liner, e.g. "drinks this week">
 goal_type: <id from goals/_archetypes.md>
 goal_confidence: <low|medium|high>
@@ -52,10 +53,34 @@ strategy_used_last_outcome: <pending|sent|replied_warm|replied_cold|no_reply|mee
 ## What's working
 ## What to avoid
 ## Open threads
+## Messages
 ## Conversation log
 ## Sent (verbatim, optional)
 ## Screenshots (optional, one entry per drop)
 ```
+
+## Messages section — verbatim thread
+
+The canonical store of the verbatim message thread, oldest at top.
+The web UI parses and edits this section directly. Format — one
+message per line, exactly:
+
+```
+- her [YYYY-MM-DDTHH:MM]: <verbatim text, single line, escape newlines as \n>
+- me  [YYYY-MM-DDTHH:MM]: <verbatim text>
+```
+
+Rules:
+- Speaker is exactly `her` or `me`. No other values.
+- Timestamp is required; use the best timestamp available (matched
+  date + 00:00 for imported messages where no timestamp is known).
+- One line per message. Real newlines inside the message become the
+  literal sequence `\n` so each entry stays on one line.
+- If the user edits this section through the UI, treat it as the new
+  truth on the next turn. Do not append duplicates.
+
+The `## Conversation log` is still the high-level decision trail
+(strategy id, outcome). `## Messages` is the raw transcript.
 
 ## Conversation log entries
 
