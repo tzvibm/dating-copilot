@@ -13,3 +13,5 @@
 ```
 
 ---
+[2026-05-02 09:00] match=2026-05-alexa-nicaragua | archetype: phone-caller + quick-meet-window signals strong early logistics push — skip rapport-build, cut to the meet
+[2026-05-02 09:00] match=2026-05-alexa-nicaragua | strategy: opener-scarcity-direct-ask created for nomad/quick-meet-window; first use pending
