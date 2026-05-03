@@ -69,7 +69,6 @@ strategy_used_last_outcome: pending
 - 4/20 reference in bio — open thread if you want to play that frame.
 - Granada-local — she lives here, you're a visitor. Asymmetric logistics knowledge in your favour to ask, hers to share.
 
-
 ## Messages
 
 - her [2026-05-02T19:27]: ❤️
@@ -77,6 +76,8 @@ strategy_used_last_outcome: pending
 - her [2026-05-02T19:27]: Hols
 - her [2026-05-02T19:27]: Hi
 - her [2026-05-02T19:27]: Nice to meet you too!
+- me  [2026-05-03T10:27]: likewise. real question -- if you were picking the spot in Granada, where are we ending up
+- her [2026-05-03T10:27]: Hiiiii
 
 ## Conversation log
 
