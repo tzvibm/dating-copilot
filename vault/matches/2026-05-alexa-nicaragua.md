@@ -1,11 +1,20 @@
 ---
 name: Alexa
+age: null
 platform: tinder
 city: Granada, Nicaragua
 matched: 2026-05-02
 phase: opener
 phase_confidence: medium
-phase_last_assessed: 2026-05-03T12:00
+phase_last_assessed: 2026-05-03T14:00
+phase_progress:
+  opener: 20
+  rapport: 0
+  qualifying: 0
+  escalation: 0
+  logistics: 0
+  confirm: 0
+turn_micro_goal: raise opener 20 → 60 by breaking the dead exchange with a message that has personality and earns a real reply
 days_remaining: null
 distance_km: 2
 goal: drinks this week
@@ -16,8 +25,8 @@ goal_basis: default from identity; no signal from her yet to override
 girl_archetype: active foodie, cafe-hopper, phone-caller, "still figuring it out"
 profile_analyzed_at: 2026-05-02
 last_message_at: 2026-05-03T13:30
-strategy_used_last: opener-scarcity-direct-ask
-strategy_used_last_outcome: sent
+strategy_used_last: opener-flirty-edge
+strategy_used_last_outcome: pending
 ---
 
 ## Profile
@@ -48,6 +57,15 @@ strategy_used_last_outcome: sent
 
 - Long text marathons. Her "Phone caller" style + identity-level rule both push the same direction: convert to meeting fast.
 
+## Match strategy
+
+**Current plan:** Thread dead from bland opener exchange. Reset with a message that has real energy — either a flirty tease to establish register, or a direct invite that leverages 1-mile proximity and real time scarcity. Goal is one substantive reply, then push straight to logistics.
+
+**Next milestone:** raise opener → 60 with a real reply this turn; pivot immediately to meet-ask if she engages.
+
+**Recent shifts:**
+- 2026-05-03: opener scored 20 (polite mirror ack only); no message landed yet with personality.
+
 ## Open threads
 
 - user-note: matched 1 mile away in Granada — logistics are trivial, the only question is when.
@@ -60,3 +78,4 @@ strategy_used_last_outcome: sent
 
 [2026-05-01 19:49] turn 1 | me: bland opener "Nice to meet you" | none | imported
 [2026-05-01 20:42] turn 2 | her: polite reciprocal ack "Nice to meet you too" | n/a | imported
+[2026-05-03 14:00] turn 3 | options suggest — dead opener reset | opener-flirty-edge / opener-lead-with-take / opener-scarcity-direct-ask | pending

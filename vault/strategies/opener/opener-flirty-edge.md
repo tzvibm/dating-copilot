@@ -5,7 +5,7 @@ status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
 goal_stats:
-  quick-meet-window: { used: 0, used_well: 0 }
+  quick-meet-window: { used: 1, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
   extended-window: { used: 0, used_well: 0 }
 ---
@@ -48,7 +48,7 @@ Examples (short — that's the point):
 
 ### quick-meet-window
 
-<!-- (no records yet) -->
+- [[2026-05-alexa-nicaragua]] turn 3 — pending
 
 ### flexible-short-window
 

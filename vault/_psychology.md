@@ -637,6 +637,412 @@ lever.
 
 ---
 
+---
+
+## F. Greene — seducer archetypes (adoptable frames)
+
+**Source.** Greene, *The Art of Seduction* (2001).
+
+Greene catalogues nine seducer types — frames a man can adopt for a
+match, calibrated to her archetype and the thread's temperature.
+These are *registers*, not personas to wholesale impersonate. The
+user's voice (`self/voice.md`) is the substrate; the seducer type is
+the angle of attack within that voice.
+
+For each type: the essence, the frame it installs, the mechanism it
+leverages, and when to deploy.
+
+### F1. The Rake
+**Essence.** Hungry, irreverent, makes her feel she awakens something
+in him. Compliments her in surgical, surprising ways.
+
+**Frame.** *I am not safe and not sorry about it.* Pleasure-coded,
+slightly transgressive, pushes against propriety just enough to feel
+forbidden.
+
+**Mechanisms.** Misattribution of arousal (A12) via transgression,
+reactance (A9) when she pushes back, scarcity (A7) implied by
+appetite for life.
+
+**When to deploy.** Match has erotic register and is reciprocating.
+Voice notes permit flirty/edgy. Avoid in cold openers (no warrant
+yet).
+
+### F2. The Ideal Lover
+**Essence.** Reads what she lacks and provides exactly that — the
+adventure she's craving, the intellectual sparring, the protector
+she's missing. Tailored attention.
+
+**Frame.** *I see what you actually want, and I'm bringing it to
+you.* High-attunement, almost therapeutic in its precision.
+
+**Mechanisms.** Liking via selective expression (A6), self-perception
+(A11) — she sees herself as the kind of woman who's understood,
+which becomes self-fulfilling.
+
+**When to deploy.** When her bio/messages reveal a clear unmet need
+(creative restlessness, intellectual hunger, escape-from-routine
+energy). Don't deploy on a cipher — Ideal Lover requires real read.
+
+### F3. The Dandy
+**Essence.** Ambiguous, gender-bending, refuses to be pinned down.
+Curiosity engine. Doesn't fit the mold she has for men.
+
+**Frame.** *I am uncategorisable, and you'll spend energy trying to
+categorise me.* Cognitive open-loop (Zeigarnik) embodied.
+
+**Mechanisms.** Zeigarnik (A15) — she keeps trying to resolve the
+ambiguity. Otherness (A14) — refuses the gendered scripts.
+
+**When to deploy.** Sophisticated/jaded match who's bored of standard
+masculine performance. Less effective with archetypes seeking
+clarity.
+
+### F4. The Natural
+**Essence.** Childlike spontaneity, plays without self-consciousness.
+Disarms by refusing to seem to be performing.
+
+**Frame.** *I'm not trying. I'm just being. Come play.*
+
+**Mechanisms.** Reciprocity (A2) — she relaxes guard because nothing
+is being extracted. Otherness via non-performance (A14).
+
+**When to deploy.** When she's been performing or guarded; gives her
+permission to drop the mask. Never via canned material — the moment
+it's optimised, the frame breaks.
+
+### F5. The Coquette
+**Essence.** Hot-cold, attainable-then-distant, intermittent rewards.
+Trains her engagement on a variable schedule.
+
+**Frame.** *You almost have me. You almost don't.* The pendulum is
+the move.
+
+**Mechanisms.** Variable-ratio reinforcement (A13), reactance via
+withdrawal (A9), Zeigarnik (A15). Among the most operationally
+powerful Greene types — and the easiest to overdo.
+
+**When to deploy.** Mid-thread, after warmth is established. Pull
+back exactly when she leans in. Not in opener (no warmth substrate).
+Stop the moment it tips into anxious-attachment-induction — natural
+withdrawal from a full life, not engineered absence.
+
+### F6. The Charmer
+**Essence.** Makes her feel like the centre of attention without
+overt seduction. Listens, deflects from himself, returns focus to
+her in flattering precision.
+
+**Frame.** *Everything about you interests me, and nothing about me
+needs your attention right now.* Sociometer-positive: he's not
+seeking validation.
+
+**Mechanisms.** Self-perception (A11) — she invests in answering
+because his attention is drawing her out. Liking (A6). Reciprocity
+(A2) gradient kept in her favour.
+
+**When to deploy.** Rapport-heavy phases, especially with verbal/
+narrative archetypes who want to be heard. Risk: tips into
+interviewer-frame if no take of his own ever surfaces.
+
+### F7. The Charismatic
+**Essence.** Conviction radiating outward — about ideas, taste,
+plans, life. The vision is contagious.
+
+**Frame.** *I'm going somewhere; come with me.*
+
+**Mechanisms.** Authority by leak (A5), pre-suasive frame (A1),
+mate-preference cues for status/agency (A19). Powerful for high-
+ambition archetypes.
+
+**When to deploy.** When the user has real conviction to draw on —
+this fails on canned charisma. The match responds to vision.
+
+### F8. The Star
+**Essence.** Ethereal, slightly distant, lets her project onto him.
+The screen on which she paints her ideal.
+
+**Frame.** *I am partly absent, partly luminous. Fill in the rest.*
+
+**Mechanisms.** Otherness (A14), Zeigarnik (A15), hyperpersonal
+imagination-filling (A18) — text amplifies this register.
+
+**When to deploy.** Extended-window goals where mystery sustains
+tension. Not for quick-meet — Star evaporates on contact, needs the
+gap.
+
+### F9. The Siren (gender-flipped: the Sensualist)
+**Essence.** Pure pleasure-coded presence. Slows time. Sensual
+attention.
+
+**Frame.** *Time bends around me. Come into the slowness.*
+
+**Mechanisms.** Misattribution (A12) via embodied register,
+otherness (A14).
+
+**When to deploy.** Late-rapport / escalation with a match who's
+warmed substantively. Not for openers; not for short-attention
+threads.
+
+---
+
+## G. Greene — seduction arc (mapped to phase model)
+
+Greene's 24-step arc compresses into four meta-phases. Each maps onto
+our `phase_progress` axes:
+
+| Greene phase | Our phases | Dominant move |
+|---|---|---|
+| **Stir interest and desire** | opener, early rapport (0-30) | Mixed signals, an aura that's both available and elusive. Make first contact indirect — through context, reputation, or angle, not direct request. |
+| **Create pleasure and confusion** | rapport (30-70), early qualifying | Effect mild disorientation. Switch tones. Pleasure-coded moments alternated with absences. The thread becomes affectively rich and somewhat unpredictable. |
+| **The deepening effect** | qualifying (60+), escalation | Stir up the transgressive. Mix pleasure with mild pain (tease, mock-disappointment, light withdrawal). She becomes invested in resolving the tension. |
+| **Moving in for the kill** | escalation (60+), logistics | Drop the ambiguity. The invitation is direct, specific, frame-confident. Greene's principle: at the close, the indirect approach inverts — clarity becomes the seduction. |
+
+**Operational note.** The arc is not strictly linear. Late-arc moves
+can be re-injected mid-rapport to reset tension; early-arc indirection
+should not appear at logistics. Use the table as gating, not script.
+
+---
+
+## H. Greene — tactical principles (signature moves)
+
+### H1. Send mixed signals
+Project two contradictory things at once: warmth + slight distance,
+attention + absence, agreement + tease. The contradiction is the
+hook — her mind keeps trying to resolve which signal is "real."
+
+**Mechanisms.** Zeigarnik (A15) + variable-ratio (A13) +
+hyperpersonal ambiguity (A18).
+
+### H2. Calculated absence
+The withdrawal that makes presence felt. Brief, real, never
+explained. She notices the silence, feels its weight, then your
+return lands at higher temperature than the previous turn.
+
+**Mechanisms.** Reactance (A9), scarcity (A7).
+
+**Failure mode.** Engineered absence pattern-matches as game-playing.
+The absence has to feel natural — coming from a real life with
+other commitments — or it inverts.
+
+### H3. Stir up the transgressive
+Introduce mild taboo. The forbidden register — not crassness, but
+edge: the slightly inappropriate observation, the off-limits topic
+broached lightly, the implication of something she shouldn't want.
+
+**Mechanisms.** Misattribution of arousal (A12), reactance (A9).
+
+**Failure mode.** Over-played, becomes vulgar. The art is the
+*implication* of transgression, not the transgression itself.
+
+### H4. Mix pleasure with pain
+Compliment + tease. Warmth + mock-disappointment. The texture is
+what creates pull — pure pleasure habituates fast, pure pain
+extinguishes engagement, but the alternation locks attention.
+
+**Mechanisms.** Variable-ratio (A13), misattribution (A12).
+
+### H5. Create temptation, then leave them wanting
+Show enough to be tantalising, never enough to satisfy. The thread
+that closes one loop while opening another. The voice note that
+ends mid-thought. The story whose ending she has to ask for.
+
+**Mechanisms.** Zeigarnik (A15), otherness (A14).
+
+### H6. Enter their spirit (calibrated mirroring)
+Adopt her register, vocabulary, cadence — then nudge it toward
+yours. Greene's principle: meet them where they are before leading
+them where you want them to be.
+
+**Mechanisms.** Liking via similarity (A6), reciprocity (A2).
+Compatible with Voss labels/mirrors (A17).
+
+### H7. The art of insinuation
+Suggest without stating. Imply meeting before asking. Imply intimacy
+before claiming it. The reader does the work of inferring — and
+that inference is hers, so it sticks (self-perception, A11).
+
+**Mechanisms.** Self-perception (A11), Zeigarnik (A15), pre-suasion
+(A1).
+
+---
+
+## I. PUA-tradition tactical framework
+
+**Source.** Strauss, *The Game* (2005); David DeAngelo, Mystery,
+Ross Jeffries, Tyler Durden, Real Social Dynamics-era community
+synthesis. Operationally observant, often crude in originating
+register. Filtered for text-only courtship; in-person-only tactics
+(kino escalation, last-minute resistance, three-second rule literal)
+omitted.
+
+### I1. Cocky-funny (DeAngelo)
+**Definition.** Statements that combine arrogant claim with
+self-aware humour, so the arrogance reads as play. "You'd be lucky
+to keep up with me on a tuesday" — the claim is bold; the wink
+makes it land.
+
+**Mechanism.** Simultaneously activates authority by leak (A5),
+reactance (A9 light), and humour-as-competence-signal (A19). The
+self-awareness prevents the authority claim from collapsing into
+performance.
+
+**Application.** Default register for openers and rapport in this
+system, calibrated by `voice.md`. The single most reliable PUA-
+tradition tactic that survives translation to text.
+
+### I2. Push-pull
+**Definition.** Statement that pulls her in (compliment, agreement,
+warmth) immediately followed by a push (tease, withdrawal, mock-
+disqualification), or vice versa. "ok that was actually clever, I'm
+revising my opinion of you upward. don't let it go to your head."
+
+**Mechanism.** Misattribution (A12) on the push, reciprocity (A2)
+on the pull, variable-ratio (A13) at the message level.
+
+**Application.** Mid-rapport through escalation. One push-pull per
+turn maximum — stacking dilutes.
+
+### I3. The Neg
+**Definition.** Backhanded observation that registers as mild
+critique without being insult. "you're trouble, I should know
+better" / "weirdly, the spotify-playlist-girls always end up being
+the most chaotic." Mystery's original framing was destabilisation;
+the durable version is *playful frame-establishment that signals
+non-supplication*.
+
+**Mechanism.** Reactance (A9), sociometer signal (A10) — registers
+that he's not auditioning for her approval.
+
+**Application.** Rapport with warm matches who can carry it. Targets
+*chosen categories* (her self-described type, her stated takes),
+never her body or innate traits — the latter crosses from playful
+critique into actual injury and the brain doesn't misattribute pain
+as attraction. See A9 failure mode.
+
+### I4. AMOG handling (Alpha Male of the Group)
+**Definition.** Originally: handling competitive male presence in
+nightlife. Text translation: handling shit-tests, third-party
+mentions, ex-mentions, comparison frames ("my last guy was like
+that…", "you sound just like every other guy on hinge").
+
+**Mechanism.** Frame control. Refuse to enter the frame she's
+inviting (defensive comparison) — acknowledge briefly, redirect to
+your own move. "depends on the day" → continue the thread you were
+on.
+
+**Application.** Reactive only. The error is engaging the frame,
+not the words. "I'm not like other guys" loses the frame; "depends
+on the day" plus return-to-topic holds it.
+
+### I5. IOI / IOD — indicator of interest / disinterest
+**Definition.** Behavioural signals her interest is rising or
+falling. Text IOIs: substantive replies, follow-up questions, voice
+notes, callbacks to earlier turns, name use, future-pacing in her
+own messages. Text IODs: shrinking message length, lag in reply
+time, single-word responses, not asking back, dropping topics he
+opened.
+
+**Application.** Continuously read IOIs/IODs to gate phase progress
+and strategy choice. Two consecutive IODs = phase has regressed.
+Three IOIs in a turn = compress timeline; consider pulling logistics
+forward.
+
+### I6. DHV / DLV — demonstrate higher / lower value
+**Definition.** Every move encodes mate-value information. DHVs:
+incidental social proof, competence leakage, frame stability,
+humour, having one's life together. DLVs: validation-seeking,
+explanations, apologies, hedges, name-dropping with effort,
+overlong messages.
+
+**Application.** Audit every candidate message: is this a DHV or a
+DLV? A neutral message is fine; a DLV is a leak. The asymmetry is
+steep — one DLV often outweighs three DHVs.
+
+### I7. Frame control
+**Definition.** Whoever's frame the conversation operates in,
+controls it. Frames: who's pursuing whom, who's evaluating whom,
+what register applies, what the thread is "about." The player with
+the stronger frame doesn't argue the other's frame — he ignores it
+and proceeds in his own.
+
+**Mechanism.** Pre-suasion (A1) sustained turn over turn. Reactance
+(A9) on shit-tests.
+
+**Application.** Especially under pressure: shit-tests, comparisons,
+ambiguity, late replies. The instinct to defend or explain enters
+her frame; the move is to acknowledge briefly and return to yours.
+"sure, depends on the day" plus original move > "no, I'm not like
+that."
+
+### I8. The phantom
+**Definition.** Implied-but-never-explicit other-options register.
+Plans she's not part of, friends mentioned without elaboration,
+schedule density. Never "I have other matches" (DLV) — always "we're
+doing thursday at the wine bar" with no specification of who "we"
+is (DHV).
+
+**Mechanism.** Social proof (A4), scarcity (A7), otherness (A14).
+
+**Application.** Continuous low-level texture. Not headline. The
+moment it's pointed at, it inverts.
+
+### I9. Time distortion
+**Definition.** Compressing emotional arc into short windows so the
+match feels like more time has passed than literal clock-time. A
+single voice note that opens and closes a story. A 90-minute thread
+that spans tease → tension → close. Mystery's principle: time-in-
+relationship feels relative to emotional density.
+
+**Mechanism.** Hyperpersonal compression (A18), Zeigarnik (A15),
+variable-ratio (A13).
+
+**Application.** Quick-meet-window goals especially. A high-density
+20-minute exchange does the work of three days of low-density
+texts.
+
+### I10. Storytelling structure
+**Definition.** Replace facts with narratives. Not "I went to
+Mexico City last month" — "the second night in mexico city I ended
+up at a rooftop bar arguing with a tequila distiller about whether
+mezcal was a fad. lost the argument. earned a free shot." Beginning,
+tension, resolution, take.
+
+**Mechanism.** Authority by leak (A5), Zeigarnik (A15) within the
+narrative, social proof (A4) embedded in the cast.
+
+**Application.** Mid-rapport especially. Voice notes amplify the
+mechanism — narrative is what voice format is *for*. A single
+well-told story does multiple turns of work.
+
+### I11. Statement of intent (Tyler Durden / direct game)
+**Definition.** Bypass indirect rapport by stating intent
+confidently early. "you're cute. let's get a drink this week."
+Skips the rapport-loop entirely on the bet that frame confidence
+substitutes for warmth investment.
+
+**Mechanism.** Pre-suasion (A1) via boldness, scarcity (A7)
+implied by efficiency, mate-preference signal for agency (A19).
+
+**Application.** High-risk, high-reward. Best for quick-meet-window
+goals where rapport-investment and timeline don't align. Fails
+without genuine warmth substrate — direct game from a man who can't
+back the frame collapses fast. Voice notes signal the warmth that
+text alone can't.
+
+### I12. The five-questions game / qualifying spike
+**Definition.** Rapid escalation of mutual disclosure via a small
+structured exchange — "ok five questions, fast, no thinking." Forces
+investment density and self-perception lock-in.
+
+**Mechanism.** Self-perception ladder (A11), reciprocity (A2),
+commitment ladder (A3) compressed.
+
+**Application.** Mid-rapport when energy is high but topics have
+been surface. Risk: feels gamey if deployed cold. Best when she's
+already volunteering substantively.
+
+---
+
 ## Index — quick lookup
 
 | Handle | Name | Primary use phase |
@@ -660,3 +1066,31 @@ lever.
 | A17 | Calibrated questions, labels, no-as-safety | logistics, recovery |
 | A18 | Hyperpersonal effect | all (text-only context) |
 | A19 | Mate-preference asymmetries | rapport, escalation |
+| F1 | Greene: The Rake | rapport, escalation |
+| F2 | Greene: The Ideal Lover | rapport (after profile read) |
+| F3 | Greene: The Dandy | rapport (sophisticated matches) |
+| F4 | Greene: The Natural | rapport (warm/guarded matches) |
+| F5 | Greene: The Coquette | rapport, escalation |
+| F6 | Greene: The Charmer | rapport |
+| F7 | Greene: The Charismatic | rapport, escalation |
+| F8 | Greene: The Star | extended-window |
+| F9 | Greene: The Siren | escalation |
+| H1 | Greene: mixed signals | all |
+| H2 | Greene: calculated absence | rapport, recovery |
+| H3 | Greene: stir up transgressive | rapport, escalation |
+| H4 | Greene: pleasure with pain | rapport, escalation |
+| H5 | Greene: temptation, leave wanting | all |
+| H6 | Greene: enter their spirit | rapport |
+| H7 | Greene: art of insinuation | escalation, logistics |
+| I1 | Cocky-funny (DeAngelo) | opener, rapport |
+| I2 | Push-pull | rapport, escalation |
+| I3 | The Neg | rapport |
+| I4 | AMOG handling | rapport (reactive) |
+| I5 | IOI / IOD reading | all |
+| I6 | DHV / DLV audit | all |
+| I7 | Frame control | all |
+| I8 | The phantom | rapport, escalation |
+| I9 | Time distortion | quick-meet-window |
+| I10 | Storytelling structure | rapport |
+| I11 | Statement of intent (direct game) | quick-meet-window |
+| I12 | Five-questions / qualifying spike | rapport, qualifying |
