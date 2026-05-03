@@ -72,7 +72,7 @@ Example illustrations:
 - "you said the bookstore on calle 5 was the move. went last
   weekend, you were right, now I owe you a different
   recommendation."
-- "the running argument from before — settled it. I'm team
+- "the running argument from before, settled it. I'm team
   late-dinner. you?"
 - "saw the place you mentioned. it has a goat in the window.
   this changes everything."

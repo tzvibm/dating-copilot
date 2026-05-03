@@ -14,9 +14,9 @@ goal_set_at: 2026-05-02
 goal_basis: identity default; user is in Granada with only a few more days
 girl_archetype: sugar-curious college party-type
 profile_analyzed_at: 2026-05-02
-last_message_at: 2026-05-03T10:31
-strategy_used_last: rapport-frame-control
-strategy_used_last_outcome: sent
+last_message_at: 2026-05-03T10:27
+strategy_used_last: escalation-direct-ask
+strategy_used_last_outcome: replied_warm
 ---
 
 ## Profile
@@ -78,7 +78,6 @@ strategy_used_last_outcome: sent
 - her [2026-05-02T19:27]: Nice to meet you too!
 - me  [2026-05-03T10:27]: likewise. real question -- if you were picking the spot in Granada, where are we ending up
 - her [2026-05-03T10:27]: Hiiiii
-- me  [2026-05-03T10:31]: Not an answer 😈
 
 ## Conversation log
 
@@ -88,8 +87,6 @@ strategy_used_last_outcome: sent
 [2026-05-02 19:16] turn 4 | me: regenerate — 3 options spanning mirror+pivot, share+volley, language-exchange callback | rapport-share-then-volley | superseded
 [2026-05-02 19:30] turn 5 | me: regen #2 — covering local-guide pivot, 4/20 callback, language-exchange share | rapport-mirror-then-pivot | sent | sent: 1
 [2026-05-02 19:45] turn 6 | me: pre-stage post-reply options (no her-msg yet) — direct-ask, 4/20 callback, sunset activity-anchor | escalation-direct-ask | replied_warm | auto: medium
-[2026-05-03 10:30] turn 7 | her: "Hiiiii" — warm dodge of direct-ask; me: frame-hold tease | rapport-frame-control | sent | sent: Not an answer 😈
+[2026-05-03 10:30] turn 7 | her: "Hiiiii" — warm dodge of direct-ask; me: frame-hold tease | rapport-frame-control | unsent
 
 ## Sent
-
-- [2026-05-03T10:31] Not an answer 😈
