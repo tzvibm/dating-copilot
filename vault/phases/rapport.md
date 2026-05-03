@@ -31,6 +31,16 @@ read on each other that proposing a meet doesn't feel transactional.
 - `rapport-callback` — bring back something she said earlier and
   push the thread forward. Best when she dropped a specific detail
   worth riffing on.
+- `rapport-playful-tease` — tease her *choices* (takes, vibe, hot
+  opinions) — never her body. Raises temperature without grinding.
+- `rapport-frame-control` — she just tested or curveballed. Brief
+  acknowledge + redirect. Don't fold, don't fight.
+- `rapport-social-proof` — drop a real, offhand reference to your
+  life as context. Implies "this is a life she'd want in on"
+  without performing.
+- `rapport-disqualifier` — flip the audition. Playful "you'd have
+  to convince me…" Use when rapport is warm and you want to escalate
+  temperature.
 
 ## Goal-type interactions
 

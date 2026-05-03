@@ -26,14 +26,24 @@ two would actually click in person.
 
 ## Strategies in this phase
 
-Most rapport strategies still apply here:
-
-- `rapport-mirror-then-pivot` — extends rapport by introducing a new
-  angle that tests fit.
+- `qualifying-ask-take` — ask her opinion on something with a fork
+  in it. Reveals something real and gives you texture for the next
+  move.
 - `rapport-share-then-volley` — your share + her response is a key
   qualifying signal.
+- `rapport-mirror-then-pivot` — extends rapport by introducing a new
+  angle that tests fit.
 - `rapport-callback` — proves attention; her response to a callback
   tells you what she actually cared about earlier.
+- `rapport-playful-tease` — tease her takes / vibe. Her response is
+  qualifying signal — does she play, defend, or fold?
+- `rapport-frame-control` — when she tests, brief acknowledge +
+  redirect. Tells you whether she escalates the test or rolls.
+- `rapport-social-proof` — drop offhand life-context. Tells you
+  whether your life intrigues her or not.
+- `rapport-disqualifier` — playful "you'd have to convince me…"
+  Use when rapport is warm and you want to raise temperature
+  before the meet ask.
 
 ## Goal-type interactions
 

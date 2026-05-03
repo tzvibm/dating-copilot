@@ -25,13 +25,21 @@ Mistiming kills it.
 
 ## Strategies in this phase
 
+- `escalation-specific-invite` — yes/no with one time + one place.
+  Top-converter when rapport is warm. The reference card for direct
+  meet asks.
 - `escalation-soft-time-anchor` — "I'm around Thursday-ish". Default
   when `days_remaining > 4` and she's not a planner type.
 - `escalation-direct-ask` — "drinks Thursday at 8?". Use when window
   is short or she's a planner.
 - `escalation-activity-anchor` — propose a specific activity she
-  already mentioned wanting to do. Removes "what should we do"
-  overhead.
+  already mentioned wanting to do.
+- `escalation-time-bridge` — drop offhand "when we get drinks" before
+  any explicit ask, so the eventual invite is just logistics. Use
+  during late rapport / qualifying, before the formal ask.
+- `escalation-phone-bridge` — pivot from text to a 5-minute call
+  before the meet. Best when her bio explicitly says phone-caller,
+  or when the thread is warm but plateauing.
 
 ## Goal-type interactions
 

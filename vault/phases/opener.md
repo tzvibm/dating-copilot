@@ -34,18 +34,22 @@ reply that opens up an actual exchange.
 
 ## Strategies in this phase
 
+- `opener-callback-to-photo` — *specific noticing* of one concrete
+  detail in a photo. Either a 5-second-to-answer question or a quick
+  take + invitation. Data-backed top-converter when the photo has a
+  unique grabbable detail. Differs from "bio-quoting" because it's
+  one specific thing, not a paragraph of "I read your profile."
 - `opener-flirty-edge` — flirty, slightly edgy, sets the room with
-  temperature. One sentence with confidence. Use when voice notes
-  allow flirty register (most defaults).
+  temperature. One sentence with confidence. Best when voice notes
+  allow flirty register and the photos don't give a strong specific
+  hook.
 - `opener-lead-with-take` — open with a confident take or frame from
-  your world; her bio sets the topic register, not the subject.
-- `opener-callback-to-photo` — riff on a non-obvious detail in a
-  photo. Use sparingly; only when the photo has a *unique* hook AND
-  the user voice notes haven't explicitly opted out of profile-
-  reactive openers.
+  your world; her bio sets the topic register, not the subject. Use
+  when you want to skip profile-anchoring entirely.
 - `opener-prompt-flip` — flip her bio/prompt back at her with a take,
-  not a question. Risky — easy to read as "I read your profile."
-- `opener-low-stakes-question` — last resort when there's nothing
+  not a question. Works when prompts have texture; risky on generic
+  prompts.
+- `opener-low-stakes-question` — fallback when there's nothing
   unique to grab. Make sure the question implies you have a take.
 
 ## Goal-type interactions

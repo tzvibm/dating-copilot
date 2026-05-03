@@ -25,6 +25,7 @@ Required keys (do not omit; if you don't know, write `null`):
 ```yaml
 ---
 name: <first name>
+age: <int or null>
 platform: <tinder|hinge|bumble|feeld|other>
 city: <human-readable, e.g. "San José, CR">
 matched: <YYYY-MM-DD>

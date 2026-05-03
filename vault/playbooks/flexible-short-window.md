@@ -24,24 +24,38 @@ locking a meet. Comfortable with no-meet outcomes.
 ## Phase-by-phase
 
 ### opener
-- Same options as `quick-meet-window`. Pick what fits her profile.
-- Open like you have time.
+- Same opener pool as `quick-meet-window`: `opener-callback-to-photo`
+  (specific noticing, top-converter), `opener-flirty-edge`,
+  `opener-lead-with-take`. Skip `opener-scarcity-direct-ask` — no
+  real scarcity to lean on.
+- Open like you have time. Statements over questions.
 
 ### rapport
 - Let it breathe. 5–8 of your turns is fine if conversation is alive.
 - `rapport-mirror-then-pivot` and `rapport-share-then-volley` work
   well; `rapport-callback` once a real detail has dropped.
+- `rapport-playful-tease` raises temperature without pushing tempo.
+- `rapport-frame-control` when she tests; `rapport-social-proof`
+  in passing to add depth.
 
 ### qualifying
 - Real qualifying matters here. This is where you learn if you'd
   click in person.
+- `qualifying-ask-take` — one fork-question per turn.
+- `rapport-share-then-volley` and `rapport-disqualifier` (if rapport
+  is warm) for raising temperature while testing fit.
 - Don't compress — the read is the point.
 
 ### escalation
 - Only on her cue: she's volunteered a place to go, asked when
-  you're free, hinted at meeting.
-- `escalation-soft-time-anchor` is the default — keeps it casual.
+  you're free, hinted at meeting. Field-tested ask window is later
+  here than in `quick-meet-window` — messages 9-12 of warm thread.
+- `escalation-time-bridge` first — drop offhand "when we get drinks"
+  to normalize the meet without asking.
+- `escalation-soft-time-anchor` keeps it casual once she's signaled.
 - `escalation-activity-anchor` if she's named something specific.
+- `escalation-specific-invite` only after at least one warm
+  reciprocation toward meeting.
 - Avoid `escalation-direct-ask` unless she's clearly a planner.
 
 ### logistics
@@ -52,7 +66,8 @@ locking a meet. Comfortable with no-meet outcomes.
 - Day-of confirmation only.
 
 ### recovery
-- One attempt with `recovery-clean-reopen`. If silent again, archive.
+- `recovery-bold-reset` if you have something fresh to bring.
+  Otherwise `recovery-clean-reopen`. If silent again, archive.
 - Don't chase.
 
 ## Failure modes

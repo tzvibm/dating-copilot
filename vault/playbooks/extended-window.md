@@ -26,25 +26,41 @@ qualifying.
 ## Phase-by-phase
 
 ### opener
-- Same opener strategies. No travel-window pressure.
+- Same pool as the others, minus scarcity-based ones. No
+  travel-window pressure to lean on.
+- `opener-callback-to-photo` and `opener-lead-with-take` are good
+  defaults; `opener-flirty-edge` if voice notes permit.
 
 ### rapport
 - Real rapport. 5-10 of your turns. Don't rush.
-- All three rapport strategies work; rotate them as the
-  conversation shapes.
+- Full rapport toolkit applies. Rotate so you're not running the
+  same play twice: `share-then-volley`, `mirror-then-pivot`,
+  `callback`, `playful-tease`, `social-proof`, `frame-control`.
+- `rapport-disqualifier` works well here once warmth is established
+  — escalates temperature with longer runway.
 
 ### qualifying
 - This is where most of the value lives.
+- `qualifying-ask-take` is the workhorse. Multiple fork-questions
+  over time, one per turn.
 - Real opinions, real questions, mild disagreement when honest.
 - Spend a week here if it's interesting.
 
 ### escalation
 - Trigger should be a specific thing — a place she mentioned, a
-  weekend coming up, a shared interest with a calendar.
-- Avoid `escalation-direct-ask` unless rapport is *very* clear.
-- `escalation-activity-anchor` is the cleanest move on this playbook.
+  weekend coming up, a shared interest with a calendar. Field-tested
+  ask window stretches later: messages 11-15+ of a warm thread.
+- `escalation-time-bridge` is your friend on a long thread — drop
+  offhand future-pacing 2-3 times before the formal ask, so the
+  meet feels assumed.
+- `escalation-activity-anchor` is the cleanest formal ask on this
+  playbook (specific activity tied to the conversation).
 - `escalation-soft-time-anchor` works when nothing concrete has
   emerged but the warmth has.
+- `escalation-specific-invite` only when she's clearly receptive.
+- `escalation-phone-bridge` if text plateaus and she's a phone
+  person.
+- Avoid `escalation-direct-ask` unless rapport is *very* clear.
 
 ### logistics
 - Don't sprint. Two-option close is fine; `logistics-specific-place`
@@ -54,8 +70,10 @@ qualifying.
 - Day-of confirmation only.
 
 ### recovery
-- Up to two attempts spaced out (1 week+ apart). If both fail,
-  archive without ceremony.
+- Up to two attempts spaced out (1 week+ apart). `recovery-bold-reset`
+  with new energy from your world if you have something to bring;
+  `recovery-clean-reopen` otherwise. If both fail, archive without
+  ceremony.
 
 ## Failure modes
 

@@ -34,28 +34,58 @@ archetype).
 ## Phase-by-phase
 
 ### opener
-- Pick from: `opener-callback-to-photo`, `opener-prompt-flip`,
-  `opener-low-stakes-question`.
-- Do NOT lead with travel timeline. It comes up naturally in
-  rapport; making it the headline reads transactional.
+- **Default picks** (in rough preference order, calibrate to her
+  profile + your voice notes):
+  - `opener-callback-to-photo` if photos have a *specific*
+    grabbable detail. Data-backed top-converter when phrased as a
+    5-second-to-answer noticing, not vague compliment.
+  - `opener-flirty-edge` if voice notes allow flirty register and
+    photos are generic. One sentence with temperature.
+  - `opener-lead-with-take` to skip profile anchoring entirely;
+    her vibe calibrates the topic register, the message is your
+    own move.
+  - `opener-scarcity-direct-ask` when you genuinely have only a
+    few days left in town. The scarcity is real, not manufactured.
+- **Avoid**: leading with the travel timeline as the headline —
+  reads transactional. Let it come up naturally in rapport when she
+  asks "where are you from."
 
 ### rapport
 - 3–5 of your turns max. Cap it.
-- Pick from: `rapport-mirror-then-pivot`, `rapport-share-then-volley`.
-- Drop your travel context naturally when she asks "where are you
-  from" (she will). Don't volunteer it preemptively.
+- **Default picks**:
+  - `rapport-share-then-volley` — share + invite her to match.
+  - `rapport-playful-tease` — tease her *takes* (never her body)
+    to raise temperature without grinding.
+  - `rapport-mirror-then-pivot` — match her energy, then introduce
+    one adjacent angle.
+  - `rapport-frame-control` — when she tests, brief acknowledge +
+    redirect to your move. Don't fold.
+  - `rapport-social-proof` — drop one offhand life-context line
+    ("we ended up at hideout last night"). Real, never performance.
+- Drop your travel context naturally when she asks; don't volunteer
+  preemptively.
 
 ### qualifying
-- Compress hard. 1–2 turns, often skipped entirely.
-- Use `rapport-share-then-volley` to test fit while keeping warmth.
+- Compress hard. 1–2 turns max, often skipped entirely.
+- `qualifying-ask-take` — one fork-question to find a real read.
+- `rapport-share-then-volley` to test fit while keeping warmth.
 
 ### escalation
-- This is the high-leverage move.
-- `escalation-soft-time-anchor` if `days_remaining > 4`.
-- `escalation-direct-ask` if `days_remaining ≤ 4`, OR she's a
-  planner type, OR she's already implied wanting to meet.
-- `escalation-activity-anchor` if she's volunteered a place /
-  activity to do.
+- The high-leverage phase. **Field-tested ask window: messages
+  7-11**, faster (5-7) when signals are hot.
+- **Default picks**:
+  - `escalation-specific-invite` — top-converter. Yes/no with one
+    time + one place. Default when rapport is warm.
+  - `escalation-direct-ask` — when window is ≤ 4 days, she's a
+    planner, or she's already implied wanting to meet.
+  - `escalation-time-bridge` — drop "when we get drinks" 1-2 turns
+    before the formal ask. Makes the eventual invite just logistics.
+  - `escalation-soft-time-anchor` — when `days_remaining > 4` and
+    she's not a planner type.
+  - `escalation-activity-anchor` — when she's volunteered a place
+    or activity to do.
+  - `escalation-phone-bridge` — when her bio explicitly says she's
+    a phone-caller, or text is plateauing.
 
 ### logistics
 - `logistics-two-option-close` is default.
@@ -67,8 +97,11 @@ archetype).
 - `logistics-day-of-confirm` only. Otherwise silent.
 
 ### recovery
-- One attempt only on this goal type. If `recovery-clean-reopen`
-  doesn't take, mark dead, move on.
+- One attempt only on this goal type.
+- `recovery-bold-reset` first — new energy from your world, no
+  acknowledgment of the silence.
+- `recovery-clean-reopen` as fallback. If neither lands, mark dead,
+  move on.
 
 ## Failure modes
 
