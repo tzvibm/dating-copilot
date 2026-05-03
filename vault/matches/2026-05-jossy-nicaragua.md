@@ -1,12 +1,22 @@
 ---
 name: Jossy
+age: 28
 platform: tinder
 city: Granada, NI
 matched: 2026-05-02
 phase: rapport
-phase_confidence: low
-phase_last_assessed: 2026-05-03T10:30
+phase_confidence: medium
+phase_last_assessed: 2026-05-03T11:00
+phase_progress:
+  opener: 100
+  rapport: 20
+  qualifying: 5
+  escalation: 10
+  logistics: 0
+  confirm: 0
+turn_micro_goal: raise rapport 20 → 40 by contributing a take/share from my world and getting her to engage with a specific topic
 days_remaining: null
+distance_km: 10
 goal: drinks while still in Granada
 goal_type: quick-meet-window
 goal_confidence: medium
@@ -63,6 +73,15 @@ strategy_used_last_outcome: replied_warm
 - Long text-marathon vibe given her "Big time texter" self-id — push toward meeting earlier, not later.
 - Don't perform sugar-daddy energy back; reads desperate and confirms the frame she's joking about.
 
+## Match strategy
+
+**Current plan:** Build real rapport texture (target 40-50, not 80) by leading with takes/shares from my experience in Granada — her local knowledge is the natural hook. Once rapport hits ~50, move directly to a specific invite this week. Compress the arc; she's a big texter and will marathon if not steered toward logistics.
+
+**Next milestone:** raise rapport 20 → 50; this is the gate for escalation under quick-meet-window.
+
+**Recent shifts:**
+- 2026-05-03: rapport at 20 — premature escalation-direct-ask (rapport ~20, gate requires 60) got warm dodge ("Hiiiii"); dropping back to rapport-building this turn.
+
 ## Open threads
 
 - Language exchange angle — she lists it as an interest and speaks both languages. Easy thread to open.
@@ -88,5 +107,6 @@ strategy_used_last_outcome: replied_warm
 [2026-05-02 19:30] turn 5 | me: regen #2 — covering local-guide pivot, 4/20 callback, language-exchange share | rapport-mirror-then-pivot | sent | sent: 1
 [2026-05-02 19:45] turn 6 | me: pre-stage post-reply options (no her-msg yet) — direct-ask, 4/20 callback, sunset activity-anchor | escalation-direct-ask | replied_warm | auto: medium
 [2026-05-03 10:30] turn 7 | her: "Hiiiii" — warm dodge of direct-ask; me: frame-hold tease | rapport-frame-control | unsent
+[2026-05-03 11:00] turn 8 | me: rapport recovery — social-proof take from Granada after premature escalation | rapport-social-proof | pending
 
 ## Sent

@@ -4,6 +4,9 @@ phase: escalation
 status: active
 created: 2026-04-01
 incompatible_goals: [extended-window, decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 60
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -61,6 +64,22 @@ Example illustrations (window-shaped, not point-shaped):
 
 Each names a window with edges (real scarcity, not infinite
 availability), invites her to specify, and stops.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 60
+
+(All others: 0 — no constraint. Below rapport 60 the H1 mixed-
+signal mechanism reads as hedging from low interest, not
+confidence-with-options.)
+
+State conditions:
+- `days_remaining > 4` (with less, the window-shape reads as
+  evasion — graduate to `escalation-specific-invite`).
+- not a hard planner-type (planners read soft anchors as flake-
+  coded; for them go straight to specific-invite).
 
 ## When it works
 

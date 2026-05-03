@@ -4,6 +4,7 @@ phase: recovery
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully]
+prerequisites: {}
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -75,6 +76,18 @@ Each one is one sentence, present-tense, references something she
 said or implied, and is fully complete on its own — no hook
 demanding a reply, but plenty of substrate for one if she wants
 to give it.
+
+## Prerequisites
+
+phase_progress: no numeric prerequisites — recovery is off-axis,
+not on the linear phase chain.
+
+State conditions (HARD — define when this card fires at all):
+- 48-96h of silence after a substantive turn (or longer gaps for
+  `reconnect-later` goal-types where this card is the canonical
+  reopener).
+- a real present-tense hook is available (something he saw, did,
+  or noticed *now* that connects to something she said).
 
 ## When it works
 

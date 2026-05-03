@@ -4,8 +4,9 @@ phase: opener
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites: {}
 goal_stats:
-  quick-meet-window: { used: 1, used_well: 0 }
+  quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
   extended-window: { used: 0, used_well: 0 }
 ---
@@ -55,6 +56,17 @@ Each example carries a take (a position, not a question), implies
 his life is in motion, and leaves exactly one open loop (A15) for
 her to pull on — without ever quoting her bio.
 
+## Prerequisites
+
+phase_progress: no numeric prerequisites — this is an opener entry
+move.
+
+State conditions:
+- her bio gives any register hook to calibrate the take's flavour
+  against (even thin signal is enough).
+- user has a real take to draw on (cocky-funny collapses on canned
+  material).
+
 ## When it works
 
 - Her bio gives *any* register hook to calibrate against — even
@@ -98,7 +110,7 @@ her to pull on — without ever quoting her bio.
 
 ### quick-meet-window
 
-- [[2026-05-alexa-nicaragua]] turn 3 — pending
+<!-- (no records yet) -->
 
 ### flexible-short-window
 

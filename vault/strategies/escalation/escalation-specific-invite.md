@@ -4,6 +4,10 @@ phase: escalation
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 60
+  qualifying: 50
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -60,6 +64,21 @@ Example illustrations (one specific time, one place, no preamble):
 Each names a hard time, a real place (or hands her place-choice as
 co-authorship), and stops. No softening, no second sentence, no
 question after the question.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 60
+- qualifying ≥ 50
+
+(All others: 0 — no constraint. This is the hard close; the
+A3 ladder math requires prior rungs to have compounded.)
+
+State conditions:
+- ideally one bridge or activity-anchor already absorbed.
+- IOIs (I5) are present (she's been future-pacing, asking back,
+  matching energy, picking up bridges).
 
 ## When it works
 

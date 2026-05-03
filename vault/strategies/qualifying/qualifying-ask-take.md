@@ -4,6 +4,9 @@ phase: qualifying
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 50
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -51,6 +54,20 @@ Each carries a fork (forced pick, not open-ended fish), implies he
 has a take of his own ready to volley back, and is short enough that
 A2 reciprocity stays in gradient — she answers in a sentence, not a
 paragraph.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 50
+
+(All others: 0 — no constraint. Below rapport 50 the A11 self-
+perception ladder doesn't lock in; her answer attributes to "being
+polite" not "being interested", and the rung is wasted.)
+
+State conditions:
+- the user has a take of his own ready to volley back when she
+  picks (fork-without-volley collapses to interview).
 
 ## When it works
 

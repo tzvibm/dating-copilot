@@ -4,6 +4,7 @@ phase: opener
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites: {}
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -55,6 +56,16 @@ Example illustrations:
 
 Each names a small choice, implies a position on his side, reads as
 casual, and stays under one short sentence.
+
+## Prerequisites
+
+phase_progress: no numeric prerequisites — this is an opener entry
+move (the controlled fallback).
+
+State conditions:
+- her profile gives no callback, prompt-flip, or register hook.
+  Reach for stronger opener cards first; this one is the opener
+  fallback when nothing better applies.
 
 ## When it works
 

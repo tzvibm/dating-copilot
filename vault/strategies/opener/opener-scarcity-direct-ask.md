@@ -4,6 +4,7 @@ phase: opener
 status: experimental
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite, extended-window]
+prerequisites: {}
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -56,6 +57,21 @@ Example illustrations:
 
 Each names the constraint plainly, asks plainly, hands her a
 specific or a fork, and ends.
+
+## Prerequisites
+
+phase_progress: no numeric prerequisites — but see state conditions.
+
+State conditions (HARD — the card collapses without these):
+- thread is DOA or this is the first message (no prior exchanges,
+  including pleasantries like "nice to meet you" pairs). After any
+  reply, this card is the wrong tool — the "phase compression"
+  premise no longer holds.
+- scarcity is REAL — actual departure date, actual short window.
+  Manufactured scarcity inverts the entire mechanism.
+- goal_type is `quick-meet-window` (encoded in `incompatible_goals`).
+- `voice.md` permits direct register; tentative voice exposes the
+  frame gap.
 
 ## When it works
 

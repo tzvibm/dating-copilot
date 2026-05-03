@@ -4,6 +4,9 @@ phase: rapport
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 30
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -65,6 +68,21 @@ Example illustrations:
 
 Each targets a chosen category, lands in one short sentence, and
 opens for her to defend, escalate, or join in.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 30
+
+(All others: 0 — no constraint. Below rapport 30, A12
+misattribution lacks the warmth substrate; the tease lands as
+cold and the move inverts.)
+
+State conditions:
+- target is a *chosen category* she opted into (take, vibe,
+  stated preference, label she authored). Never innate traits.
+- `voice.md` permits flirty/playful register.
 
 ## When it works
 

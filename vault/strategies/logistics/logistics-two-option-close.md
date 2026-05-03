@@ -4,6 +4,10 @@ phase: logistics
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 60
+  escalation: 60
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -59,6 +63,21 @@ Example illustrations:
 
 Each one names the meet as the substrate and invites her to author
 the texture.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 60
+- escalation ≥ 60
+
+(All others: 0 — no constraint. Without escalation substrate
+the move tries to manufacture a meet through framing alone.)
+
+State conditions:
+- she's said yes in principle but specifics aren't locked.
+- both options are real for the user (no bait option).
+- the two options are adjacent (same week, similar window).
 
 ## When it works
 

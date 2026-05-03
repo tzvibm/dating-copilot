@@ -4,6 +4,9 @@ phase: escalation
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 60
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -67,6 +70,22 @@ Example illustrations (casual, short, no preamble):
 
 Each frames the call as the lighter option, asks for the number
 directly, and stops.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 60
+
+(All others: 0 — no constraint.)
+
+State conditions:
+- ideally an explicit phone-coded signal in her bio or behaviour
+  ("phone caller", voice notes from her side, references to calls).
+- thread is plateauing in text — warm enough that the bridge isn't
+  premature, stalled enough that the channel-jump genuinely solves
+  the problem.
+- the user can carry voice register without strain.
 
 ## When it works
 

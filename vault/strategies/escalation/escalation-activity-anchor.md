@@ -4,6 +4,9 @@ phase: escalation
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 60
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -63,6 +66,20 @@ Example illustrations (her loop, his time, one move):
 
 Each names what she opened, attaches a specific time, and stops —
 no preamble explaining why he remembered, no padding.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 60
+
+(All others: 0 — no constraint.)
+
+State conditions:
+- she volunteered a specific activity / venue / curiosity earlier
+  (live loop, not stale; ideally unprompted).
+- the activity is plausible for a first meet (drinks > coffee >
+  short walk; 4-hour hike inflates the rung too far).
 
 ## When it works
 

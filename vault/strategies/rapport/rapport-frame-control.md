@@ -4,8 +4,10 @@ phase: rapport
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
 goal_stats:
-  quick-meet-window: { used: 1, used_well: 0 }
+  quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
   extended-window: { used: 0, used_well: 0 }
 ---
@@ -70,6 +72,20 @@ Example illustrations:
 Each acknowledges in one short clause and returns to the actual
 move that was already in motion.
 
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+
+(All others: 0 — this card is reactive and fires whenever she
+throws a test, regardless of how warm rapport is.)
+
+State conditions:
+- she actually threw a shit-test, tease, or curveball (not a
+  vulnerable share misread as a test).
+- the user has a prior direction with somewhere to go (a redirect
+  to nothing is just stonewalling).
+
 ## When it works
 
 - She threw an actual test, tease, or curveball — a frame-pressure
@@ -125,7 +141,7 @@ move that was already in motion.
 
 ### quick-meet-window
 
-- [[2026-05-jossy-nicaragua]] turn 7 — pending (medium)
+- [[2026-05-jossy-nicaragua]] turn 7 — unsent
 
 ### flexible-short-window
 

@@ -4,6 +4,9 @@ phase: rapport
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 30
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -62,6 +65,20 @@ Example illustrations:
 
 Each opens with one short volley acknowledging her topic, then
 hands her one adjacent fork to step onto.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 30
+
+(All others: 0 — no constraint. Sweet spot is rapport 30-65.
+Above 65 the move is too gentle; below 30 the mirror has nothing
+to build on.)
+
+State conditions:
+- thread is warm but circling — she's reciprocating, but the topic
+  has stopped accumulating new information.
 
 ## When it works
 

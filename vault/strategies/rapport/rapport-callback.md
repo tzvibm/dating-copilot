@@ -4,6 +4,9 @@ phase: rapport
 status: active
 created: 2026-05-02
 incompatible_goals: [just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 30
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -62,6 +65,18 @@ Example illustrations:
 
 Each names her specific detail, lands a take or move on it, and
 points the thread an inch forward.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 30
+
+(All others: 0 — no constraint.)
+
+State conditions:
+- a detail she volunteered earlier in the thread that's still
+  ambient (not closed, not stale).
 
 ## When it works
 

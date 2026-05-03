@@ -4,6 +4,10 @@ phase: logistics
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 60
+  escalation: 60
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -64,6 +68,21 @@ Example illustrations:
 Each one carries a place, a time, and one tiny texturing detail
 that signals the man has *been there* (not just googled it). The
 detail is incidental authority leak (A5).
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 60
+- escalation ≥ 60
+
+(All others: 0 — no constraint. Without escalation substrate
+this skips a rung; reads as presumptuous, not confident.)
+
+State conditions:
+- a real default in `cities/<slug>.md` (a venue you've been to,
+  not a Google Maps screenshot).
+- the place fits both your locations (check `distance_km`).
 
 ## When it works
 

@@ -204,11 +204,24 @@ phase: <phase>
 status: <active|deprecated|experimental>
 created: <YYYY-MM-DD>
 incompatible_goals: [<goal_type>, ...]
+prerequisites:
+  opener: <0-100>      # required min phase_progress.opener to fire
+  rapport: <0-100>
+  qualifying: <0-100>
+  escalation: <0-100>
+  logistics: <0-100>
+  confirm: <0-100>
 goal_stats:
   <goal_type>: { used: <int>, used_well: <int> }
   <goal_type>: { used: <int>, used_well: <int> }
 ---
 ```
+
+`prerequisites` is the per-card phase-progress gate. Every key listed
+must be met by the current `phase_progress` map for the card to be
+eligible. Unspecified phases default to 0 (no constraint). Phases
+that don't apply can be omitted. This **replaces** any universal
+phase gate — the rule is "consult the card you're citing".
 
 `goal_stats` keys are the goals this strategy applies to (compat is
 implicit from the keys). `incompatible_goals` is the hard exclusion
@@ -217,6 +230,9 @@ list during selection.
 
 Body sections, in order:
 - `## What it is`
+- `## Prerequisites` — human-readable mirror of the frontmatter
+  `prerequisites` block, plus any STATE conditions not capturable
+  as numeric thresholds (e.g. "thread is DOA / first message").
 - `## When it works`
 - `## When it fails`
 - `## Outcomes by goal` — with `### <goal_type>` subsections, one per

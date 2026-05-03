@@ -4,6 +4,9 @@ phase: rapport
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully]
+prerequisites:
+  opener: 60
+  rapport: 20
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -77,6 +80,20 @@ Example illustrations:
 Each shares one concrete real thing, sizes the disclosure to fit
 two short sentences, and asks a question that mirrors the share's
 shape — not its content.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 20
+
+(All others: 0 — this card is the warmth-substrate builder; it
+runs on early- to mid-rapport when the thread is warm but flat /
+transactional.)
+
+State conditions:
+- thread is Q&A-shaped or transactional — needs the rhythm change
+  this move provides.
 
 ## When it works
 

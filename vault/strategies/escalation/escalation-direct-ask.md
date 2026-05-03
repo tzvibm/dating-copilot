@@ -4,8 +4,11 @@ phase: escalation
 status: active
 created: 2026-05-02
 incompatible_goals: [extended-window, decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 60
 goal_stats:
-  quick-meet-window: { used: 0, used_well: 0 }
+  quick-meet-window: { used: 1, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
 ---
 
@@ -58,6 +61,26 @@ Example illustrations (single line, no padding):
 - "thursday after work. drinks. send."
 
 Each is one clause, frame-confident, asks the question and stops.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 60
+
+(All others: 0 — but see state conditions; this is the highest-
+variance escalation move and the soft prereqs aren't enough on
+their own.)
+
+State conditions:
+- strong IOIs (I5): she's future-pacing in her own messages, asking
+  back substantively, picking up callbacks.
+- `voice.md` permits direct register without strain.
+- `days_remaining < 4` or hard scarcity is real (he's traveling,
+  she's traveling).
+- planner-coded archetype preferred — non-planners often read
+  directness as pressure.
+- goal_type is `quick-meet-window`.
 
 ## When it works
 
@@ -112,7 +135,7 @@ Each is one clause, frame-confident, asks the question and stops.
 
 ### quick-meet-window
 
-<!-- (no records yet) -->
+- [[2026-05-jossy-nicaragua]] turn 6 — replied_warm (medium) [premature: rapport ~20, gate requires 60; warm dodge]
 
 ### flexible-short-window
 

@@ -4,6 +4,8 @@ phase: rapport
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -75,6 +77,20 @@ Example illustrations:
 Each names a real specific thing — a place, a count of people, a
 who, a what — and serves the move that's actually the turn (a
 question, a meet-anchor, a take), not its own headline.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+
+(All others: 0 — this card is background texture that runs
+underneath any rapport-or-later turn. No specific rapport floor;
+runs continuously at low level.)
+
+State conditions:
+- the social reference is REAL (not manufactured).
+- the reference serves another move on this turn (a take,
+  question, callback) — never headlined as social proof itself.
 
 ## When it works
 

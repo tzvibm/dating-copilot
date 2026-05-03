@@ -4,6 +4,7 @@ phase: opener
 status: active
 created: 2026-04-01
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites: {}
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -54,6 +55,14 @@ Example illustrations:
 
 Each names one concrete thing, asks something answerable in a single
 short reply, and hands her exactly one thing to pull on.
+
+## Prerequisites
+
+phase_progress: no numeric prerequisites — this is an opener entry
+move.
+
+State conditions:
+- at least one photo carries a non-obvious nameable detail.
 
 ## When it works
 

@@ -4,6 +4,7 @@ phase: recovery
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites: {}
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -76,6 +77,20 @@ Example illustrations:
 Each one carries new texture, an implicit life that's been moving,
 and exactly one open loop or move for her to pull on — without
 any reference to the gap.
+
+## Prerequisites
+
+phase_progress: no numeric prerequisites — recovery is off-axis,
+not on the linear phase chain.
+
+State conditions (HARD — define when this card fires at all):
+- 48-96h+ silent thread after at least one substantive exchange.
+- prior frame was strong (bold reset succeeds in proportion to
+  prior frame strength; on a thread that was already weak, it
+  just confirms the weakness — `recovery-clean-reopen` is lighter
+  and safer there).
+- a real new energy / move (specific time, specific place,
+  specific thing) is available — not a manufactured pretext.
 
 ## When it works
 

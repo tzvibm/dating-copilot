@@ -4,6 +4,7 @@ phase: recovery
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully]
+prerequisites: {}
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -79,6 +80,20 @@ Example illustrations:
 
 Each one names her detail (callback, A15 closure), then pivots
 to a new fork (re-engagement, A1 reset).
+
+## Prerequisites
+
+phase_progress: no numeric prerequisites — recovery is off-axis,
+not on the linear phase chain.
+
+State conditions (HARD — define when this card fires at all):
+- thread has gone quiet 48-120h after a turn where she
+  volunteered something specific that's still unresolved or
+  pivotable.
+- the earlier detail was specific and felt important to her
+  (generic callbacks don't retrieve a real loop).
+- the pivot creates a fresh question / fork / reversal — not a
+  re-litigation of where things went quiet.
 
 ## When it works
 

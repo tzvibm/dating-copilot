@@ -15,3 +15,7 @@
 ---
 [2026-05-02 09:00] match=2026-05-alexa-nicaragua | archetype: phone-caller + quick-meet-window signals strong early logistics push — skip rapport-build, cut to the meet
 [2026-05-02 09:00] match=2026-05-alexa-nicaragua | strategy: opener-scarcity-direct-ask created for nomad/quick-meet-window; first use pending
+[2026-05-03 15:00] match=2026-05-alexa-nicaragua | strategy: opener-confident-read created — confident-binary-type move for active/foodie archetypes; distinct from opener-lead-with-take (subject is her pattern, not his world)
+[2026-05-03 15:00] match=2026-05-alexa-nicaragua | other: 3 consecutive unsent suggest turns on same dead thread — user iterating on options without committing; worth monitoring if pattern repeats across matches
+[2026-05-03 11:00] match=2026-05-jossy-nicaragua | strategy: escalation-direct-ask fired with rapport ~20 (gate: 60) — warm dodge result; confirms gate exists for a reason, even on quick-meet-window goals
+[2026-05-03 11:00] match=2026-05-jossy-nicaragua | archetype: sugar-curious-big-texter is warm but superficial early — lots of greeting energy, no topic engagement yet; may need stronger take/pull to cut through

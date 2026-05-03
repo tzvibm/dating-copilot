@@ -4,6 +4,9 @@ phase: rapport
 status: experimental
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 30
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -69,6 +72,20 @@ Example illustrations:
 
 Each names a category she opted into, sets a game-able bar, and
 hands her room to defend, escalate, or counter-disqualify.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 30
+
+(All others: 0 — no constraint. Below rapport 30, the move reads
+as hostility, not play.)
+
+State conditions:
+- `voice.md` supports playful-arrogant register.
+- a chosen category (her self-described archetype, take, or label)
+  is on the table to target — never an innate trait.
 
 ## When it works
 

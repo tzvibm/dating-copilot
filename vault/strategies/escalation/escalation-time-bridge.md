@@ -4,6 +4,9 @@ phase: escalation
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 60
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -58,6 +61,20 @@ Example illustrations (offhand, buried, no question attached):
 Each is a sentence, buried mid-message, never headlined. The "we"
 and the future tense do all the work; the topic is whatever loop
 she already opened.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 60
+
+(All others: 0 — no constraint. Below rapport 60 the "we" reads
+presumptuous and inverts.)
+
+State conditions:
+- `voice.md` permits "we" deployed lightly (plausible deniability).
+- a specific reference (venue, activity, debate she opened) exists
+  to bridge from — vague "we should hang" generates no scene.
 
 ## When it works
 

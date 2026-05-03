@@ -4,6 +4,7 @@ phase: opener
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites: {}
 goal_stats:
   quick-meet-window: { used: 1, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -58,6 +59,17 @@ Example illustrations:
 Each is one short line, declarative, with one implied open loop
 (A15) for her to volley against. None reference her bio explicitly.
 None ask permission to be flirty.
+
+## Prerequisites
+
+phase_progress: no numeric prerequisites — this is an opener entry
+move.
+
+State conditions:
+- `voice.md` permits flirty-edgy register.
+- her photos / prompts show some pleasure-coded register herself
+  (the high pre-suasive ceiling needs to be one she can plausibly
+  reach).
 
 ## When it works
 

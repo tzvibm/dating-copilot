@@ -4,6 +4,11 @@ phase: logistics
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites:
+  opener: 60
+  rapport: 60
+  escalation: 60
+  logistics: 80
 goal_stats:
   quick-meet-window: { used: 0, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -65,6 +70,23 @@ Example illustrations:
 Each one carries the time, a forward-pacing detail, and a
 texture-of-day-already-in-motion. None of them ask whether
 the plan is on.
+
+## Prerequisites
+
+phase_progress required:
+- opener ≥ 60
+- rapport ≥ 60
+- escalation ≥ 60
+- logistics ≥ 80
+
+(All others: 0 — no constraint. This is the highest prerequisite
+in the catalogue: a specific time AND place must already be
+locked from a prior turn. Without that, this message reverts to
+a logistics ask in disguise and reads as anxious.)
+
+State conditions:
+- send 2-4 hours before the meet (not the morning of, not 30
+  minutes before).
 
 ## When it works
 

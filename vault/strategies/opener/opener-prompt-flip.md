@@ -4,6 +4,7 @@ phase: opener
 status: active
 created: 2026-05-02
 incompatible_goals: [decline-gracefully, just-being-polite]
+prerequisites: {}
 goal_stats:
   quick-meet-window: { used: 1, used_well: 0 }
   flexible-short-window: { used: 0, used_well: 0 }
@@ -59,6 +60,16 @@ Example illustrations:
 Each registers a position on what she wrote, doesn't ask her to
 explain herself, and leaves one open loop (A15) for her to push
 back on or expand.
+
+## Prerequisites
+
+phase_progress: no numeric prerequisites — this is an opener entry
+move.
+
+State conditions:
+- her prompt or bio has texture (a take, joke, specific reference,
+  point of view). Generic prompts give nothing to flip.
+- `voice.md` supports having a position.
 
 ## When it works
 

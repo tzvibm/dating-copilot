@@ -6,7 +6,7 @@ city: Granada, Nicaragua
 matched: 2026-05-02
 phase: opener
 phase_confidence: medium
-phase_last_assessed: 2026-05-03T14:30
+phase_last_assessed: 2026-05-03T15:00
 phase_progress:
   opener: 20
   rapport: 0
@@ -25,8 +25,8 @@ goal_basis: default from identity; no signal from her yet to override
 girl_archetype: active foodie, cafe-hopper, phone-caller, "still figuring it out"
 profile_analyzed_at: 2026-05-02
 last_message_at: 2026-05-01T20:42
-strategy_used_last: null
-strategy_used_last_outcome: null
+strategy_used_last: opener-scarcity-direct-ask
+strategy_used_last_outcome: pending
 ---
 
 ## Profile
@@ -66,6 +66,7 @@ strategy_used_last_outcome: null
 **Recent shifts:**
 - 2026-05-03: opener at 20; polite ack only; prior suggest never sent; re-suggesting with tighter options.
 - 2026-05-03: cleaned up erroneous strategy card stats from unsent prior suggest.
+- 2026-05-03: turn 5 re-suggest; opener still 20; three distinct moves generated (scarcity-direct / food-invite / confident-type tease).
 
 ## Open threads
 
@@ -80,4 +81,5 @@ strategy_used_last_outcome: null
 [2026-05-01 19:49] turn 1 | me: bland opener "Nice to meet you" | none | imported
 [2026-05-01 20:42] turn 2 | her: polite reciprocal ack "Nice to meet you too" | n/a | imported
 [2026-05-03 14:00] turn 3 | options suggest — dead opener reset | opener-flirty-edge / opener-lead-with-take / opener-scarcity-direct-ask | unsent (re-suggested turn 4)
-[2026-05-03 14:30] turn 4 | re-suggest: 3-way dead-opener reset targeting meet-signal | opener-scarcity-direct-ask / recovery-bold-reset / opener-lead-with-take | pending
+[2026-05-03 14:30] turn 4 | re-suggest: 3-way dead-opener reset targeting meet-signal | opener-scarcity-direct-ask / recovery-bold-reset / opener-lead-with-take | unsent
+[2026-05-03 15:00] turn 5 | re-suggest: scarcity-direct / food-invite / confident-type tease | opener-scarcity-direct-ask / opener-lead-with-take / opener-confident-read | pending
