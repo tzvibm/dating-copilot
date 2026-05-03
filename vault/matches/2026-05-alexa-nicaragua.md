@@ -66,3 +66,4 @@ strategy_used_last_outcome: pending
 [2026-05-02 12:00] turn 5 | suggest options (3): scarcity-direct-ask / self-lead-invite / flirty-edge-direct-ask | opener-scarcity-direct-ask | pending
 [2026-05-02 14:00] turn 6 | suggest options (3): scarcity-direct-ask / lead-with-take / flirty-edge | opener-scarcity-direct-ask | pending
 [2026-05-03 12:00] turn 7 | suggest draft: scarcity + tonight ask | opener-scarcity-direct-ask | pending
+[2026-05-03 12:30] turn 8 | suggest options (3): scarcity-direct / lead-with-take / flirty-edge | opener-scarcity-direct-ask | pending
