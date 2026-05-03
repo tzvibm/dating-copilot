@@ -16,7 +16,7 @@ goal_basis: default from identity; no signal from her yet to override
 girl_archetype: active foodie, cafe-hopper, phone-caller, "still figuring it out"
 profile_analyzed_at: 2026-05-02
 last_message_at: 2026-05-01T20:42
-strategy_used_last: opener-prompt-flip
+strategy_used_last: opener-lead-with-take
 strategy_used_last_outcome: pending
 ---
 
@@ -61,4 +61,4 @@ strategy_used_last_outcome: pending
 
 [2026-05-01 19:49] turn 1 | me: bland opener "Nice to meet you" | none | imported
 [2026-05-01 20:42] turn 2 | her: polite reciprocal ack "Nice to meet you too" | n/a | imported
-[2026-05-02 00:00] turn 3 | me: recovering from bland opener, profile-grounded hook | opener-prompt-flip | pending
+[2026-05-02 00:00] turn 3 | me: recovering from bland opener, scarcity + local-knowledge hook | opener-lead-with-take | pending
