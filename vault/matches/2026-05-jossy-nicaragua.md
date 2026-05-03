@@ -5,7 +5,7 @@ city: Granada, NI
 matched: 2026-05-02
 phase: rapport
 phase_confidence: low
-phase_last_assessed: 2026-05-02T19:30
+phase_last_assessed: 2026-05-02T19:45
 days_remaining: null
 goal: drinks while still in Granada
 goal_type: quick-meet-window
@@ -15,8 +15,8 @@ goal_basis: identity default; user is in Granada with only a few more days
 girl_archetype: sugar-curious college party-type
 profile_analyzed_at: 2026-05-02
 last_message_at: 2026-05-02T19:35
-strategy_used_last: rapport-mirror-then-pivot
-strategy_used_last_outcome: sent
+strategy_used_last: escalation-direct-ask
+strategy_used_last_outcome: pending
 ---
 
 ## Profile
@@ -85,3 +85,4 @@ strategy_used_last_outcome: sent
 [2026-05-02 19:13] turn 3 | me: mirror "Hols" + draft her as granada local guide | rapport-mirror-then-pivot | superseded
 [2026-05-02 19:16] turn 4 | me: regenerate — 3 options spanning mirror+pivot, share+volley, language-exchange callback | rapport-share-then-volley | superseded
 [2026-05-02 19:30] turn 5 | me: regen #2 — covering local-guide pivot, 4/20 callback, language-exchange share | rapport-mirror-then-pivot | sent | sent: 1
+[2026-05-02 19:45] turn 6 | me: pre-stage post-reply options (no her-msg yet) — direct-ask, 4/20 callback, sunset activity-anchor | escalation-direct-ask | pending
