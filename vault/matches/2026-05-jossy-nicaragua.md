@@ -69,6 +69,15 @@ strategy_used_last_outcome: sent
 - 4/20 reference in bio — open thread if you want to play that frame.
 - Granada-local — she lives here, you're a visitor. Asymmetric logistics knowledge in your favour to ask, hers to share.
 
+
+## Messages
+
+- her [2026-05-02T19:27]: ❤️
+- me  [2026-05-02T19:27]: Hola nice to meet uou
+- her [2026-05-02T19:27]: Hols
+- her [2026-05-02T19:27]: Hi
+- her [2026-05-02T19:27]: Nice to meet you too!
+
 ## Conversation log
 
 [2026-05-02 00:00] turn 1 | me: opener — "Hola nice to meet uou" (typo) | parsed | imported
