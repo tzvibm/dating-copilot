@@ -17,7 +17,7 @@ girl_archetype: active foodie, cafe-hopper, phone-caller, "still figuring it out
 profile_analyzed_at: 2026-05-02
 last_message_at: 2026-05-03T13:30
 strategy_used_last: opener-scarcity-direct-ask
-strategy_used_last_outcome: pending
+strategy_used_last_outcome: sent
 ---
 
 ## Profile
