@@ -60,13 +60,3 @@ strategy_used_last_outcome: sent
 
 [2026-05-01 19:49] turn 1 | me: bland opener "Nice to meet you" | none | imported
 [2026-05-01 20:42] turn 2 | her: polite reciprocal ack "Nice to meet you too" | n/a | imported
-[2026-05-02 00:00] turn 3 | me: recovering from bland opener, scarcity + local-knowledge hook | opener-lead-with-take | pending
-[2026-05-02 09:00] turn 4 | suggest options (3): scarcity-direct-ask / flirty-edge-reset / lead-with-take | opener-scarcity-direct-ask | pending
-[2026-05-02 12:00] turn 5 | suggest options (3): scarcity-direct-ask / self-lead-invite / flirty-edge-direct-ask | opener-scarcity-direct-ask | pending
-[2026-05-02 14:00] turn 6 | suggest options (3): scarcity-direct-ask / lead-with-take / flirty-edge | opener-scarcity-direct-ask | pending
-[2026-05-03 12:00] turn 7 | suggest draft: scarcity + tonight ask | opener-scarcity-direct-ask | pending
-[2026-05-03 12:30] turn 8 | suggest options (3): scarcity-direct / lead-with-take / flirty-edge | opener-scarcity-direct-ask | sent: Bet you know this city better than I do. Drinks this week?
-
-## Sent
-
-- [2026-05-03 13:30] Bet you know this city better than I do. Drinks this week?
