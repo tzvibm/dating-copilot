@@ -6,24 +6,45 @@
 
 ## Drawn to
 
-<!-- Types, traits, vibes that have actually worked. Be concrete. -->
+- Spontaneous — open to plans coming together fast.
+- Low-friction — yes/no comes easy, doesn't make every step a
+  negotiation.
+- Feminine energy.
+- Not shy about sexual jokes / playful in that register early.
+- Genuine, not performatively sarcastic.
+- High empathy.
+- Low ego.
 
 ## Doesn't work
 
-<!-- Patterns that have failed multiple times. Equally concrete. -->
+- Golddiggers.
+- High-ego / controlling — needs to run every detail.
+- High-friction — small things become big things.
+- Pushing for a serious relationship too fast.
+- Too sarcastic — when irony is the only register.
 
 ## Date activities
 
 ### Default first meet
-<!-- What you usually propose for a first in-person. -->
+
+Drinks. Coffee. A museum. A casual park hang / walk and talk. Anything
+low-stakes where the time can stretch or end early without it being
+weird.
 
 ### Backup options
-<!-- 2-3 alternatives. -->
+
+- Coffee if she's not a drinker / earlier in the day.
+- Museum or some local cultural thing if the city has one and she
+  seems into it.
+- Park / walk if the weather's right and the vibe is chill.
+- Dinner — but **only** for matches that already feel high-potential.
 
 ### Hard nos
-<!-- Activities you won't do. -->
+
+- Fancy dinner as a first meet.
 
 ## Energy
 
-<!-- When you actually message vs. when you don't. Time-of-day
-     patterns, what burns you out, what gives energy. -->
+<!-- TODO: user declined to specify time-of-day or thread-load
+     preferences during setup ("anything is fine"). Refine as patterns
+     emerge from observations.md. -->
