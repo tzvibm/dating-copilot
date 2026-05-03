@@ -14,14 +14,14 @@ phase_progress:
   escalation: 0
   logistics: 0
   confirm: 0
-turn_micro_goal: raise opener 20 → 70 by earning a substantive reply that breaks the polite-ack deadlock
+turn_micro_goal: null
 days_remaining: null
 distance_km: 2
-goal: drinks this week
-goal_type: quick-meet-window
-goal_confidence: low
-goal_set_at: 2026-05-02
-goal_basis: default from identity; no signal from her yet to override
+goal: same-day sex meetup — extremely flirty, suggestive approach
+goal_type: casual-sex
+goal_confidence: high
+goal_set_at: 2026-05-03
+goal_basis: only in town today; same-day or nothing
 girl_archetype: active foodie, cafe-hopper, phone-caller, "still figuring it out"
 profile_analyzed_at: 2026-05-02
 last_message_at: 2026-05-01T20:42
@@ -59,15 +59,16 @@ strategy_used_last_outcome: pending
 
 ## Match strategy
 
-**Current plan:** Thread ~41h dead after polite-ack exchange. Real scarcity (user leaving Granada in a few days) and trivial logistics (1 mile) mean there's no reason to pad rapport — the move is a single message that either resets with energy and points at a meet, or goes directly for the invite. One real reply, then push straight to logistics.
+**Current plan:** Thread dead ~41h after polite-ack exchange. Under casual-sex with today-only constraint, there is zero margin for rapport — the first real message must set a flirty/suggestive register and point at meeting today. One shot: if she matches the energy, close logistics (time + place today) immediately. If she doesn't, it's a no.
 
-**Next milestone:** raise opener 20 → 70 with a substantive reply; if she bites, push straight to a specific day/time (logistics 0 → 60) next turn.
+**Next milestone:** raise opener 20 → 60 with a reply that matches the flirty/suggestive register; close logistics (specific time + place today) in the same or next turn.
 
 **Recent shifts:**
 - 2026-05-03: opener at 20; polite ack only; prior suggest never sent; re-suggesting with tighter options.
 - 2026-05-03: cleaned up erroneous strategy card stats from unsent prior suggest.
-- 2026-05-03: turn 5 re-suggest; opener still 20; three distinct moves generated (scarcity-direct / food-invite / confident-type tease).
-- 2026-05-03: turn 6 re-suggest; three options (scarcity-direct ⚠gate / foodie-take / phone-caller-read); opener at 20.
+- 2026-05-03: turn 5 re-suggest; opener still 20; three distinct moves generated.
+- 2026-05-03: turn 6 re-suggest; three options generated; opener at 20.
+- 2026-05-03: goal changed: quick-meet-window → casual-sex (only in town today; same-day or nothing). Phase_progress re-scored under new lens: raw scores unchanged (opener 20, all others 0); bars now set per casual-sex scoring overrides.
 
 ## Open threads
 
@@ -85,3 +86,4 @@ strategy_used_last_outcome: pending
 [2026-05-03 14:30] turn 4 | re-suggest: 3-way dead-opener reset targeting meet-signal | opener-scarcity-direct-ask / recovery-bold-reset / opener-lead-with-take | unsent
 [2026-05-03 15:00] turn 5 | re-suggest: scarcity-direct / food-invite / confident-type tease | opener-scarcity-direct-ask / opener-lead-with-take / opener-confident-read | pending
 [2026-05-03 15:30] turn 6 | re-suggest: scarcity-direct (⚠escalation backstop) / foodie-take / phone-caller-read | opener-scarcity-direct-ask / opener-lead-with-take / opener-confident-read | pending
+[2026-05-03 16:00] goal changed: quick-meet-window → casual-sex | n/a | manual

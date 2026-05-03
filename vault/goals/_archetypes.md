@@ -186,3 +186,48 @@ axes don't progress under this archetype.
 confirm are frozen at 0 by definition — the goal explicitly
 forecloses pursuit. Opener and rapport scores are read against the
 baseline rubric but inform conversation, not advancement.
+
+## casual-sex
+
+Extremely flirty, sexually suggestive approach targeting a same-day
+or very-short-window physical meetup. No rapport arc. No pretense of
+a longer timeline.
+
+**Dominant mechanisms.** Scarcity (A7) at maximum compression —
+same-day or nothing. Pre-suasion (A1) is critical: the register must
+be set in the first real message so there's no bait-and-switch later.
+Misattribution of arousal (A11) — move fast enough that her
+excitement attaches to you, not just the situation. Reactance (A9)
+— invite, don't push; let her opt in, don't recruit.
+
+**Phase-progress allocation.** Opener and minimal rapport must land,
+then skip straight to escalation and logistics. Rapport target: 30-40
+(enough warmth not to read cold or threatening). Qualifying: scan
+only for hard red flags (relationship-pusher, obviously wrong vibe).
+Push escalation and logistics in the same message or back-to-back
+turns. No multi-day arc.
+
+**Phase scoring (under this goal).** Compress everything. Rapport and
+qualifying bars are low; escalation and logistics bars are high (need
+clear yes before counting as solid).
+
+- opener: 60 = she replied with any substance or matched flirty energy.
+  100 = she escalated or set the tempo above yours.
+- rapport: 40 = she's engaged and not cold. 60 = warm and
+  reciprocating. 100 = explicit receptiveness signal.
+- qualifying: 30 = no hard red flags. 60 = hinting at openness to
+  something casual.
+- escalation: 60 = she matched the flirty/suggestive register.
+  100 = explicit or near-explicit yes to meeting today.
+- logistics: 60 = today named. 100 = specific time AND place today
+  confirmed.
+- (confirm: baseline rubric.)
+
+**What kills it.** A platonic-register opener that then pivots to
+sexual — that reads as bait-and-switch and loses her. Over-texting
+before the ask (momentum dies). Treating her profile cues as rapport
+material. Any message that needs more than one reply to land a meet
+ask. Her immediately pushing a relationship frame.
+
+scoring under this goal: TODO — uses scoring overrides above until
+field data accumulates.
