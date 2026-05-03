@@ -5,7 +5,7 @@ city: Granada, NI
 matched: 2026-05-02
 phase: rapport
 phase_confidence: low
-phase_last_assessed: 2026-05-02T19:13
+phase_last_assessed: 2026-05-02T19:16
 days_remaining: null
 goal: drinks while still in Granada
 goal_type: quick-meet-window
@@ -15,7 +15,7 @@ goal_basis: identity default; user is in Granada with only a few more days
 girl_archetype: sugar-curious college party-type
 profile_analyzed_at: 2026-05-02
 last_message_at: 2026-05-02T00:00
-strategy_used_last: rapport-mirror-then-pivot
+strategy_used_last: rapport-share-then-volley
 strategy_used_last_outcome: pending
 ---
 
@@ -74,3 +74,4 @@ strategy_used_last_outcome: pending
 [2026-05-02 00:00] turn 1 | me: opener — "Hola nice to meet uou" (typo) | parsed | imported
 [2026-05-02 00:00] turn 2 | her: warm ack — "Hols / Hi / Nice to meet you too!" | parsed | imported
 [2026-05-02 19:13] turn 3 | me: mirror "Hols" + draft her as granada local guide | rapport-mirror-then-pivot | pending
+[2026-05-02 19:16] turn 4 | me: regenerate — 3 options spanning mirror+pivot, share+volley, language-exchange callback | rapport-share-then-volley | pending
