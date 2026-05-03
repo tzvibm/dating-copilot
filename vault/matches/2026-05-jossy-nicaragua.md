@@ -8,20 +8,20 @@ phase: rapport
 phase_confidence: medium
 phase_last_assessed: 2026-05-03T11:00
 phase_progress:
-  opener: 100
-  rapport: 20
-  qualifying: 5
+  opener: 80
+  rapport: 40
+  qualifying: 30
   escalation: 10
   logistics: 0
   confirm: 0
-turn_micro_goal: raise rapport 20 → 40 by contributing a take/share from my world and getting her to engage with a specific topic
+turn_micro_goal: null
 days_remaining: null
 distance_km: 10
-goal: drinks while still in Granada
-goal_type: quick-meet-window
-goal_confidence: medium
-goal_set_at: 2026-05-02
-goal_basis: identity default; user is in Granada with only a few more days
+goal: invite her to my hotel room directly for drinks
+goal_type: casual-sex
+goal_confidence: high
+goal_set_at: 2026-05-03
+goal_basis: she isn't reacting well so I want a clear yes or no
 girl_archetype: sugar-curious college party-type
 profile_analyzed_at: 2026-05-02
 last_message_at: 2026-05-03T10:27
@@ -75,12 +75,13 @@ strategy_used_last_outcome: replied_warm
 
 ## Match strategy
 
-**Current plan:** Build real rapport texture (target 40-50, not 80) by leading with takes/shares from my experience in Granada — her local knowledge is the natural hook. Once rapport hits ~50, move directly to a specific invite this week. Compress the arc; she's a big texter and will marathon if not steered toward logistics.
+**Current plan:** Set a direct flirty/sexual register in the next message — rapport at 40 meets the casual-sex floor ("engaged and not cold"). Push escalation and logistics in the same or back-to-back turns. The invite is hotel drinks, direct, no pretense. She's been warm but hasn't been given a clear register to match yet; set it now and get a yes or no.
 
-**Next milestone:** raise rapport 20 → 50; this is the gate for escalation under quick-meet-window.
+**Next milestone:** escalation 10 → 60 — get her to match the flirty/suggestive register or accept a direct invite; this is the gating signal under casual-sex before logistics ask.
 
 **Recent shifts:**
 - 2026-05-03: rapport at 20 — premature escalation-direct-ask (rapport ~20, gate requires 60) got warm dodge ("Hiiiii"); dropping back to rapport-building this turn.
+- 2026-05-03: goal changed: quick-meet-window → casual-sex (user wants clear yes/no; re-scored: opener 100→80, rapport 20→40, qualifying 5→30; rapport at casual-sex floor, escalation is the bottleneck).
 
 ## Open threads
 
@@ -108,5 +109,6 @@ strategy_used_last_outcome: replied_warm
 [2026-05-02 19:45] turn 6 | me: pre-stage post-reply options (no her-msg yet) — direct-ask, 4/20 callback, sunset activity-anchor | escalation-direct-ask | replied_warm | auto: medium
 [2026-05-03 10:30] turn 7 | her: "Hiiiii" — warm dodge of direct-ask; me: frame-hold tease | rapport-frame-control | unsent
 [2026-05-03 11:00] turn 8 | me: rapport recovery — social-proof take from Granada after premature escalation | rapport-social-proof | pending
+[2026-05-03 11:15] goal changed: quick-meet-window → casual-sex | n/a | manual
 
 ## Sent
