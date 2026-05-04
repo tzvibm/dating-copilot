@@ -4,17 +4,17 @@ age: null
 platform: tinder
 city: Granada, Nicaragua
 matched: 2026-05-02
-phase: escalation
+phase: logistics
 phase_confidence: high
-phase_last_assessed: 2026-05-04T09:00
+phase_last_assessed: 2026-05-04T15:30
 phase_progress:
-  opener: 70
-  rapport: 60
-  qualifying: 20
-  escalation: 60
-  logistics: 10
+  opener: 100
+  rapport: 70
+  qualifying: 30
+  escalation: 90
+  logistics: 65
   confirm: 0
-turn_micro_goal: "raise logistics 10 → 60 by landing a specific time tonight — she already counter-proposed the day"
+turn_micro_goal: "raise logistics 65 → 100 by getting a specific venue for tonight's 8pm meet via IG handoff + venue flip"
 days_remaining: null
 distance_km: 2
 goal: same-day sex meetup — extremely flirty, suggestive approach
@@ -59,14 +59,15 @@ strategy_used_last_outcome: sent
 
 ## Match strategy
 
-**Current plan:** She counter-proposed tonight (May 4) after explaining she just got off a night shift. Warm, real reason — not a rejection. Rapport and escalation both hit 60 under casual-sex scoring (she future-paced with a day + warm 🌚 energy). The move this turn: accept her counter, name a time, done. If she confirms a specific time and place, logistics closes fast.
+**Current plan:** She confirmed "tonight would be perfect" and asked for IG — escalation at 90, time locked at 8pm, venue TBD. Give IG handle + flip venue to her in one message (callback to her "not from this city" joke). Once she names a place, logistics closes to 100 and the only remaining move is a day-of confirm nudge ~2h before.
 
-**Next milestone:** raise logistics 10 → 60 by landing a specific time agreement for tonight; then confirm ≥ 60 via day-of nudge ~2-4h before.
+**Next milestone:** raise logistics 65 → 100 by getting a specific venue named (her reply to the venue flip). Then confirm ≥ 60 via day-of nudge ~2h before 8pm.
 
 **Recent shifts:**
 - 2026-05-03: goal changed: quick-meet-window → casual-sex (only in town today; same-day or nothing).
-- 2026-05-03: she replied warm to drinks ask — opener 20→70, rapport 0→40 (casual-sex target reached); escalation 0→10.
+- 2026-05-03: she replied warm to drinks ask — opener 20→70, rapport 0→40; escalation 0→10.
 - 2026-05-04: she counter-proposed tonight after night shift — rapport 40→60, escalation 10→60, logistics 0→10; phase → escalation (high).
+- 2026-05-04: she confirmed "tonight would be perfect" + asked for IG — opener 70→100, rapport 60→70, escalation 60→90, logistics 10→65; phase → logistics (high).
 
 ## Open threads
 
@@ -94,7 +95,8 @@ strategy_used_last_outcome: sent
 [2026-05-03 16:00] goal changed: quick-meet-window → casual-sex | n/a | manual
 [2026-05-03 16:30] turn 7 | options suggest — casual-sex DOA reset; 3 distinct moves: scarcity-direct / cold-brevity / interest-fork | opener-scarcity-direct-ask / opener-cold-brevity-ask / opener-scarcity-direct-ask(fork) | replied_warm (high) | auto: high
 [2026-05-03 17:00] turn 8 | she deflected drinks ask with humor ("not from this city jajaj"); push tonight-specific close | escalation-same-day-banter-close | replied_warm (high) | auto: high | sent: Even better. Tonight?
-[2026-05-04 09:00] turn 9 | she counter-proposed tonight (night shift, warm 🌚); accept + time anchor | logistics-counter-accept-close | sent: Tonight works. 8?
+[2026-05-04 09:00] turn 9 | she counter-proposed tonight (night shift, warm 🌚); accept + time anchor | logistics-counter-accept-close | replied_warm (high) | auto: high | sent: Tonight works. 8?
+[2026-05-04 15:30] turn 10 | she confirmed tonight + asked for IG; give handle + flip venue to her (callback to "not from this city") | logistics-social-handoff-venue-flip | pending
 
 ## Sent
 
