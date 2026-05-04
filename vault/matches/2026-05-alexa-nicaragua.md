@@ -6,15 +6,15 @@ city: Granada, Nicaragua
 matched: 2026-05-02
 phase: logistics
 phase_confidence: high
-phase_last_assessed: 2026-05-04T15:30
+phase_last_assessed: 2026-05-04T16:00
 phase_progress:
   opener: 100
-  rapport: 70
+  rapport: 72
   qualifying: 30
   escalation: 90
-  logistics: 65
+  logistics: 80
   confirm: 0
-turn_micro_goal: "raise logistics 65 → 100 by getting a specific venue for tonight's 8pm meet via IG handoff + venue flip"
+turn_micro_goal: "raise logistics 80 → 100 by resolving pickup logistics (accept or hold) and getting hard confirmation she's coming at 8pm"
 days_remaining: null
 distance_km: 2
 goal: same-day sex meetup — extremely flirty, suggestive approach
@@ -59,15 +59,14 @@ strategy_used_last_outcome: sent
 
 ## Match strategy
 
-**Current plan:** She confirmed "tonight would be perfect" and asked for IG — escalation at 90, time locked at 8pm, venue TBD. Give IG handle + flip venue to her in one message (callback to her "not from this city" joke). Once she names a place, logistics closes to 100 and the only remaining move is a day-of confirm nudge ~2h before.
+**Current plan:** She's still engaged — "You don't come to get me?" is playful friction, not a cancellation. Time (8pm) and venue (Clandestino) are set; the only open item is pickup logistics. Accept pickup and get her address (closes logistics to 100 in one shot), or hold the venue frame and let her navigate. Pickup is faster and removes all her friction for showing up.
 
-**Next milestone:** raise logistics 65 → 100 by getting a specific venue named (her reply to the venue flip). Then confirm ≥ 60 via day-of nudge ~2h before 8pm.
+**Next milestone:** logistics 80 → 100 — resolve pickup and get hard confirmation she's en route. Then confirm ≥ 60 via day-of nudge ~6pm.
 
 **Recent shifts:**
 - 2026-05-03: goal changed: quick-meet-window → casual-sex (only in town today; same-day or nothing).
-- 2026-05-03: she replied warm to drinks ask — opener 20→70, rapport 0→40; escalation 0→10.
-- 2026-05-04: she counter-proposed tonight after night shift — rapport 40→60, escalation 10→60, logistics 0→10; phase → escalation (high).
 - 2026-05-04: she confirmed "tonight would be perfect" + asked for IG — opener 70→100, rapport 60→70, escalation 60→90, logistics 10→65; phase → logistics (high).
+- 2026-05-04: gave IG (@tzvibm) + named Clandestino at 8pm — she replied "You don't come to get me?"; logistics 65→80 (venue + time locked, pickup TBD).
 
 ## Open threads
 
@@ -99,7 +98,8 @@ strategy_used_last_outcome: sent
 [2026-05-03 16:30] turn 7 | options suggest — casual-sex DOA reset; 3 distinct moves: scarcity-direct / cold-brevity / interest-fork | opener-scarcity-direct-ask / opener-cold-brevity-ask / opener-scarcity-direct-ask(fork) | replied_warm (high) | auto: high
 [2026-05-03 17:00] turn 8 | she deflected drinks ask with humor ("not from this city jajaj"); push tonight-specific close | escalation-same-day-banter-close | replied_warm (high) | auto: high | sent: Even better. Tonight?
 [2026-05-04 09:00] turn 9 | she counter-proposed tonight (night shift, warm 🌚); accept + time anchor | logistics-counter-accept-close | replied_warm (high) | auto: high | sent: Tonight works. 8?
-[2026-05-04 15:30] turn 10 | she confirmed tonight + asked for IG; give handle + flip venue to her (callback to "not from this city") | logistics-social-handoff-venue-flip | pending
+[2026-05-04 15:30] turn 10 | she confirmed tonight + asked for IG; give handle + flip venue to her | logistics-social-handoff-venue-flip | replied_warm (high) | auto: high | sent: @tzvibm / Clandestino 8pm
+[2026-05-04 16:00] turn 11 | she asked about pickup; hold frame on venue/time, playful redirect | logistics-frame-hold | pending
 
 ## Sent
 

@@ -104,7 +104,7 @@ State conditions:
 
 ### casual-sex
 
-- [[2026-05-alexa-nicaragua]] turn 10 — pending
+- [[2026-05-alexa-nicaragua]] turn 10 — replied_warm (high)
 
 ### quick-meet-window
 
