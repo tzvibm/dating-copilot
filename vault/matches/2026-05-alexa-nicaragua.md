@@ -24,8 +24,8 @@ goal_set_at: 2026-05-03
 goal_basis: only in town today; same-day or nothing
 girl_archetype: active foodie, cafe-hopper, phone-caller, "still figuring it out"
 profile_analyzed_at: 2026-05-02
-last_message_at: 2026-05-03T17:15
-strategy_used_last: escalation-same-day-banter-close
+last_message_at: 2026-05-04T15:00
+strategy_used_last: logistics-counter-accept-close
 strategy_used_last_outcome: sent
 ---
 
@@ -79,6 +79,7 @@ strategy_used_last_outcome: sent
 - her [2026-05-03T12:23]: Of course 🤭\nBut I'm not from this city jajaj
 - me  [2026-05-03T17:15]: Even better. Tonight?
 - her [2026-05-04T08:18]: Not tonight, because I just go out of my night shift, so tomorrow? 🌚
+- me  [2026-05-04T15:00]: Tonight works. 8?
 
 ## Conversation log
 
@@ -91,8 +92,9 @@ strategy_used_last_outcome: sent
 [2026-05-03 16:00] goal changed: quick-meet-window → casual-sex | n/a | manual
 [2026-05-03 16:30] turn 7 | options suggest — casual-sex DOA reset; 3 distinct moves: scarcity-direct / cold-brevity / interest-fork | opener-scarcity-direct-ask / opener-cold-brevity-ask / opener-scarcity-direct-ask(fork) | replied_warm (high) | auto: high
 [2026-05-03 17:00] turn 8 | she deflected drinks ask with humor ("not from this city jajaj"); push tonight-specific close | escalation-same-day-banter-close | replied_warm (high) | auto: high | sent: Even better. Tonight?
-[2026-05-04 09:00] turn 9 | she counter-proposed tonight (night shift, warm 🌚); accept + time anchor | logistics-counter-accept-close | pending
+[2026-05-04 09:00] turn 9 | she counter-proposed tonight (night shift, warm 🌚); accept + time anchor | logistics-counter-accept-close | sent: Tonight works. 8?
 
 ## Sent
 
 [2026-05-03 17:15] Even better. Tonight?
+[2026-05-04 15:00] Tonight works. 8?
