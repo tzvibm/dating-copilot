@@ -78,6 +78,7 @@ strategy_used_last_outcome: sent
 - me  [2026-05-03T12:23]: Bet you know this city better than I do, Drinks this week?
 - her [2026-05-03T12:23]: Of course 🤭\nBut I'm not from this city jajaj
 - me  [2026-05-03T17:15]: Even better. Tonight?
+- her [2026-05-04T08:18]: Not tonight, because I just go out of my night shift, so tomorrow? 🌚
 
 ## Conversation log
 
