@@ -85,7 +85,7 @@ State conditions:
 
 ### casual-sex
 
-- [[2026-05-alexa-nicaragua]] turn 8 — pending
+- [[2026-05-alexa-nicaragua]] turn 8 — replied_warm (high) | auto: high
 
 ### quick-meet-window
 
