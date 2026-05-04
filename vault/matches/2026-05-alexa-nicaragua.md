@@ -80,6 +80,8 @@ strategy_used_last_outcome: sent
 - me  [2026-05-03T17:15]: Even better. Tonight?
 - her [2026-05-04T08:18]: Not tonight, because I just go out of my night shift, so tomorrow? 🌚
 - me  [2026-05-04T15:00]: Tonight works. 8?
+- her [2026-05-04T10:33]: Yes. tonight would be perfect
+- her [2026-05-04T10:33]: You have ig?
 
 ## Conversation log
 
